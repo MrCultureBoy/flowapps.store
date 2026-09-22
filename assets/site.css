@@ -41,7 +41,9 @@ body {
   font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
-img { max-width: 100%; display: block; }
+/* height:auto est indispensable : sans lui, l'attribut height="1304" des captures
+   s'applique tel quel pendant que max-width réduit la largeur → image étirée. */
+img { max-width: 100%; height: auto; display: block; }
 a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
 a:hover { text-decoration-thickness: 2px; }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
@@ -104,7 +106,8 @@ a:hover { text-decoration-thickness: 2px; }
   border-radius: 34px; overflow: hidden; background: #0b1640;
   box-shadow: 0 30px 60px -20px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.08);
 }
-.hero .phone { width: min(300px, 78vw); margin: 0 auto; transform: rotate(2deg); }
+.phone img { width: 100%; }
+.hero .phone { width: min(280px, 64vw); margin: 0 auto; transform: rotate(2deg); }
 
 /* ── Sections ─────────────────────────────────────────────── */
 section { padding: 84px 0; }
@@ -132,13 +135,20 @@ h2 { font-size: clamp(28px, 3.6vw, 40px); line-height: 1.15; letter-spacing: -.0
 .feature p { margin: 0; color: var(--ink-2); font-size: 16px; }
 
 /* Galerie de captures */
-.shots {
-  display: grid; grid-auto-flow: column; grid-auto-columns: minmax(210px, 1fr);
-  gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 4px 20px;
-  -webkit-overflow-scrolling: touch;
+/* Ordinateur : les 5 captures sur une ligne, chacune ~190 px de large.
+   Téléphone : bande qui défile au doigt, une capture et demie visible. */
+.shots { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 18px; padding: 4px 0 8px; }
+.shots figure { margin: 0; }
+.shots .phone { border-radius: 22px; }
+.shots .phone img { width: 100%; }
+@media (max-width: 760px) {
+  .shots {
+    grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 58%;
+    overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 16px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .shots figure { scroll-snap-align: start; }
 }
-.shots figure { margin: 0; scroll-snap-align: start; }
-.shots .phone { border-radius: 26px; }
 .shots figcaption { font-size: 14px; color: var(--ink-2); margin-top: 10px; text-align: center; }
 .tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .06em; color: var(--accent); background: var(--accent-soft); border-radius: 6px; padding: 2px 6px; margin-left: 4px; vertical-align: 1px; }
 
