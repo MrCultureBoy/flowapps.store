@@ -2,190 +2,503 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FLOW — des apps pour apprendre les langues, hors ligne</title>
-<meta name="description" content="FLOW, des applications iPhone pour apprendre les langues&nbsp;: anglais, français, italien, espagnol, allemand, russe, roumain, persan. Hors ligne, sans compte, sans publicité, sans suivi.">
-<meta name="theme-color" content="#F3EDE3" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#17130F" media="(prefers-color-scheme: dark)">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FLOW — 165 apps pour iPhone et Mac, sans rien d’autre autour</title>
+<meta name="description" content="FLOW, une famille de 165 applications pour iPhone et Mac&nbsp;: planifier, faire, apprendre les langues, prendre soin de soi. Sans compte, sans publicité, sans suivi.">
+<meta name="theme-color" content="#17130F">
 <link rel="canonical" href="https://flowapps.store/">
 <link rel="icon" href="/assets/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:type" content="website">
-<meta property="og:title" content="FLOW — des apps pour apprendre les langues, hors ligne">
-<meta property="og:description" content="Une app par langue, construite pour les francophones. Hors ligne, sans compte, sans publicité, sans suivi.">
+<meta property="og:title" content="FLOW — 165 apps pour iPhone et Mac, sans rien d’autre autour">
+<meta property="og:description" content="Une app par besoin, 11 univers. Sans compte, sans publicité, sans suivi.">
 <meta property="og:image" content="https://flowapps.store/assets/flow-anglais-icon.png">
 <meta property="og:url" content="https://flowapps.store/">
 <meta property="og:locale" content="fr_FR">
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/univers/univers.css">
+<style>:root { --cols: 15; --rangs: 11; }</style>
+<!-- Sans script, la page reste une page : tout le contenu est dans le HTML. -->
+<script>document.documentElement.className = 'js';</script>
 </head>
 <body>
 
-<header class="top">
-  <div class="wrap">
-    <a class="brand" href="/" aria-current="page">FLOW</a>
-    <nav aria-label="Navigation principale">
-      <a href="/anglais/">Anglais</a>
-      <a href="/anglais/assistance/">Assistance</a>
-      <a class="hide-sm" href="/mentions-legales/">Mentions légales</a>
-    </nav>
-  </div>
-</header>
+<a class="evitement" href="#apps">Aller à la liste des apps</a>
 
-<main>
+<!-- Le chargement : le mot se remplit pendant que les emblèmes arrivent. -->
+<div class="chargement" id="chargement" aria-hidden="true">
+  <div class="chargement-mot"><span>FLOW</span><span class="plein" id="motPlein">FLOW</span></div>
+  <div class="chargement-pct"><span id="pct">0</span>&nbsp;%</div>
+</div>
 
-<div class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="kicker">Apps iPhone</span>
-      <h1>Apprendre, sans rien d’autre autour.</h1>
-      <p class="lede">Les apps FLOW tiennent dans ta poche et fonctionnent hors ligne. Pas de compte, pas de publicité, pas de suivi&nbsp;: juste toi et ce que tu apprends.</p>
-      <div class="cta-row">
-        <a class="badge plein p-taupe" href="/anglais/">Découvrir Anglais</a>
-        <a class="ghost" href="#apps">Toutes les langues ↓</a>
-      </div>
-    </div>
-    <figure class="dossier" aria-hidden="true">
-      <div class="dossier-grille">
-        <img src="/assets/icones/anglais.png" alt="" width="110" height="110">
-        <img src="/assets/icones/francais.png" alt="" width="110" height="110">
-        <img src="/assets/icones/italien.png" alt="" width="110" height="110">
-        <img src="/assets/icones/espagnol.png" alt="" width="110" height="110">
-        <img src="/assets/icones/allemand.png" alt="" width="110" height="110">
-        <img src="/assets/icones/russe.png" alt="" width="110" height="110">
-        <img src="/assets/icones/roumain.png" alt="" width="110" height="110">
-        <img src="/assets/icones/persan.png" alt="" width="110" height="110">
-        <img src="/assets/icones/polyglotte.png" alt="" width="110" height="110">
-      </div>
-      <figcaption>Apprendre</figcaption>
-    </figure>
+<!-- La scène, fixe derrière le texte : le fond coloré et les tuiles en volume. -->
+<div class="scene" id="scene" aria-hidden="true">
+  <canvas id="fond"></canvas>
+  <div class="socle socle-haut"></div>
+  <div class="socle socle-bas"></div>
+  <div class="monde" id="monde">
+<div class="tuile" data-i="0" data-id="planifier" data-nom="Planifier le temps" data-texte="Le soir, la semaine, le mois : décider à l&#x27;avance où va ton temps, puis voir ce qui a tenu." data-n="16" data-c="#202841" style="--c:#202841"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/tomorrow.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">apps</span></div><span class="reflet"></span></div></div>
+<div class="tuile" data-i="1" data-id="faire" data-nom="Faire" data-texte="Une liste par façon de s&#x27;y mettre : par énergie, par durée, par priorité, par moment de la journée." data-n="19" data-c="#5C918A" style="--c:#5C918A"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/todo.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">apps</span></div><span class="reflet"></span></div></div>
+<div class="tuile" data-i="2" data-id="projets" data-nom="Projets et concentration" data-texte="Mener ce qui dure, et protéger les heures où l&#x27;on avance vraiment." data-n="11" data-c="#2A4A80" style="--c:#2A4A80"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/deepwork.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">apps</span></div><span class="reflet"></span></div></div>
+<div class="tuile" data-i="3" data-id="corps" data-nom="Soigner le corps" data-texte="L&#x27;eau, le sommeil, les repas, la posture : noter au moment où ça arrive, puis lire la tendance." data-n="17" data-c="#402F50" style="--c:#402F50"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/sleep.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">apps</span></div><span class="reflet"></span></div></div>
+<div class="tuile" data-i="4" data-id="bouger" data-nom="Bouger, sortir" data-texte="Les séries, les courses, les lieux : ce que tu fais dehors et à la salle." data-n="10" data-c="#B17E30" style="--c:#B17E30"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/running.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">apps</span></div><span class="reflet"></span></div></div>
+<div class="tuile" data-i="5" data-id="apprendre" data-nom="Apprendre" data-texte="Des langues, des livres, des concepts : apprendre hors ligne, un peu chaque jour." data-n="20" data-c="#6C5F54" style="--c:#6C5F54"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/anglais.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">apps</span></div><span class="reflet"></span></div></div>
+<div class="tuile" data-i="6" data-id="connaitre" data-nom="Se connaître" data-texte="Ce que tu deviens, compté sans jugement : habitudes, réussites, phases d&#x27;une vie." data-n="20" data-c="#9C5A68" style="--c:#9C5A68"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/identite.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">apps</span></div><span class="reflet"></span></div></div>
+<div class="tuile" data-i="7" data-id="autres" data-nom="Les autres" data-texte="Les amis, la parole, l&#x27;écoute : ce qui se joue avec les gens." data-n="16" data-c="#702537" style="--c:#702537"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/friends.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">apps</span></div><span class="reflet"></span></div></div>
+<div class="tuile" data-i="8" data-id="ecouter" data-nom="Écouter, se poser, prier" data-texte="La musique, le silence, la prière : les moments où l&#x27;on s&#x27;arrête." data-n="14" data-c="#6B8A72" style="--c:#6B8A72"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/pause.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">apps</span></div><span class="reflet"></span></div></div>
+<div class="tuile" data-i="9" data-id="foyer" data-nom="Le foyer et les choses" data-texte="L&#x27;argent, les objets, le ménage : la maison tenue sans y penser." data-n="8" data-c="#5F6B36" style="--c:#5F6B36"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/budget.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">apps</span></div><span class="reflet"></span></div></div>
+<div class="tuile" data-i="10" data-id="outils" data-nom="Les outils" data-texte="Ce qui tient l&#x27;iPhone et le Mac en ordre, et relie les apps entre elles." data-n="14" data-c="#C67247" style="--c:#C67247"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/sidenote.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">apps</span></div><span class="reflet"></span></div></div>
   </div>
 </div>
 
-<section class="soft" id="apps">
-  <div class="wrap">
-    <p class="eyebrow">Les apps</p>
-    <h2>Une app par langue, construite pour les francophones.</h2>
-    <p class="sub">Chaque app part de ce qui piège un francophone et ramène chaque mot au bon moment grâce à la révision espacée. Polyglotte les réunit sur un seul tableau de bord.</p>
-    <div class="apps">
+<!-- Le cadre : coins, barre d'avancement, lettres. -->
+<div class="hud" aria-hidden="true">
+  <div class="hud-barre"><i id="avancement"></i></div>
+  <span class="coin coin-hg"></span><span class="coin coin-hd"></span>
+  <span class="coin coin-bg"></span><span class="coin coin-bd"></span>
+  <div class="hud-lettres" id="lettres"><span>F</span><span>L</span><span>O</span><span>W</span></div>
+  <div class="hud-graduations"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+</div>
 
-      <a class="app-card vedette p-taupe" href="/anglais/">
-        <img class="app-icon" src="/assets/icones/anglais.png" alt="" width="110" height="110">
-        <div class="corps">
-          <div class="tete"><h3>Anglais</h3><span class="pill">Bientôt sur l’App Store</span></div>
-          <p>11&nbsp;166 mots du A1 au C2, 43 leçons de grammaire, une vraie voix américaine ou britannique, et un mot sur ton écran verrouillé. Entièrement gratuite.</p>
-          <span class="suite">Découvrir Anglais →</span>
-        </div>
-      </a>
+<header class="barre">
+  <button class="son" id="son" type="button" aria-pressed="false">
+    <span class="son-etat" id="sonEtat">Son coupé</span>
+    <span class="son-ondes" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+  </button>
+  <a class="logo" href="/" aria-label="FLOW, accueil">FLOW</a>
+  <div class="barre-droite">
+    <button class="lien-menu" id="ouvrirMenu" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="points" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Menu
+    </button>
+    <a class="bouton" href="mailto:contact@flowapps.store">Contact</a>
+  </div>
+</header>
 
-      <article class="app-card p-petrole">
-        <img class="app-icon" src="/assets/icones/francais.png" alt="" width="110" height="110">
-        <div class="corps">
-          <div class="tete"><h3>Français</h3><span class="pill muted">En préparation</span></div>
-          <p>Enrichir un français déjà natif, cinq minutes à la fois&nbsp;: des cartes, un quiz, et le mot à retrouver depuis sa définition.</p>
-        </div>
-      </article>
+<div class="menu" id="menu" hidden>
+  <button class="menu-fermer" id="fermerMenu" type="button">Fermer</button>
+  <nav aria-label="Menu">
+    <ol class="menu-grand">
+      <li><a href="#univers">Les univers</a></li>
+      <li><a href="#principes">Les principes</a></li>
+      <li><a href="#apps">Toutes les apps</a></li>
+      <li><a href="#questions">Questions</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+    <ul class="menu-petit">
+      <li><a href="/anglais/">Anglais</a></li>
+      <li><a href="/anglais/assistance/">Assistance</a></li>
+      <li><a href="/mentions-legales/">Mentions légales</a></li>
+      <li><a href="mailto:contact@flowapps.store">contact@flowapps.store</a></li>
+    </ul>
+  </nav>
+</div>
 
-      <a class="app-card p-graphite" href="/italien/">
-        <img class="app-icon" src="/assets/icones/italien.png" alt="" width="110" height="110">
-        <div class="corps">
-          <div class="tete"><h3>Italien</h3><span class="pill">Bientôt sur l’App Store</span></div>
-          <p>L’italien du premier mot au C2&nbsp;: un parcours par unités, un conjugueur qui connaît toutes les formes, de la grammaire qu’on pratique et de l’oral.</p>
-          <span class="suite">Découvrir Italien →</span>
-        </div>
-      </a>
+<main>
 
-      <a class="app-card p-terracotta" href="/espagnol/">
-        <img class="app-icon" src="/assets/icones/espagnol.png" alt="" width="110" height="110">
-        <div class="corps">
-          <div class="tete"><h3>Espagnole</h3><span class="pill">Bientôt sur l’App Store</span></div>
-          <p>L’espagnol de zéro au C2&nbsp;: la conjugaison, la grammaire qui piège un francophone (ser ou estar, por ou para) et une voix d’Espagne ou d’Amérique.</p>
-          <span class="suite">Découvrir Espagnole →</span>
-        </div>
-      </a>
+<!-- 1 · Les univers : le carrousel. -->
+<section class="s s-gamme" id="univers" data-scene="gamme">
+  <div class="gamme-tete">
+    <p class="surtitre">165 apps · 11 univers · iPhone et Mac</p>
+    <h1 class="decoupe">Une app, une seule chose. Rien d’autre autour.</h1>
+  </div>
+  <div class="gamme-pied">
+    <div class="gamme-nom">
+      <button class="fleche" id="prec" type="button" aria-label="Univers précédent">←</button>
+      <p class="nom-famille" id="nomFamille" aria-live="polite">Planifier le temps</p>
+      <button class="fleche" id="suiv" type="button" aria-label="Univers suivant">→</button>
+    </div>
+    <label class="glissiere">
+      <span class="lu">Choisir un univers</span>
+      <input id="glissiere" type="range" min="0" max="10" step="1" value="0">
+    </label>
+    <p class="indice">Défiler pour découvrir</p>
+  </div>
+  <!-- Sans script : la liste des univers, en liens. -->
+  <ul class="gamme-liste">
+<li><a href="#univers-planifier" style="--c:#202841">Planifier le temps<span>16 apps</span></a></li>
+<li><a href="#univers-faire" style="--c:#5C918A">Faire<span>19 apps</span></a></li>
+<li><a href="#univers-projets" style="--c:#2A4A80">Projets et concentration<span>11 apps</span></a></li>
+<li><a href="#univers-corps" style="--c:#402F50">Soigner le corps<span>17 apps</span></a></li>
+<li><a href="#univers-bouger" style="--c:#B17E30">Bouger, sortir<span>10 apps</span></a></li>
+<li><a href="#univers-apprendre" style="--c:#6C5F54">Apprendre<span>20 apps</span></a></li>
+<li><a href="#univers-connaitre" style="--c:#9C5A68">Se connaître<span>20 apps</span></a></li>
+<li><a href="#univers-autres" style="--c:#702537">Les autres<span>16 apps</span></a></li>
+<li><a href="#univers-ecouter" style="--c:#6B8A72">Écouter, se poser, prier<span>14 apps</span></a></li>
+<li><a href="#univers-foyer" style="--c:#5F6B36">Le foyer et les choses<span>8 apps</span></a></li>
+<li><a href="#univers-outils" style="--c:#C67247">Les outils<span>14 apps</span></a></li>
+  </ul>
+</section>
 
-      <a class="app-card p-vieux-rose" href="/allemand/">
-        <img class="app-icon" src="/assets/icones/allemand.png" alt="" width="110" height="110">
-        <div class="corps">
-          <div class="tete"><h3>Allemand</h3><span class="pill">Bientôt sur l’App Store</span></div>
-          <p>L’allemand jusqu’au C2&nbsp;: der, die, das, les quatre cas et le verbe en fin de phrase, expliqués en français, et chaque mot du dictionnaire décliné ou conjugué à la demande.</p>
-          <span class="suite">Découvrir Allemand →</span>
-        </div>
-      </a>
+<!-- 2 · Le profil de l'univers choisi. -->
+<section class="s s-profil" data-scene="profil">
+  <div class="colonne">
+    <p class="surtitre">L’univers</p>
+    <h2 class="decoupe" id="pNom">Planifier le temps</h2>
+    <p class="chapeau" id="pTexte">Le soir, la semaine, le mois : décider à l&#x27;avance où va ton temps, puis voir ce qui a tenu.</p>
+    <ul class="minis" id="pMinis" aria-hidden="true"></ul>
+    <a class="bouton clair" id="pLien" href="#apps"><span><span id="pN">16</span> apps dans cet univers</span></a>
+  </div>
+</section>
 
-      <article class="app-card p-safran">
-        <img class="app-icon" src="/assets/icones/russe.png" alt="" width="110" height="110">
-        <div class="corps">
-          <div class="tete"><h3>Russe</h3><span class="pill muted">En préparation</span></div>
-          <p>Le russe en commençant par l’alphabet cyrillique&nbsp;: les six cas, l’aspect des verbes, l’accent tonique marqué sur chaque mot, et tout le dictionnaire décliné à la demande.</p>
-        </div>
-      </article>
+<!-- 3 · Les principes : ce que les apps FLOW ne feront jamais. -->
+<div id="principes">
+<section class="s s-principe" data-scene="principe" data-k="0">
+  <div class="colonne">
+    <p class="barre-rouge"><s>Créer un compte</s></p>
+    <h2 class="decoupe">Sans compte</h2>
+    <p class="chapeau">Tu installes, tu utilises. Il n’existe pas de compte FLOW&nbsp;: ni inscription, ni mot de passe.</p>
+  </div>
+</section>
+<section class="s s-principe" data-scene="principe" data-k="1">
+  <div class="colonne">
+    <p class="barre-rouge"><s>Afficher de la publicité</s></p>
+    <h2 class="decoupe">Sans publicité</h2>
+    <p class="chapeau">Rien ne vient interrompre une séance&nbsp;: pas de bannière, pas de vidéo à regarder pour continuer.</p>
+  </div>
+</section>
+<section class="s s-principe" data-scene="principe" data-k="2">
+  <div class="colonne">
+    <p class="barre-rouge"><s>Collecter tes données</s></p>
+    <h2 class="decoupe">Sans suivi</h2>
+    <p class="chapeau">Aucune donnée n’est collectée. Ce que tu notes reste sur tes appareils&nbsp;; entre ton iPhone et ton Mac, il voyage par ton propre iCloud.</p>
+  </div>
+</section>
+<section class="s s-principe" data-scene="principe" data-k="3">
+  <div class="colonne">
+    <p class="barre-rouge"><s>Exiger une connexion</s></p>
+    <h2 class="decoupe">Hors ligne d’abord</h2>
+    <p class="chapeau">Dans le métro, en avion ou à la campagne&nbsp;: le contenu est dans l’app. FLOW n’a aucun serveur dont dépendre.</p>
+  </div>
+</section>
+</div>
+<nav class="reperes" id="reperes" aria-label="Les quatre principes">
+  <button type="button" data-k="0" aria-label="Sans compte"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5"/><path d="M5 20c.6-3.6 3.4-5.5 7-5.5s6.4 1.9 7 5.5"/><path d="M4 4l16 16"/></svg></button>
+  <button type="button" data-k="1" aria-label="Sans publicité"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="6" width="17" height="12" rx="2"/><path d="M8 15l2-6 2 6M8.7 13h2.6M15 15V9h1.2a3 3 0 0 1 0 6z"/></svg></button>
+  <button type="button" data-k="2" aria-label="Sans suivi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="2.6"/><path d="M4 4l16 16"/></svg></button>
+  <button type="button" data-k="3" aria-label="Hors ligne d’abord"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 9.5a13 13 0 0 1 17 0M6.5 13a8.5 8.5 0 0 1 11 0M9.5 16.3a4 4 0 0 1 5 0"/><circle cx="12" cy="19.3" r=".9"/><path d="M4 4l16 16"/></svg></button>
+</nav>
 
-      <article class="app-card p-rose-the">
-        <img class="app-icon" src="/assets/icones/roumain.png" alt="" width="110" height="110">
-        <div class="corps">
-          <div class="tete"><h3>Roumanie</h3><span class="pill muted">En préparation</span></div>
-          <p>Le roumain du premier «&#8239;bună&#8239;» au C2&nbsp;: l’article collé au bout du mot, le génitif-datif et le subjonctif, expliqués en français.</p>
-        </div>
-      </article>
+<!-- 4 · L'argument. -->
+<section class="s s-argument" data-scene="argument">
+  <div class="centre">
+    <p class="surtitre">La règle de la famille</p>
+    <h2 class="decoupe geant">Une app fait une seule chose. Et elle la fait jusqu’au bout.</h2>
+    <p class="chapeau">165 apps, 11 univers, une seule allure&nbsp;: un symbole ivoire sur un pigment.</p>
+    <a class="bouton clair" href="#apps">Voir les 165 apps</a>
+  </div>
+</section>
 
-      <article class="app-card p-ardoise">
-        <img class="app-icon" src="/assets/icones/persan.png" alt="" width="110" height="110">
-        <div class="corps">
-          <div class="tete"><h3>Persan</h3><span class="pill muted">En préparation</span></div>
-          <p>Le vocabulaire et la conjugaison du persan, pas à pas&nbsp;: le persan d’Iran ou le dari d’Afghanistan, en écriture naskh ou nastaʿlīq.</p>
-        </div>
-      </article>
+<!-- 5 · Toute la gamme. -->
+<section class="s-catalogue" id="apps" data-scene="catalogue">
+  <div class="large">
+    <p class="surtitre">La gamme entière</p>
+    <h2 class="decoupe">Toutes les apps</h2>
+    <p class="chapeau">Anglais arrive la première sur l’App Store. Les autres sont en préparation.</p>
+    <div class="outils">
+      <label class="recherche">
+        <span class="lu">Chercher une app</span>
+        <input id="recherche" type="search" placeholder="Chercher : eau, tâches, italien…" autocomplete="off">
+      </label>
+      <div class="puces" id="puces">
+        <button class="puce actif" type="button" data-id="">Tout<span>165</span></button>
+<button class="puce" type="button" data-id="planifier" style="--c:#202841">Planifier le temps<span>16</span></button>
+<button class="puce" type="button" data-id="faire" style="--c:#5C918A">Faire<span>19</span></button>
+<button class="puce" type="button" data-id="projets" style="--c:#2A4A80">Projets et concentration<span>11</span></button>
+<button class="puce" type="button" data-id="corps" style="--c:#402F50">Soigner le corps<span>17</span></button>
+<button class="puce" type="button" data-id="bouger" style="--c:#B17E30">Bouger, sortir<span>10</span></button>
+<button class="puce" type="button" data-id="apprendre" style="--c:#6C5F54">Apprendre<span>20</span></button>
+<button class="puce" type="button" data-id="connaitre" style="--c:#9C5A68">Se connaître<span>20</span></button>
+<button class="puce" type="button" data-id="autres" style="--c:#702537">Les autres<span>16</span></button>
+<button class="puce" type="button" data-id="ecouter" style="--c:#6B8A72">Écouter, se poser, prier<span>14</span></button>
+<button class="puce" type="button" data-id="foyer" style="--c:#5F6B36">Le foyer et les choses<span>8</span></button>
+<button class="puce" type="button" data-id="outils" style="--c:#C67247">Les outils<span>14</span></button>
+      </div>
+    </div>
+    <p class="vide" id="vide" hidden>Aucune app ne correspond à cette recherche.</p>
+<section class="groupe" id="univers-planifier" data-id="planifier" style="--c:#202841">
+<header class="groupe-tete"><h3>Planifier le temps</h3><p>Le soir, la semaine, le mois : décider à l&#x27;avance où va ton temps, puis voir ce qui a tenu.</p><span class="groupe-n">16 apps</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#202841" data-nom="-tomorrow-le-soir-decide-le-matin-execute-le-plan-de-demain-boucle-en-deux-minutes"><span class="ico" style="--x:0;--y:0"></span><span class="carte-texte"><span class="carte-nom">Tomorrow</span><span class="carte-ligne">Le soir décide, le matin exécute : le plan de demain bouclé en deux minutes.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#606C37" data-nom="-myweek-la-grille-horaire-de-la-semaine-une-semaine-type-puis-chaque-semaine-vit-sa-vie"><span class="ico" style="--x:1;--y:0"></span><span class="carte-texte"><span class="carte-nom">MyWeek</span><span class="carte-ligne">La grille horaire de la semaine : une semaine type, puis chaque semaine vit sa vie.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B0573B" data-nom="-weekdo-les-taches-de-la-semaine-trois-essentielles-les-reports-traces-la-revue-du-lundi"><span class="ico" style="--x:2;--y:0"></span><span class="carte-texte"><span class="carte-nom">WeekDo</span><span class="carte-ligne">Les tâches de la semaine : trois essentielles, les reports tracés, la revue du lundi.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6F2537" data-nom="-weekh-la-semaine-heure-par-heure-sept-jours-et-une-case-a-cocher-devant-chaque-heure"><span class="ico" style="--x:3;--y:0"></span><span class="carte-texte"><span class="carte-nom">WeekH</span><span class="carte-ligne">La semaine heure par heure : sept jours, et une case à cocher devant chaque heure.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2D4A3B" data-nom="-weekplan-repartir-ses-taches-sur-sept-jours-selon-la-charge-que-chaque-journee-peut-porter"><span class="ico" style="--x:4;--y:0"></span><span class="carte-texte"><span class="carte-nom">WeekPlan</span><span class="carte-ligne">Répartir ses tâches sur sept jours, selon la charge que chaque journée peut porter.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#9C5B69" data-nom="-mois-tout-ce-qu-il-y-a-a-faire-ce-mois-ci-sur-une-seule-page"><span class="ico" style="--x:5;--y:0"></span><span class="carte-texte"><span class="carte-nom">Mois</span><span class="carte-ligne">Tout ce qu&#x27;il y a à faire ce mois-ci, sur une seule page.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3F6FA0" data-nom="-annee-l-annee-entiere-sur-une-seule-page"><span class="ico" style="--x:6;--y:0"></span><span class="carte-texte"><span class="carte-nom">Année</span><span class="carte-ligne">L&#x27;année entière, sur une seule page.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2A4A80" data-nom="-day-hour-la-journee-en-quarts-d-heure-avec-tes-rendez-vous-ce-qui-tient-encore-avant-ce-soir"><span class="ico" style="--x:7;--y:0"></span><span class="carte-texte"><span class="carte-nom">Day Hour</span><span class="carte-ligne">La journée en quarts d&#x27;heure, avec tes rendez-vous : ce qui tient encore avant ce soir.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5C918A" data-nom="-calendar-le-calendrier-de-tes-rendez-vous-le-temps-qu-on-ne-decide-pas-soi-meme"><span class="ico" style="--x:8;--y:0"></span><span class="carte-texte"><span class="carte-nom">Calendar</span><span class="carte-ligne">Le calendrier de tes rendez-vous : le temps qu&#x27;on ne décide pas soi-même.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#866A8F" data-nom="-days-todo-un-jour-un-ecran-entier-les-taches-de-cette-journee-cochees-sans-viser"><span class="ico" style="--x:9;--y:0"></span><span class="carte-texte"><span class="carte-nom">Days todo</span><span class="carte-ligne">Un jour, un écran entier : les tâches de cette journée, cochées sans viser.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2F7280" data-nom="-time-le-temps-reellement-passe-mesure-puis-relu"><span class="ico" style="--x:10;--y:0"></span><span class="carte-texte"><span class="carte-nom">Time</span><span class="carte-ligne">Le temps réellement passé, mesuré puis relu.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5F3B64" data-nom="-rythme-la-journee-en-periodes-de-90-minutes-avec-une-intention-pour-chacune"><span class="ico" style="--x:11;--y:0"></span><span class="carte-texte"><span class="carte-nom">Rythme</span><span class="carte-ligne">La journée en périodes de 90 minutes, avec une intention pour chacune.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3B3B3B" data-nom="-sablier-se-donner-un-temps-avant-de-commencer-puis-voir-s-il-a-tenu"><span class="ico" style="--x:12;--y:0"></span><span class="carte-texte"><span class="carte-nom">Sablier</span><span class="carte-ligne">Se donner un temps avant de commencer, puis voir s&#x27;il a tenu.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#4B5667" data-nom="-bloc-regrouper-ses-taches-en-blocs-et-les-enchainer"><span class="ico" style="--x:13;--y:0"></span><span class="carte-texte"><span class="carte-nom">Bloc</span><span class="carte-ligne">Regrouper ses tâches en blocs et les enchaîner.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B17D2F" data-nom="-progress-la-part-ecoulee-de-ta-journee-en-jauge-dans-la-barre-des-menus-et-sur-l-ecran-verrouille"><span class="ico" style="--x:14;--y:0"></span><span class="carte-texte"><span class="carte-nom">Progress</span><span class="carte-ligne">La part écoulée de ta journée, en jauge dans la barre des menus et sur l&#x27;écran verrouillé.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6E4C35" data-nom="-alarme-des-alarmes-qui-sonnent-vraiment-et-la-verite-sur-la-facon-dont-on-se-leve"><span class="ico" style="--x:0;--y:1"></span><span class="carte-texte"><span class="carte-nom">Alarme</span><span class="carte-ligne">Des alarmes qui sonnent vraiment, et la vérité sur la façon dont on se lève.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+</ul>
+</section>
+<section class="groupe" id="univers-faire" data-id="faire" style="--c:#5C918A">
+<header class="groupe-tete"><h3>Faire</h3><p>Une liste par façon de s&#x27;y mettre : par énergie, par durée, par priorité, par moment de la journée.</p><span class="groupe-n">19 apps</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#5C918A" data-nom="-todo-les-taches-du-jour-epurees-aujourd-hui-demain-un-jour"><span class="ico" style="--x:1;--y:1"></span><span class="carte-texte"><span class="carte-nom">Todo</span><span class="carte-ligne">Les tâches du jour, épurées : Aujourd&#x27;hui, Demain, Un jour.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3F6FA0" data-nom="-clarte-un-gestionnaire-de-taches-complet-et-calme-sans-compte"><span class="ico" style="--x:2;--y:1"></span><span class="carte-texte"><span class="carte-nom">Clarté</span><span class="carte-ligne">Un gestionnaire de tâches complet et calme, sans compte.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#86698F" data-nom="-listdo-des-listes-qu-on-coche-d-un-pouce-et-qu-on-rearme-au-lieu-de-les-reecrire"><span class="ico" style="--x:3;--y:1"></span><span class="carte-texte"><span class="carte-nom">ListDo</span><span class="carte-ligne">Des listes qu&#x27;on coche d&#x27;un pouce et qu&#x27;on réarme au lieu de les réécrire.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#8A3E24" data-nom="-kanban-tes-taches-en-tableau-kanban-dans-la-poche"><span class="ico" style="--x:4;--y:1"></span><span class="carte-texte"><span class="carte-nom">Kanban</span><span class="carte-ligne">Tes tâches en tableau kanban, dans la poche.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2A4A80" data-nom="-board-des-tableaux-des-listes-cote-a-cote-et-des-cartes-qu-on-glisse-de-l-une-a-l-autre"><span class="ico" style="--x:5;--y:1"></span><span class="carte-texte"><span class="carte-nom">Board</span><span class="carte-ligne">Des tableaux, des listes côte à côte et des cartes qu&#x27;on glisse de l&#x27;une à l&#x27;autre.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#402F50" data-nom="-prioritydo-par-laquelle-je-commence-un-ordre-strict-decide-duel-apres-duel"><span class="ico" style="--x:6;--y:1"></span><span class="carte-texte"><span class="carte-nom">PriorityDo</span><span class="carte-ligne">Par laquelle je commence ? Un ordre strict, décidé duel après duel.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6F2436" data-nom="-eisenhower-la-matrice-urgent-important-avec-une-zone-a-trancher-pour-ce-qui-n-a-jamais-ete-juge"><span class="ico" style="--x:7;--y:1"></span><span class="carte-texte"><span class="carte-nom">Eisenhower</span><span class="carte-ligne">La matrice urgent-important, avec une zone « À trancher » pour ce qui n&#x27;a jamais été jugé.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#1F5B5F" data-nom="-delaydo-les-petites-taches-classees-par-duree-et-rien-d-autre"><span class="ico" style="--x:8;--y:1"></span><span class="carte-texte"><span class="carte-nom">DelayDo</span><span class="carte-ligne">Les petites tâches classées par durée, et rien d&#x27;autre.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#4B5667" data-nom="-energydo-dis-comment-tu-te-sens-l-app-propose-la-tache-qui-va-avec-cet-etat-jamais-plus-exigeante"><span class="ico" style="--x:9;--y:1"></span><span class="carte-texte"><span class="carte-nom">EnergyDo</span><span class="carte-ligne">Dis comment tu te sens : l&#x27;app propose la tâche qui va avec cet état, jamais plus exigeante.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3B3B3B" data-nom="-day-energy-ranger-ses-taches-par-l-energie-qu-elles-demandent-puis-savoir-quoi-faire-maintenant"><span class="ico" style="--x:10;--y:1"></span><span class="carte-texte"><span class="carte-nom">Day Energy</span><span class="carte-ligne">Ranger ses tâches par l&#x27;énergie qu&#x27;elles demandent, puis savoir quoi faire maintenant.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#7B5B2D" data-nom="-essentiel-pour-chaque-journee-a-venir-un-cap-et-les-deux-ou-trois-taches-qui-la-definissent"><span class="ico" style="--x:11;--y:1"></span><span class="carte-texte"><span class="carte-nom">Essentiel</span><span class="carte-ligne">Pour chaque journée à venir, un cap et les deux ou trois tâches qui la définissent.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#606C37" data-nom="-contexte-le-moment-ou-tu-es-decide-quelles-taches-remontent-en-marchant-dans-une-file-au-lit"><span class="ico" style="--x:12;--y:1"></span><span class="carte-texte"><span class="carte-nom">Contexte</span><span class="carte-ligne">Le moment où tu es décide quelles tâches remontent : en marchant, dans une file, au lit.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2D4A3A" data-nom="-domaine-les-taches-rangees-par-pan-de-vie-sans-aucune-date"><span class="ico" style="--x:13;--y:1"></span><span class="carte-texte"><span class="carte-nom">Domaine</span><span class="carte-ligne">Les tâches rangées par pan de vie, sans aucune date.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#9C5A68" data-nom="-actions-et-maintenant-le-creneau-en-cours-son-compte-a-rebours-et-la-tache-qui-va-avec"><span class="ico" style="--x:14;--y:1"></span><span class="carte-texte"><span class="carte-nom">Actions</span><span class="carte-ligne">« Et maintenant ? » : le créneau en cours, son compte à rebours et la tâche qui va avec.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#C67146" data-nom="-meal-do-autour-de-chaque-repas-ce-qu-il-y-a-a-faire-a-regarder-ou-a-ecouter"><span class="ico" style="--x:0;--y:2"></span><span class="carte-texte"><span class="carte-nom">Meal Do</span><span class="carte-ligne">Autour de chaque repas, ce qu&#x27;il y a à faire, à regarder ou à écouter.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B6767F" data-nom="-matin-les-taches-du-matin-une-routine-qui-revient-et-la-plus-dure-d-abord"><span class="ico" style="--x:1;--y:2"></span><span class="carte-texte"><span class="carte-nom">Matin</span><span class="carte-ligne">Les tâches du matin : une routine qui revient, et la plus dure d&#x27;abord.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#08744D" data-nom="-apres-midi-les-taches-de-l-apres-midi-en-trois-temps-reprise-elan-bouclage"><span class="ico" style="--x:2;--y:2"></span><span class="carte-texte"><span class="carte-nom">Après-midi</span><span class="carte-ligne">Les tâches de l&#x27;après-midi en trois temps : reprise, élan, bouclage.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B17D30" data-nom="-midi-ce-qui-tient-dans-la-pause-de-midi-duree-par-duree"><span class="ico" style="--x:3;--y:2"></span><span class="carte-texte"><span class="carte-nom">Midi</span><span class="carte-ligne">Ce qui tient dans la pause de midi, durée par durée.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5A4498" data-nom="-soir-ce-qu-il-reste-a-faire-ce-soir-dans-le-temps-qui-separe-du-coucher"><span class="ico" style="--x:4;--y:2"></span><span class="carte-texte"><span class="carte-nom">Soir</span><span class="carte-ligne">Ce qu&#x27;il reste à faire ce soir, dans le temps qui sépare du coucher.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+</ul>
+</section>
+<section class="groupe" id="univers-projets" data-id="projets" style="--c:#2A4A80">
+<header class="groupe-tete"><h3>Projets et concentration</h3><p>Mener ce qui dure, et protéger les heures où l&#x27;on avance vraiment.</p><span class="groupe-n">11 apps</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#866A8F" data-nom="-project-tous-tes-projets-au-meme-endroit-et-un-seul-par-creneau-jour-semaine-mois-annee"><span class="ico" style="--x:5;--y:2"></span><span class="carte-texte"><span class="carte-nom">Project</span><span class="carte-ligne">Tous tes projets au même endroit, et un seul par créneau : jour, semaine, mois, année.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2D4A3A" data-nom="-feuille-project-une-colonne-par-projet-avec-sa-feuille-de-route-etapes-depliees-taches-cochees"><span class="ico" style="--x:6;--y:2"></span><span class="carte-texte"><span class="carte-nom">Feuille Project</span><span class="carte-ligne">Une colonne par projet, avec sa feuille de route : étapes dépliées, tâches cochées.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#4070A0" data-nom="-admin-la-paperasse-faite-comptee-jour-apres-jour"><span class="ico" style="--x:7;--y:2"></span><span class="carte-texte"><span class="carte-nom">Admin</span><span class="carte-ligne">La paperasse faite, comptée jour après jour.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2F7280" data-nom="-cv-tout-ce-qu-un-cv-demande-note-le-jour-ou-ca-arrive-et-un-seul-manque-a-combler-a-la-fois"><span class="ico" style="--x:8;--y:2"></span><span class="carte-texte"><span class="carte-nom">CV</span><span class="carte-ligne">Tout ce qu&#x27;un CV demande, noté le jour où ça arrive, et un seul manque à combler à la fois.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2A4A80" data-nom="-deepwork-lancer-une-session-de-travail-profond-et-compter-les-heures-de-vraie-concentration"><span class="ico" style="--x:9;--y:2"></span><span class="carte-texte"><span class="carte-nom">DeepWork</span><span class="carte-ligne">Lancer une session de travail profond et compter les heures de vraie concentration.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#473558" data-nom="-away-des-pauses-pour-les-yeux-sur-le-mac-et-la-mesure-de-celles-que-tu-as-vraiment-prises"><span class="ico detouree" style="--x:10;--y:2"></span><span class="carte-texte"><span class="carte-nom">Away</span><span class="carte-ligne">Des pauses pour les yeux sur le Mac, et la mesure de celles que tu as vraiment prises.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3B3B3B" data-nom="-distraction-chaque-distraction-notee-d-un-toucher-avec-sa-cause"><span class="ico" style="--x:11;--y:2"></span><span class="carte-texte"><span class="carte-nom">Distraction</span><span class="carte-ligne">Chaque distraction notée d&#x27;un toucher, avec sa cause.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#9C5B69" data-nom="-video-les-videos-regardees-comptees-d-un-geste-avec-ce-qu-il-reste-avant-ta-limite"><span class="ico" style="--x:12;--y:2"></span><span class="carte-texte"><span class="carte-nom">Vidéo</span><span class="carte-ligne">Les vidéos regardées, comptées d&#x27;un geste, avec ce qu&#x27;il reste avant ta limite.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B17D2F" data-nom="-dashboard-le-poste-de-pilotage-tableaux-de-bord-en-tuiles-vision-feuilles-de-route"><span class="ico" style="--x:13;--y:2"></span><span class="carte-texte"><span class="carte-nom">Dashboard</span><span class="carte-ligne">Le poste de pilotage : tableaux de bord en tuiles, vision, feuilles de route.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#702537" data-nom="-business-apprendre-le-business-et-l-appliquer-treize-matieres-trois-niveaux"><span class="ico" style="--x:14;--y:2"></span><span class="carte-texte"><span class="carte-nom">Business</span><span class="carte-ligne">Apprendre le business et l&#x27;appliquer : treize matières, trois niveaux.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B0583C" data-nom="-productivity-les-techniques-de-productivite-apprises-une-a-une-seize-domaines-neuf-niveaux"><span class="ico" style="--x:0;--y:3"></span><span class="carte-texte"><span class="carte-nom">Productivity</span><span class="carte-ligne">Les techniques de productivité, apprises une à une : seize domaines, neuf niveaux.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+</ul>
+</section>
+<section class="groupe" id="univers-corps" data-id="corps" style="--c:#402F50">
+<header class="groupe-tete"><h3>Soigner le corps</h3><p>L&#x27;eau, le sommeil, les repas, la posture : noter au moment où ça arrive, puis lire la tendance.</p><span class="groupe-n">17 apps</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#307380" data-nom="-water-l-eau-bue-notee-au-moment-ou-on-la-boit-et-le-rythme-qu-il-reste-a-tenir"><span class="ico" style="--x:1;--y:3"></span><span class="carte-texte"><span class="carte-nom">Water</span><span class="carte-ligne">L&#x27;eau bue, notée au moment où on la boit, et le rythme qu&#x27;il reste à tenir.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#4070A0" data-nom="-douche-froide-des-douches-froides-guidees-a-la-voix-en-neuf-paliers-de-15-secondes-a-5-minutes"><span class="ico" style="--x:2;--y:3"></span><span class="carte-texte"><span class="carte-nom">Douche froide</span><span class="carte-ligne">Des douches froides guidées à la voix, en neuf paliers de 15 secondes à 5 minutes.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6C8A73" data-nom="-smile-le-brossage-des-dents-note-d-un-toucher-avec-une-seance-guidee-de-deux-minutes"><span class="ico" style="--x:3;--y:3"></span><span class="carte-texte"><span class="carte-nom">Smile</span><span class="carte-ligne">Le brossage des dents noté d&#x27;un toucher, avec une séance guidée de deux minutes.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#402F50" data-nom="-sleep-tes-nuits-un-score-sur-100-la-dette-de-sommeil-et-un-reveil-cale-sur-les-cycles"><span class="ico" style="--x:4;--y:3"></span><span class="carte-texte"><span class="carte-nom">Sleep</span><span class="carte-ligne">Tes nuits, un score sur 100, la dette de sommeil et un réveil calé sur les cycles.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B67780" data-nom="-sieste-une-sieste-lancee-d-une-touche-et-un-reveil-qui-sonne-meme-en-silencieux"><span class="ico" style="--x:5;--y:3"></span><span class="carte-texte"><span class="carte-nom">Sieste</span><span class="carte-ligne">Une sieste lancée d&#x27;une touche, et un réveil qui sonne même en silencieux.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3A3A3A" data-nom="-jeune-le-jeune-lance-au-moment-ou-il-commence-et-enfin-compte"><span class="ico" style="--x:6;--y:3"></span><span class="carte-texte"><span class="carte-nom">Jeûne</span><span class="carte-ligne">Le jeûne lancé au moment où il commence, et enfin compté.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6F2436" data-nom="-poids-se-peser-en-deux-gestes-et-regarder-la-tendance-plutot-que-le-chiffre-du-jour"><span class="ico" style="--x:7;--y:3"></span><span class="carte-texte"><span class="carte-nom">Poids</span><span class="carte-ligne">Se peser en deux gestes, et regarder la tendance plutôt que le chiffre du jour.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2B4B80" data-nom="-posture-les-fois-ou-tu-t-avachis-et-celles-ou-tu-te-tiens-droit-comptees"><span class="ico" style="--x:8;--y:3"></span><span class="carte-texte"><span class="carte-nom">Posture</span><span class="carte-ligne">Les fois où tu t&#x27;avachis et celles où tu te tiens droit, comptées.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#C67247" data-nom="-fatigue-le-coup-de-barre-note-quand-il-arrive-et-trois-facons-de-repartir"><span class="ico" style="--x:9;--y:3"></span><span class="carte-texte"><span class="carte-nom">Fatigue</span><span class="carte-ligne">Le coup de barre noté quand il arrive, et trois façons de repartir.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#866A8F" data-nom="-fossette-affiner-son-visage-l-indice-des-joues-mesure-sur-photo-l-assiette-sodium-potassium"><span class="ico" style="--x:10;--y:3"></span><span class="carte-texte"><span class="carte-nom">Fossette</span><span class="carte-ligne">Affiner son visage : l&#x27;indice des joues mesuré sur photo, l&#x27;assiette sodium-potassium.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B17E30" data-nom="-meal-le-journal-des-repas-le-garde-manger-et-un-score-d-assiette"><span class="ico" style="--x:11;--y:3"></span><span class="carte-texte"><span class="carte-nom">Meal</span><span class="carte-ligne">Le journal des repas, le garde-manger et un score d&#x27;assiette.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6E4B34" data-nom="-coffee-chaque-tasse-notee-et-la-cafeine-qui-reste-dans-le-corps-en-jauge"><span class="ico" style="--x:12;--y:3"></span><span class="carte-texte"><span class="carte-nom">Coffee</span><span class="carte-ligne">Chaque tasse notée, et la caféine qui reste dans le corps, en jauge.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#9C5A68" data-nom="-sante-tes-donnees-apple-sante-deposees-dans-tes-propres-notes"><span class="ico" style="--x:13;--y:3"></span><span class="carte-texte"><span class="carte-nom">Santé</span><span class="carte-ligne">Tes données Apple Santé, déposées dans tes propres notes.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2E4B3B" data-nom="-astuce-dis-comment-tu-te-sens-l-astuce-qui-convient-a-ce-moment-classee-et-expliquee"><span class="ico" style="--x:14;--y:3"></span><span class="carte-texte"><span class="carte-nom">Astuce</span><span class="carte-ligne">Dis comment tu te sens : l&#x27;astuce qui convient à ce moment, classée et expliquée.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#606C37" data-nom="-alpha-les-pensees-qu-on-laisse-passer-et-les-envies-qu-on-tient-comptees"><span class="ico" style="--x:0;--y:4"></span><span class="carte-texte"><span class="carte-nom">Alpha</span><span class="carte-ligne">Les pensées qu&#x27;on laisse passer et les envies qu&#x27;on tient, comptées.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#07734C" data-nom="-meal-time-les-moments-de-tes-repas-du-gouter-et-de-l-hydratation-en-calendrier"><span class="ico" style="--x:1;--y:4"></span><span class="carte-texte"><span class="carte-nom">Meal Time</span><span class="carte-ligne">Les moments de tes repas, du goûter et de l&#x27;hydratation, en calendrier.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#8A3E25" data-nom="-anatomie-le-corps-humain-appris-piece-par-piece-en-un-programme-de-neuf-annees"><span class="ico" style="--x:2;--y:4"></span><span class="carte-texte"><span class="carte-nom">Anatomie</span><span class="carte-ligne">Le corps humain appris pièce par pièce, en un programme de neuf années.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+</ul>
+</section>
+<section class="groupe" id="univers-bouger" data-id="bouger" style="--c:#B17E30">
+<header class="groupe-tete"><h3>Bouger, sortir</h3><p>Les séries, les courses, les lieux : ce que tu fais dehors et à la salle.</p><span class="groupe-n">10 apps</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#6E4C35" data-nom="-body-les-machines-de-ta-salle-tes-reglages-sur-chacune-et-tes-series"><span class="ico" style="--x:3;--y:4"></span><span class="carte-texte"><span class="carte-nom">Body</span><span class="carte-ligne">Les machines de ta salle, tes réglages sur chacune et tes séries.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B0583C" data-nom="-pompes-une-serie-de-pompes-notee-en-un-geste-avec-le-chrono-de-repos"><span class="ico" style="--x:4;--y:4"></span><span class="carte-texte"><span class="carte-nom">Pompes</span><span class="carte-ligne">Une série de pompes notée en un geste, avec le chrono de repos.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#4070A0" data-nom="-tractions-une-serie-de-tractions-en-dix-secondes-prises-lest-chrono-de-repos"><span class="ico" style="--x:5;--y:4"></span><span class="carte-texte"><span class="carte-nom">Tractions</span><span class="carte-ligne">Une série de tractions en dix secondes : prises, lest, chrono de repos.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6C8A73" data-nom="-etirements-un-toucher-sur-la-carte-du-corps-pour-un-etirement-et-des-seances-guidees"><span class="ico" style="--x:6;--y:4"></span><span class="carte-texte"><span class="carte-nom">Étirements</span><span class="carte-ligne">Un toucher sur la carte du corps pour un étirement, et des séances guidées.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B17E30" data-nom="-running-lancer-prevoir-et-relire-ses-courses-a-pied"><span class="ico" style="--x:7;--y:4"></span><span class="carte-texte"><span class="carte-nom">Running</span><span class="carte-ligne">Lancer, prévoir et relire ses courses à pied.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6F2537" data-nom="-move-ce-qu-on-ecoute-lit-ou-fait-en-mouvement-transport-marche-course-sport"><span class="ico" style="--x:8;--y:4"></span><span class="carte-texte"><span class="carte-nom">Move</span><span class="carte-ligne">Ce qu&#x27;on écoute, lit ou fait en mouvement : transport, marche, course, sport.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#1F5B5F" data-nom="-go-peu-de-lieux-toujours-les-memes-la-journee-comptee-contre-un-budget-de-lieux"><span class="ico" style="--x:9;--y:4"></span><span class="carte-texte"><span class="carte-nom">Go</span><span class="carte-ligne">Peu de lieux, toujours les mêmes : la journée comptée contre un budget de lieux.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#402F50" data-nom="-lieux-rituel-a-chaque-lieu-son-rituel-de-concentration-deroule-etape-par-etape"><span class="ico" style="--x:10;--y:4"></span><span class="carte-texte"><span class="carte-nom">Lieux Rituel</span><span class="carte-ligne">À chaque lieu son rituel de concentration, déroulé étape par étape.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2A4A80" data-nom="-atlas-tous-les-endroits-visites-notes-sur-le-moment-avec-la-date-et-ton-avis"><span class="ico" style="--x:11;--y:4"></span><span class="carte-texte"><span class="carte-nom">Atlas</span><span class="carte-ligne">Tous les endroits visités, notés sur le moment avec la date et ton avis.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#606C37" data-nom="-steps-les-pas-du-jour-sur-la-montre-l-iphone-et-le-mac-sans-rien-saisir"><span class="ico" style="--x:12;--y:4"></span><span class="carte-texte"><span class="carte-nom">Steps</span><span class="carte-ligne">Les pas du jour sur la montre, l&#x27;iPhone et le Mac, sans rien saisir.</span><span class="carte-plat">Apple Watch, iPhone et Mac</span></span></div></li>
+</ul>
+</section>
+<section class="groupe" id="univers-apprendre" data-id="apprendre" style="--c:#6C5F54">
+<header class="groupe-tete"><h3>Apprendre</h3><p>Des langues, des livres, des concepts : apprendre hors ligne, un peu chaque jour.</p><span class="groupe-n">20 apps</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#6E4B34" data-nom="-book-ta-bibliotheque-chaque-minute-de-lecture-chronometree-tes-notes-et-tes-citations"><span class="ico" style="--x:13;--y:4"></span><span class="carte-texte"><span class="carte-nom">Book</span><span class="carte-ligne">Ta bibliothèque, chaque minute de lecture chronométrée, tes notes et tes citations.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#1F2740" data-nom="-reader-tout-ce-qui-merite-d-etre-lu-au-meme-endroit-articles-pdf-epub-flux"><span class="ico" style="--x:14;--y:4"></span><span class="carte-texte"><span class="carte-nom">Reader</span><span class="carte-ligne">Tout ce qui mérite d&#x27;être lu au même endroit : articles, PDF, EPUB, flux.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#1F5B5F" data-nom="-francais-enrichir-un-francais-deja-natif-cinq-minutes-a-la-fois-des-cartes-un-quiz-et-le-mot-a-retrouver-depuis-sa-definition"><span class="ico" style="--x:0;--y:5"></span><span class="carte-texte"><span class="carte-nom">Français</span><span class="carte-ligne">Enrichir un français déjà natif, cinq minutes à la fois : des cartes, un quiz, et le mot à retrouver depuis sa définition.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3F6FA0" data-nom="-revision-reviser-ses-concepts-hors-ligne-en-repetition-espacee"><span class="ico" style="--x:1;--y:5"></span><span class="carte-texte"><span class="carte-nom">Révision</span><span class="carte-ligne">Réviser ses concepts hors ligne, en répétition espacée.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2A4A80" data-nom="-lecons-ecrire-ses-lecons-en-avance-et-les-retrouver-dans-ses-notes"><span class="ico" style="--x:2;--y:5"></span><span class="carte-texte"><span class="carte-nom">Leçons</span><span class="carte-ligne">Écrire ses leçons en avance, et les retrouver dans ses notes.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#866A8F" data-nom="-brain-neuf-jeux-courts-pour-faire-travailler-sa-tete-chaque-jour"><span class="ico" style="--x:3;--y:5"></span><span class="carte-texte"><span class="carte-nom">Brain</span><span class="carte-ligne">Neuf jeux courts pour faire travailler sa tête chaque jour.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2D4A3A" data-nom="-chess-jouer-aux-echecs-hors-ligne-et-sortir-de-chaque-partie-avec-une-lecon"><span class="ico" style="--x:4;--y:5"></span><span class="carte-texte"><span class="carte-nom">Chess</span><span class="carte-ligne">Jouer aux échecs hors ligne, et sortir de chaque partie avec une leçon.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6C8A73" data-nom="-citation-toutes-tes-citations-au-meme-endroit-coller-c-est-ranger"><span class="ico" style="--x:5;--y:5"></span><span class="carte-texte"><span class="carte-nom">Citation</span><span class="carte-ligne">Toutes tes citations au même endroit : coller, c&#x27;est ranger.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#702537" data-nom="-cine-ta-filmotheque-les-fiches-le-journal-des-seances-et-un-classement-par-duels"><span class="ico" style="--x:6;--y:5"></span><span class="carte-texte"><span class="carte-nom">Ciné</span><span class="carte-ligne">Ta filmothèque : les fiches, le journal des séances et un classement par duels.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#402F50" data-nom="-polyglotte-le-tableau-de-bord-de-toutes-tes-langues-les-mots-rencontres-et-acquis-ton-rythme-ta-serie"><span class="ico" style="--x:7;--y:5"></span><span class="carte-texte"><span class="carte-nom">Polyglotte</span><span class="carte-ligne">Le tableau de bord de toutes tes langues : les mots rencontrés et acquis, ton rythme, ta série.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#9C5B69" data-nom="-allemand-l-allemand-jusqu-au-c2-der-die-das-les-quatre-cas-et-le-verbe-en-fin-de-phrase-expliques-en-francais"><span class="ico" style="--x:8;--y:5"></span><span class="carte-texte"><span class="carte-nom">Allemand<span class="etat">Bientôt sur l’App Store</span></span><span class="carte-ligne">L&#x27;allemand jusqu&#x27;au C2 : der, die, das, les quatre cas et le verbe en fin de phrase, expliqués en français.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B0583B" data-nom="-espagnole-l-espagnol-de-zero-au-c2-la-conjugaison-la-grammaire-qui-piege-un-francophone-une-voix-d-espagne-ou-d-amerique"><span class="ico" style="--x:9;--y:5"></span><span class="carte-texte"><span class="carte-nom">Espagnole<span class="etat">Bientôt sur l’App Store</span></span><span class="carte-ligne">L&#x27;espagnol de zéro au C2 : la conjugaison, la grammaire qui piège un francophone, une voix d&#x27;Espagne ou d&#x27;Amérique.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3A3A3A" data-nom="-italien-l-italien-du-premier-mot-au-c2-un-parcours-par-unites-et-un-conjugueur-qui-connait-toutes-les-formes"><span class="ico" style="--x:10;--y:5"></span><span class="carte-texte"><span class="carte-nom">Italien<span class="etat">Bientôt sur l’App Store</span></span><span class="carte-ligne">L&#x27;italien du premier mot au C2 : un parcours par unités et un conjugueur qui connaît toutes les formes.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B17E30" data-nom="-russe-le-russe-en-commencant-par-l-alphabet-cyrillique-les-six-cas-l-aspect-des-verbes-l-accent-marque-sur-chaque-mot"><span class="ico" style="--x:11;--y:5"></span><span class="carte-texte"><span class="carte-nom">Russe</span><span class="carte-ligne">Le russe en commençant par l&#x27;alphabet cyrillique : les six cas, l&#x27;aspect des verbes, l&#x27;accent marqué sur chaque mot.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#4B5667" data-nom="-persan-le-vocabulaire-et-la-conjugaison-du-persan-pas-a-pas-persan-d-iran-ou-dari-d-afghanistan"><span class="ico" style="--x:12;--y:5"></span><span class="carte-texte"><span class="carte-nom">Persan</span><span class="carte-ligne">Le vocabulaire et la conjugaison du persan, pas à pas : persan d&#x27;Iran ou dari d&#x27;Afghanistan.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><a class="carte" style="--c:#6C5F54" data-nom="-anglais-11-166-mots-du-a1-au-c2-43-lecons-de-grammaire-une-vraie-voix-americaine-ou-britannique-entierement-gratuite" href="/anglais/"><span class="ico" style="--x:13;--y:5"></span><span class="carte-texte"><span class="carte-nom">Anglais<span class="etat">Bientôt sur l’App Store</span></span><span class="carte-ligne">11 166 mots du A1 au C2, 43 leçons de grammaire, une vraie voix américaine ou britannique. Entièrement gratuite.</span><span class="carte-plat">iPhone et Mac</span></span></a></li>
+<li><div class="carte" style="--c:#B67780" data-nom="-roumanie-le-roumain-du-premier-buna-au-c2-l-article-colle-au-bout-du-mot-le-genitif-datif-le-subjonctif"><span class="ico" style="--x:14;--y:5"></span><span class="carte-texte"><span class="carte-nom">Roumanie</span><span class="carte-ligne">Le roumain du premier « bună » au C2 : l&#x27;article collé au bout du mot, le génitif-datif, le subjonctif.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#8A3F25" data-nom="-turquie-le-turc-de-merhaba-au-c2-sans-reseau"><span class="ico" style="--x:0;--y:6"></span><span class="carte-texte"><span class="carte-nom">Turquie</span><span class="carte-ligne">Le turc de « merhaba » au C2, sans réseau.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#08744D" data-nom="-chinois-le-chinois-mandarin-des-quatre-tons-au-c2-sans-reseau"><span class="ico" style="--x:1;--y:6"></span><span class="carte-texte"><span class="carte-nom">Chinois</span><span class="carte-ligne">Le chinois mandarin, des quatre tons au C2, sans réseau.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5B4598" data-nom="-japonais-le-japonais-appris-seul-et-hors-ligne-pas-a-pas"><span class="ico" style="--x:2;--y:6"></span><span class="carte-texte"><span class="carte-nom">Japonais</span><span class="carte-ligne">Le japonais appris seul et hors ligne, pas à pas.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+</ul>
+</section>
+<section class="groupe" id="univers-connaitre" data-id="connaitre" style="--c:#9C5A68">
+<header class="groupe-tete"><h3>Se connaître</h3><p>Ce que tu deviens, compté sans jugement : habitudes, réussites, phases d&#x27;une vie.</p><span class="groupe-n">20 apps</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#9C5A68" data-nom="-identite-pas-l-as-tu-fait-mais-qui-deviens-tu-chaque-geste-est-un-vote"><span class="ico" style="--x:3;--y:6"></span><span class="carte-texte"><span class="carte-nom">Identité</span><span class="carte-ligne">Pas « l&#x27;as-tu fait ? » mais « qui deviens-tu ? » : chaque geste est un vote.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#202841" data-nom="-bad-identite-la-mauvaise-identite-construite-par-les-mauvaises-habitudes-regardee-en-face-pour-la-defaire"><span class="ico" style="--x:4;--y:6"></span><span class="carte-texte"><span class="carte-nom">Bad identité</span><span class="carte-ligne">La mauvaise identité construite par les mauvaises habitudes, regardée en face pour la défaire.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B17E30" data-nom="-valeur-tout-ce-que-tu-as-acquis-dans-ta-vie-garde-avec-ses-preuves-pour-les-jours-de-doute"><span class="ico" style="--x:5;--y:6"></span><span class="carte-texte"><span class="carte-nom">Valeur</span><span class="carte-ligne">Tout ce que tu as acquis dans ta vie, gardé avec ses preuves pour les jours de doute.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2A4A80" data-nom="-discipline-chaque-fois-que-tu-as-ete-discipline-compte-d-un-toucher"><span class="ico" style="--x:6;--y:6"></span><span class="carte-texte"><span class="carte-nom">Discipline</span><span class="carte-ligne">Chaque fois que tu as été discipliné, compté d&#x27;un toucher.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#A3634B" data-nom="-habit-tes-habitudes-cochees-en-dix-secondes-les-series-et-un-retour-sans-culpabilite"><span class="ico detouree" style="--x:7;--y:6"></span><span class="carte-texte"><span class="carte-nom">Habit</span><span class="carte-ligne">Tes habitudes cochées en dix secondes, les séries, et un retour sans culpabilité.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#C06E53" data-nom="-rituels-des-sequences-de-gestes-pour-chaque-moment-de-la-journee"><span class="ico detouree" style="--x:8;--y:6"></span><span class="carte-texte"><span class="carte-nom">Rituels</span><span class="carte-ligne">Des séquences de gestes pour chaque moment de la journée.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3B3B3B" data-nom="-bilan-le-pouls-de-la-journee-en-trois-bilans-de-trente-secondes-matin-midi-soir"><span class="ico" style="--x:9;--y:6"></span><span class="carte-texte"><span class="carte-nom">Bilan</span><span class="carte-ligne">Le pouls de la journée en trois bilans de trente secondes : matin, midi, soir.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5F3B64" data-nom="-reussite-toutes-tes-reussites-rangees-mois-par-mois"><span class="ico" style="--x:10;--y:6"></span><span class="carte-texte"><span class="carte-nom">Réussite</span><span class="carte-ligne">Toutes tes réussites, rangées mois par mois.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2D4A3A" data-nom="-mensonge-les-petits-mensonges-du-quotidien-comptes-d-un-toucher"><span class="ico" style="--x:11;--y:6"></span><span class="carte-texte"><span class="carte-nom">Mensonge</span><span class="carte-ligne">Les petits mensonges du quotidien, comptés d&#x27;un toucher.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#606B37" data-nom="-refuse-chaque-proposition-refusee-avec-sa-raison-puis-le-recul-le-referais-tu"><span class="ico" style="--x:12;--y:6"></span><span class="carte-texte"><span class="carte-nom">Refusé</span><span class="carte-ligne">Chaque proposition refusée, avec sa raison, puis le recul : le referais-tu ?</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2F7280" data-nom="-oublie-les-oublis-notes-quand-on-s-en-rend-compte-et-les-parades-qui-marchent"><span class="ico" style="--x:13;--y:6"></span><span class="carte-texte"><span class="carte-nom">Oublié</span><span class="carte-ligne">Les oublis notés quand on s&#x27;en rend compte, et les parades qui marchent.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3F6FA0" data-nom="-decharge-chaque-fois-que-tu-vides-ce-qui-pesait-mails-photos-chambre-paperasse"><span class="ico" style="--x:14;--y:6"></span><span class="carte-texte"><span class="carte-nom">Déchargé</span><span class="carte-ligne">Chaque fois que tu vides ce qui pesait : mails, photos, chambre, paperasse.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6F2537" data-nom="-haine-un-endroit-ou-deposer-la-colere-d-une-journee-pour-ne-pas-la-garder"><span class="ico" style="--x:0;--y:7"></span><span class="carte-texte"><span class="carte-nom">Haine</span><span class="carte-ligne">Un endroit où déposer la colère d&#x27;une journée, pour ne pas la garder.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6C5F54" data-nom="-perte-ce-que-tu-perds-compte-pour-devenir-plus-attentif"><span class="ico" style="--x:1;--y:7"></span><span class="carte-texte"><span class="carte-nom">Perte</span><span class="carte-ligne">Ce que tu perds, compté pour devenir plus attentif.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5D918A" data-nom="-phase-les-phases-de-ta-vie-depuis-la-naissance-sur-une-frise"><span class="ico" style="--x:2;--y:7"></span><span class="carte-texte"><span class="carte-nom">Phase</span><span class="carte-ligne">Les phases de ta vie depuis la naissance, sur une frise.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#4B5667" data-nom="-souvenir-tous-tes-souvenirs-depuis-la-naissance"><span class="ico" style="--x:3;--y:7"></span><span class="carte-texte"><span class="carte-nom">Souvenir</span><span class="carte-ligne">Tous tes souvenirs, depuis la naissance.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#866A8F" data-nom="-nouveaute-ce-qui-entre-dans-ta-vie-et-ce-que-tu-en-retires"><span class="ico" style="--x:4;--y:7"></span><span class="carte-texte"><span class="carte-nom">Nouveauté</span><span class="carte-ligne">Ce qui entre dans ta vie, et ce que tu en retires.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#7A5A2C" data-nom="-photo-une-photo-de-soi-chaque-jour-puis-le-timelapse-et-le-comparateur"><span class="ico" style="--x:5;--y:7"></span><span class="carte-texte"><span class="carte-nom">Photo</span><span class="carte-ligne">Une photo de soi chaque jour, puis le timelapse et le comparateur.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5B4598" data-nom="-bouleversement-les-grands-bouleversements-de-ta-vie-depuis-l-enfance"><span class="ico" style="--x:6;--y:7"></span><span class="carte-texte"><span class="carte-nom">Bouleversement</span><span class="carte-ligne">Les grands bouleversements de ta vie, depuis l&#x27;enfance.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#07734C" data-nom="-regard-les-regards-qu-on-soutient-et-ceux-qu-on-detourne-comptes"><span class="ico" style="--x:7;--y:7"></span><span class="carte-texte"><span class="carte-nom">Regard</span><span class="carte-ligne">Les regards qu&#x27;on soutient et ceux qu&#x27;on détourne, comptés.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+</ul>
+</section>
+<section class="groupe" id="univers-autres" data-id="autres" style="--c:#702537">
+<header class="groupe-tete"><h3>Les autres</h3><p>Les amis, la parole, l&#x27;écoute : ce qui se joue avec les gens.</p><span class="groupe-n">16 apps</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#702537" data-nom="-friends-tes-meilleurs-amis-au-meme-endroit-et-combien-de-fois-vous-vous-voyez"><span class="ico" style="--x:8;--y:7"></span><span class="carte-texte"><span class="carte-nom">Friends</span><span class="carte-ligne">Tes meilleurs amis au même endroit, et combien de fois vous vous voyez.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#8A3F25" data-nom="-drague-les-signes-d-interet-recus-notes-sur-le-moment-et-ce-que-tu-en-as-fait"><span class="ico" style="--x:9;--y:7"></span><span class="carte-texte"><span class="carte-nom">Drague</span><span class="carte-ligne">Les signes d&#x27;intérêt reçus, notés sur le moment, et ce que tu en as fait.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5C918A" data-nom="-sociale-ta-batterie-sociale-ce-qui-la-vide-ce-qui-la-recharge-ta-zone-d-equilibre"><span class="ico" style="--x:10;--y:7"></span><span class="carte-texte"><span class="carte-nom">Sociale</span><span class="carte-ligne">Ta batterie sociale : ce qui la vide, ce qui la recharge, ta zone d&#x27;équilibre.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3F6FA0" data-nom="-sujets-tout-ce-que-tu-as-a-dire-a-chacun-pret-au-moment-ou-tu-le-vois"><span class="ico" style="--x:11;--y:7"></span><span class="carte-texte"><span class="carte-nom">Sujets</span><span class="carte-ligne">Tout ce que tu as à dire à chacun, prêt au moment où tu le vois.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3F2E4F" data-nom="-parole-la-prise-de-parole-discours-minutes-repetitions-chronometrees-debriefs"><span class="ico" style="--x:12;--y:7"></span><span class="carte-texte"><span class="carte-nom">Parole</span><span class="carte-ligne">La prise de parole : discours minutés, répétitions chronométrées, débriefs.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#86698F" data-nom="-eloquence-parle-l-app-entend-les-euh-les-tics-et-les-silences-puis-mesure-ton-debit"><span class="ico" style="--x:13;--y:7"></span><span class="carte-texte"><span class="carte-nom">Éloquence</span><span class="carte-ligne">Parle : l&#x27;app entend les « euh », les tics et les silences, puis mesure ton débit.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B17E30" data-nom="-humble-les-fois-ou-tu-as-ecoute-au-lieu-de-parler-de-toi-comptees"><span class="ico" style="--x:14;--y:7"></span><span class="carte-texte"><span class="carte-nom">Humble</span><span class="carte-ligne">Les fois où tu as écouté au lieu de parler de toi, comptées.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3A3A3A" data-nom="-coupe-les-fois-ou-tu-oses-prendre-la-parole-pour-tenir-ta-place-comptees"><span class="ico" style="--x:0;--y:8"></span><span class="carte-texte"><span class="carte-nom">Coupé</span><span class="carte-ligne">Les fois où tu oses prendre la parole pour tenir ta place, comptées.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#1F5B5F" data-nom="-negocie-chaque-negociation-reussie-et-ce-que-tu-as-obtenu"><span class="ico" style="--x:1;--y:8"></span><span class="carte-texte"><span class="carte-nom">Négocié</span><span class="carte-ligne">Chaque négociation réussie, et ce que tu as obtenu.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5F6B36" data-nom="-sms-les-sms-comptes-au-moment-ou-ils-partent-vers-un-objectif-ou-sous-une-limite"><span class="ico" style="--x:2;--y:8"></span><span class="carte-texte"><span class="carte-nom">SMS</span><span class="carte-ligne">Les SMS comptés au moment où ils partent, vers un objectif ou sous une limite.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2A4A80" data-nom="-courriels-les-mails-envoyes-comptes-d-un-pouce-au-moment-ou-ils-partent"><span class="ico" style="--x:3;--y:8"></span><span class="carte-texte"><span class="carte-nom">Courriels</span><span class="carte-ligne">Les mails envoyés, comptés d&#x27;un pouce au moment où ils partent.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#85786D" data-nom="-audience-qui-compose-vraiment-ton-audience-instagram-mutuels-fans-fantomes"><span class="ico detouree" style="--x:4;--y:8"></span><span class="carte-texte"><span class="carte-nom">Audience</span><span class="carte-ligne">Qui compose vraiment ton audience Instagram : mutuels, fans, fantômes.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#7B5B2D" data-nom="-inspiration-une-semaine-un-nom-qui-t-a-inspire-et-le-geste-que-tu-lui-empruntes"><span class="ico" style="--x:5;--y:8"></span><span class="carte-texte"><span class="carte-nom">Inspiration</span><span class="carte-ligne">Une semaine, un nom : qui t&#x27;a inspiré, et le geste que tu lui empruntes.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#C67146" data-nom="-risque-les-risques-pris-au-quotidien-chacun-avec-sa-phrase"><span class="ico" style="--x:6;--y:8"></span><span class="carte-texte"><span class="carte-nom">Risque</span><span class="carte-ligne">Les risques pris au quotidien, chacun avec sa phrase.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#4B5667" data-nom="-silence-les-silences-choisis-dans-une-conversation-comptes"><span class="ico" style="--x:7;--y:8"></span><span class="carte-texte"><span class="carte-nom">Silence</span><span class="carte-ligne">Les silences choisis dans une conversation, comptés.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#07734C" data-nom="-conversation-les-sujets-deja-abordes-avec-les-gens-pour-ne-plus-les-repeter"><span class="ico" style="--x:8;--y:8"></span><span class="carte-texte"><span class="carte-nom">Conversation</span><span class="carte-ligne">Les sujets déjà abordés avec les gens, pour ne plus les répéter.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+</ul>
+</section>
+<section class="groupe" id="univers-ecouter" data-id="ecouter" style="--c:#6B8A72">
+<header class="groupe-tete"><h3>Écouter, se poser, prier</h3><p>La musique, le silence, la prière : les moments où l&#x27;on s&#x27;arrête.</p><span class="groupe-n">14 apps</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#6B8A72" data-nom="-pause-quoi-faire-de-ta-pause-la-ou-tu-es-avec-le-temps-que-tu-as"><span class="ico" style="--x:9;--y:8"></span><span class="carte-texte"><span class="carte-nom">Pause</span><span class="carte-ligne">Quoi faire de ta pause, là où tu es, avec le temps que tu as.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#8F515C" data-nom="-ecoutes-la-musique-comptee-morceau-par-morceau-avec-ce-qu-il-reste-avant-ta-limite"><span class="ico detouree" style="--x:10;--y:8"></span><span class="carte-texte"><span class="carte-nom">Écoutes</span><span class="carte-ligne">La musique comptée morceau par morceau, avec ce qu&#x27;il reste avant ta limite.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2D4A3B" data-nom="-spotify-toutes-tes-ecoutes-comptees-morceau-par-morceau-avec-l-archive-complete"><span class="ico" style="--x:11;--y:8"></span><span class="carte-texte"><span class="carte-nom">Spotify</span><span class="carte-ligne">Toutes tes écoutes, comptées morceau par morceau, avec l&#x27;archive complète.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2B4B80" data-nom="-podcast-les-podcasts-ecoutes-au-quotidien-comptes-sans-y-penser"><span class="ico" style="--x:12;--y:8"></span><span class="carte-texte"><span class="carte-nom">Podcast</span><span class="carte-ligne">Les podcasts écoutés au quotidien, comptés sans y penser.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3F2E4F" data-nom="-chansons-une-chanson-par-jour-les-vers-coches-un-a-un-le-karaoke-la-revision"><span class="ico" style="--x:13;--y:8"></span><span class="carte-texte"><span class="carte-nom">Chansons</span><span class="carte-ligne">Une chanson par jour : les vers cochés un à un, le karaoké, la révision.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#7B5B2D" data-nom="-coran-le-coran-entier-hors-ligne-pour-lire-un-passage-par-jour"><span class="ico" style="--x:14;--y:8"></span><span class="carte-texte"><span class="carte-nom">Coran</span><span class="carte-ligne">Le Coran entier hors ligne, pour lire un passage par jour.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#1E5A5E" data-nom="-muslim-devenir-chaque-jour-plus-veridique-et-plus-pratiquant-et-le-voir"><span class="ico" style="--x:0;--y:9"></span><span class="carte-texte"><span class="carte-nom">Muslim</span><span class="carte-ligne">Devenir chaque jour plus véridique et plus pratiquant, et le voir.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3B3B3B" data-nom="-prieres-les-cinq-prieres-du-jour-notees-en-trois-secondes"><span class="ico" style="--x:1;--y:9"></span><span class="carte-texte"><span class="carte-nom">Prières</span><span class="carte-ligne">Les cinq prières du jour, notées en trois secondes.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#1F2740" data-nom="-meditation-des-seances-de-meditation-et-59-sons-a-superposer-en-trois-couches"><span class="ico" style="--x:2;--y:9"></span><span class="carte-texte"><span class="carte-nom">Méditation</span><span class="carte-ligne">Des séances de méditation et 59 sons à superposer en trois couches.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#4A5566" data-nom="-sounds-des-paysages-sonores-pour-travailler-ou-se-poser"><span class="ico" style="--x:3;--y:9"></span><span class="carte-texte"><span class="carte-nom">Sounds</span><span class="carte-ligne">Des paysages sonores pour travailler ou se poser.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#07734C" data-nom="-chance-les-chances-de-la-journee-notees-une-a-une"><span class="ico" style="--x:4;--y:9"></span><span class="carte-texte"><span class="carte-nom">Chance</span><span class="carte-ligne">Les chances de la journée, notées une à une.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B17D2F" data-nom="-gratitude-trois-a-cinq-gratitudes-par-jour"><span class="ico" style="--x:5;--y:9"></span><span class="carte-texte"><span class="carte-nom">Gratitude</span><span class="carte-ligne">Trois à cinq gratitudes par jour.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B0573B" data-nom="-recompense-tes-recompenses-et-celles-que-tu-t-accordes-chaque-jour"><span class="ico" style="--x:6;--y:9"></span><span class="carte-texte"><span class="carte-nom">Récompense</span><span class="carte-ligne">Tes récompenses, et celles que tu t&#x27;accordes chaque jour.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#866A8F" data-nom="-negative-deposer-ce-qui-s-est-mal-passe-pour-ne-pas-garder-l-emotion"><span class="ico" style="--x:7;--y:9"></span><span class="carte-texte"><span class="carte-nom">Negative</span><span class="carte-ligne">Déposer ce qui s&#x27;est mal passé, pour ne pas garder l&#x27;émotion.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+</ul>
+</section>
+<section class="groupe" id="univers-foyer" data-id="foyer" style="--c:#5F6B36">
+<header class="groupe-tete"><h3>Le foyer et les choses</h3><p>L&#x27;argent, les objets, le ménage : la maison tenue sans y penser.</p><span class="groupe-n">8 apps</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#5F6B36" data-nom="-budget-les-depenses-en-une-phrase-les-budgets-les-tirelires"><span class="ico" style="--x:8;--y:9"></span><span class="carte-texte"><span class="carte-nom">Budget</span><span class="carte-ligne">Les dépenses en une phrase, les budgets, les tirelires.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2E4B3B" data-nom="-achats-tous-tes-achats-ranges-par-horizon-avec-un-sas-de-reflexion-pour-les-envies"><span class="ico" style="--x:9;--y:9"></span><span class="carte-texte"><span class="carte-nom">Achats</span><span class="carte-ligne">Tous tes achats, rangés par horizon, avec un sas de réflexion pour les envies.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6E4B34" data-nom="-objet-tout-ce-que-tu-possedes-range-comme-tu-le-decides"><span class="ico" style="--x:10;--y:9"></span><span class="carte-texte"><span class="carte-nom">Objet</span><span class="carte-ligne">Tout ce que tu possèdes, rangé comme tu le décides.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#C67247" data-nom="-cuisine-le-livre-des-plats-que-tu-sais-cuisiner"><span class="ico" style="--x:11;--y:9"></span><span class="carte-texte"><span class="carte-nom">Cuisine</span><span class="carte-ligne">Le livre des plats que tu sais cuisiner.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B17D2F" data-nom="-rangement-vingt-minutes-devant-toi-quoi-ranger-en-premier"><span class="ico" style="--x:12;--y:9"></span><span class="carte-texte"><span class="carte-nom">Rangement</span><span class="carte-ligne">Vingt minutes devant toi : quoi ranger en premier.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#307380" data-nom="-proprete-le-menage-zone-par-zone-avec-ses-rappels"><span class="ico" style="--x:13;--y:9"></span><span class="carte-texte"><span class="carte-nom">Propreté</span><span class="carte-ligne">Le ménage zone par zone, avec ses rappels.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5D918A" data-nom="-tri-les-photos-videos-et-fichiers-supprimes-comptes-pendant-que-tu-tries"><span class="ico" style="--x:14;--y:9"></span><span class="carte-texte"><span class="carte-nom">Tri</span><span class="carte-ligne">Les photos, vidéos et fichiers supprimés, comptés pendant que tu tries.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3F6FA0" data-nom="-appareil-quel-appareil-sert-a-quoi-une-activite-un-appareil-principal"><span class="ico" style="--x:0;--y:10"></span><span class="carte-texte"><span class="carte-nom">Appareil</span><span class="carte-ligne">Quel appareil sert à quoi : une activité, un appareil principal.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+</ul>
+</section>
+<section class="groupe" id="univers-outils" data-id="outils" style="--c:#C67247">
+<header class="groupe-tete"><h3>Les outils</h3><p>Ce qui tient l&#x27;iPhone et le Mac en ordre, et relie les apps entre elles.</p><span class="groupe-n">14 apps</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#3A3A3A" data-nom="-accueil-l-ecran-d-accueil-de-la-famille-tes-apps-flow-et-leurs-chiffres-du-jour-en-grands-widgets"><span class="ico" style="--x:1;--y:10"></span><span class="carte-texte"><span class="carte-nom">Accueil</span><span class="carte-ligne">L&#x27;écran d&#x27;accueil de la famille : tes apps FLOW et leurs chiffres du jour, en grands widgets.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#402F50" data-nom="-barre-une-seule-ligne-dans-la-barre-des-menus-la-tache-du-jour-la-journee-ecoulee-le-prochain-rendez-vous"><span class="ico" style="--x:2;--y:10"></span><span class="carte-texte"><span class="carte-nom">Barre</span><span class="carte-ligne">Une seule ligne dans la barre des menus : la tâche du jour, la journée écoulée, le prochain rendez-vous.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#84404E" data-nom="-mac-ce-que-tu-fais-vraiment-sur-ton-mac-note-en-fond-les-apps-le-temps-jamais-ce-que-tu-tapes"><span class="ico detouree" style="--x:3;--y:10"></span><span class="carte-texte"><span class="carte-nom">Mac</span><span class="carte-ligne">Ce que tu fais vraiment sur ton Mac, noté en fond : les apps, le temps, jamais ce que tu tapes.</span><span class="carte-plat">Mac</span></span></div></li>
+<li><div class="carte" style="--c:#1E5A5E" data-nom="-cleaner-nettoyer-le-mac-sans-rien-casser-chaque-element-explique-tout-part-a-la-corbeille"><span class="ico" style="--x:4;--y:10"></span><span class="carte-texte"><span class="carte-nom">Cleaner</span><span class="carte-ligne">Nettoyer le Mac sans rien casser : chaque élément expliqué, tout part à la Corbeille.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2D4A3A" data-nom="-charge-garder-la-batterie-sous-80-et-verifier-que-la-limite-tient"><span class="ico" style="--x:5;--y:10"></span><span class="carte-texte"><span class="carte-nom">Charge</span><span class="carte-ligne">Garder la batterie sous 80 %, et vérifier que la limite tient.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#866A8F" data-nom="-obsidian-ton-coffre-de-notes-en-plus-rapide"><span class="ico" style="--x:6;--y:10"></span><span class="carte-texte"><span class="carte-nom">Obsidian</span><span class="carte-ligne">Ton coffre de notes, en plus rapide.</span><span class="carte-plat">iPhone</span></span></div></li>
+<li><div class="carte" style="--c:#C67247" data-nom="-sidenote-des-notes-au-bord-de-l-ecran-la-quand-tu-en-as-besoin"><span class="ico" style="--x:7;--y:10"></span><span class="carte-texte"><span class="carte-nom">SideNote</span><span class="carte-ligne">Des notes au bord de l&#x27;écran, là quand tu en as besoin.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2A4A80" data-nom="-note-un-editeur-qui-montre-le-resultat-jamais-le-code-deux-visages-sur-un-seul-texte"><span class="ico" style="--x:8;--y:10"></span><span class="carte-texte"><span class="carte-nom">Note</span><span class="carte-ligne">Un éditeur qui montre le résultat, jamais le code : deux visages sur un seul texte.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#4070A0" data-nom="-mindmap-tes-projets-en-cartes-mentales-ou-les-taches-se-cochent"><span class="ico" style="--x:9;--y:10"></span><span class="carte-texte"><span class="carte-nom">MindMap</span><span class="carte-ligne">Tes projets en cartes mentales, où les tâches se cochent.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#202841" data-nom="-verrou-des-regles-posees-quand-tu-vois-clair-que-l-iphone-fait-respecter-ensuite"><span class="ico" style="--x:10;--y:10"></span><span class="carte-texte"><span class="carte-nom">Verrou</span><span class="carte-ligne">Des règles posées quand tu vois clair, que l&#x27;iPhone fait respecter ensuite.</span><span class="carte-plat">iPhone</span></span></div></li>
+<li><div class="carte" style="--c:#94989D" data-nom="-writer-ecrire-vite-et-juste-en-francais-le-curseur-bloque-sur-la-faute"><span class="ico detouree" style="--x:11;--y:10"></span><span class="carte-texte"><span class="carte-nom">Writer</span><span class="carte-ligne">Écrire vite et juste en français : le curseur bloque sur la faute.</span><span class="carte-plat">Mac</span></span></div></li>
+<li><div class="carte" style="--c:#492421" data-nom="-verrou-mac-bloquer-sites-apps-et-internet-sur-le-mac-selon-les-regles-que-tu-as-fixees"><span class="ico" style="--x:12;--y:10"></span><span class="carte-texte"><span class="carte-nom">Verrou Mac</span><span class="carte-ligne">Bloquer sites, apps et Internet sur le Mac, selon les règles que tu as fixées.</span><span class="carte-plat">Mac</span></span></div></li>
+<li><div class="carte" style="--c:#7A5A2C" data-nom="-backup-ne-plus-jamais-perdre-un-fichier-chaque-version-gardee-tout-se-retrouve"><span class="ico" style="--x:13;--y:10"></span><span class="carte-texte"><span class="carte-nom">Backup</span><span class="carte-ligne">Ne plus jamais perdre un fichier : chaque version gardée, tout se retrouve.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5B4598" data-nom="-security-la-vigie-du-mac-et-de-l-iphone-ce-qui-protege-ce-qui-se-lance-tout-seul"><span class="ico" style="--x:14;--y:10"></span><span class="carte-texte"><span class="carte-nom">Security</span><span class="carte-ligne">La vigie du Mac et de l&#x27;iPhone : ce qui protège, ce qui se lance tout seul.</span><span class="carte-plat">iPhone et Mac</span></span></div></li>
+</ul>
+</section>
+  </div>
+</section>
 
-      <article class="app-card relie p-aubergine">
-        <img class="app-icon" src="/assets/icones/polyglotte.png" alt="" width="110" height="110">
-        <div class="corps">
-          <span class="role">La pièce qui les relie</span>
-          <div class="tete"><h3>Polyglotte</h3><span class="pill muted">En préparation</span></div>
-          <p>Le tableau de bord de toutes tes langues&nbsp;: les mots rencontrés et acquis dans chacune, ton rythme, ta série et tes objectifs. Il lit les chiffres dans les apps elles-mêmes, sur ton appareil et sans réseau.</p>
-        </div>
-      </article>
-
+<!-- 6 · Les questions. -->
+<section class="s-faq" id="questions" data-scene="texte">
+  <div class="etroit">
+    <h2 class="decoupe">Foire aux questions</h2>
+    <div class="faq">
+      <details>
+        <summary>Qu’est-ce que FLOW&nbsp;?</summary>
+        <p>Une famille d’applications pour iPhone et Mac. Chaque app fait une seule chose&nbsp;: compter tes verres d’eau, préparer la journée de demain, apprendre l’italien. Elles partagent la même allure et les mêmes principes.</p>
+      </details>
+      <details>
+        <summary>Où télécharger les apps&nbsp;?</summary>
+        <p>Anglais arrive la première sur l’App Store&nbsp;; Italien, Espagnole et Allemand la suivent. Les autres apps sont en préparation.</p>
+      </details>
+      <details>
+        <summary>Faut-il créer un compte&nbsp;?</summary>
+        <p>Non. Il n’existe pas de compte FLOW. Quelques apps se relient à un service que tu utilises déjà, comme ton calendrier ou Apple Santé&nbsp;: c’est toi qui l’autorises, sur ton appareil.</p>
+      </details>
+      <details>
+        <summary>Où vont mes données&nbsp;?</summary>
+        <p>Nulle part. Elles restent sur tes appareils. Entre ton iPhone et ton Mac, elles passent par ton propre iCloud. FLOW n’a aucun serveur.</p>
+      </details>
+      <details>
+        <summary>Est-ce que ça marche sans réseau&nbsp;?</summary>
+        <p>Oui pour l’essentiel&nbsp;: le contenu est dans l’app. Seules les apps qui lisent un service en ligne ont besoin du réseau pour le faire.</p>
+      </details>
+      <details>
+        <summary>iPhone ou Mac&nbsp;?</summary>
+        <p>Presque toutes existent sur les deux, avec les mêmes écrans, et se synchronisent. Quelques-unes ne vivent que sur le Mac ou que sur l’iPhone&nbsp;: c’est indiqué sous chaque app.</p>
+      </details>
+      <details>
+        <summary>Est-ce payant&nbsp;?</summary>
+        <p>Anglais est entièrement gratuite. Le prix des autres apps sera indiqué à leur sortie.</p>
+      </details>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="wrap">
-    <p class="eyebrow">Nos principes</p>
-    <h2>Ce que les apps FLOW ne feront jamais.</h2>
-    <div class="features">
-      <div class="feature">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div>
-        <h3>Collecter tes données</h3>
-        <p>Aucune donnée n’est collectée. Ta progression reste sur ton appareil, et tu peux l’exporter quand tu veux.</p>
-      </div>
-      <div class="feature">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M9.5 5.2A9 9 0 0 1 21 12M3 12a9 9 0 0 0 12.3 8.4"/></svg></div>
-        <h3>Afficher de la publicité</h3>
-        <p>Rien ne vient interrompre une séance&nbsp;: pas de bannière, pas de vidéo à regarder pour continuer.</p>
-      </div>
-      <div class="feature">
-        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><path d="M4 4l16 16"/></svg></div>
-        <h3>Exiger une connexion</h3>
-        <p>Dans le métro, en avion ou à la campagne&nbsp;: tout le contenu est dans l’app, rien ne dépend d’un serveur.</p>
-      </div>
-    </div>
+<!-- 7 · Le contact et le pied de page. -->
+<section class="s-contact" id="contact" data-scene="texte">
+  <div class="etroit centre-texte">
+    <h2 class="decoupe">Écris-moi</h2>
+    <p class="chapeau">Une question, une idée d’app, un bug&nbsp;? Je lis tous les messages.</p>
+    <a class="bouton clair grand" href="mailto:contact@flowapps.store">contact@flowapps.store</a>
   </div>
-</section>
-
-</main>
-
-<footer class="foot">
-  <div class="wrap">
+  <footer class="pied">
     <nav aria-label="Liens du pied de page">
       <a href="/anglais/">FLOW — Anglais</a>
       <a href="/anglais/assistance/">Assistance</a>
       <a href="/mentions-legales/">Mentions légales</a>
-      <a href="mailto:contact@flowapps.store">contact@flowapps.store</a>
     </nav>
-    <span class="copy">© 2026 Helal Andesha</span>
-  </div>
-</footer>
+    <span>© 2026 Helal Andesha</span>
+  </footer>
+</section>
 
+<!-- 8 · Le retour : la page boucle sur son début. -->
+<section class="s s-retour" data-scene="retour" aria-hidden="true">
+  <p class="indice">Retour au début</p>
+</section>
+
+</main>
+
+<script type="application/json" id="minis">{"planifier":[{"n":"Tomorrow","x":0,"y":0},{"n":"MyWeek","x":1,"y":0},{"n":"WeekDo","x":2,"y":0},{"n":"WeekH","x":3,"y":0},{"n":"WeekPlan","x":4,"y":0},{"n":"Mois","x":5,"y":0},{"n":"Année","x":6,"y":0},{"n":"Day Hour","x":7,"y":0},{"n":"Calendar","x":8,"y":0}],"faire":[{"n":"Todo","x":1,"y":1},{"n":"Clarté","x":2,"y":1},{"n":"ListDo","x":3,"y":1},{"n":"Kanban","x":4,"y":1},{"n":"Board","x":5,"y":1},{"n":"PriorityDo","x":6,"y":1},{"n":"Eisenhower","x":7,"y":1},{"n":"DelayDo","x":8,"y":1},{"n":"EnergyDo","x":9,"y":1}],"projets":[{"n":"Project","x":5,"y":2},{"n":"Feuille Project","x":6,"y":2},{"n":"Admin","x":7,"y":2},{"n":"CV","x":8,"y":2},{"n":"DeepWork","x":9,"y":2},{"n":"Distraction","x":11,"y":2},{"n":"Vidéo","x":12,"y":2},{"n":"Dashboard","x":13,"y":2},{"n":"Business","x":14,"y":2}],"corps":[{"n":"Water","x":1,"y":3},{"n":"Douche froide","x":2,"y":3},{"n":"Smile","x":3,"y":3},{"n":"Sleep","x":4,"y":3},{"n":"Sieste","x":5,"y":3},{"n":"Jeûne","x":6,"y":3},{"n":"Poids","x":7,"y":3},{"n":"Posture","x":8,"y":3},{"n":"Fatigue","x":9,"y":3}],"bouger":[{"n":"Body","x":3,"y":4},{"n":"Pompes","x":4,"y":4},{"n":"Tractions","x":5,"y":4},{"n":"Étirements","x":6,"y":4},{"n":"Running","x":7,"y":4},{"n":"Move","x":8,"y":4},{"n":"Go","x":9,"y":4},{"n":"Lieux Rituel","x":10,"y":4},{"n":"Atlas","x":11,"y":4}],"apprendre":[{"n":"Book","x":13,"y":4},{"n":"Reader","x":14,"y":4},{"n":"Français","x":0,"y":5},{"n":"Révision","x":1,"y":5},{"n":"Leçons","x":2,"y":5},{"n":"Brain","x":3,"y":5},{"n":"Chess","x":4,"y":5},{"n":"Citation","x":5,"y":5},{"n":"Ciné","x":6,"y":5}],"connaitre":[{"n":"Identité","x":3,"y":6},{"n":"Bad identité","x":4,"y":6},{"n":"Valeur","x":5,"y":6},{"n":"Discipline","x":6,"y":6},{"n":"Bilan","x":9,"y":6},{"n":"Réussite","x":10,"y":6},{"n":"Mensonge","x":11,"y":6},{"n":"Refusé","x":12,"y":6},{"n":"Oublié","x":13,"y":6}],"autres":[{"n":"Friends","x":8,"y":7},{"n":"Drague","x":9,"y":7},{"n":"Sociale","x":10,"y":7},{"n":"Sujets","x":11,"y":7},{"n":"Parole","x":12,"y":7},{"n":"Éloquence","x":13,"y":7},{"n":"Humble","x":14,"y":7},{"n":"Coupé","x":0,"y":8},{"n":"Négocié","x":1,"y":8}],"ecouter":[{"n":"Pause","x":9,"y":8},{"n":"Spotify","x":11,"y":8},{"n":"Podcast","x":12,"y":8},{"n":"Chansons","x":13,"y":8},{"n":"Coran","x":14,"y":8},{"n":"Muslim","x":0,"y":9},{"n":"Prières","x":1,"y":9},{"n":"Méditation","x":2,"y":9},{"n":"Sounds","x":3,"y":9}],"foyer":[{"n":"Budget","x":8,"y":9},{"n":"Achats","x":9,"y":9},{"n":"Objet","x":10,"y":9},{"n":"Cuisine","x":11,"y":9},{"n":"Rangement","x":12,"y":9},{"n":"Propreté","x":13,"y":9},{"n":"Tri","x":14,"y":9},{"n":"Appareil","x":0,"y":10}],"outils":[{"n":"Accueil","x":1,"y":10},{"n":"Barre","x":2,"y":10},{"n":"Cleaner","x":4,"y":10},{"n":"Charge","x":5,"y":10},{"n":"Obsidian","x":6,"y":10},{"n":"SideNote","x":7,"y":10},{"n":"Note","x":8,"y":10},{"n":"MindMap","x":9,"y":10},{"n":"Verrou","x":10,"y":10}]}</script>
+<script src="/assets/univers/univers.js" defer></script>
 </body>
 </html>
