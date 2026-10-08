@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FLOW — 165 款 iPhone 和 Mac 应用，没有任何多余的东西</title>
+<meta name="description" content="FLOW 是一个包含 165 款 iPhone 和 Mac 应用的家族：规划、执行、学语言、照顾自己。无需账号，没有广告，不做追踪。">
+<meta name="theme-color" content="#17130F">
+<link rel="canonical" href="https://flowapps.store/zh/">
+<link rel="alternate" hreflang="fr" href="https://flowapps.store/">
+<link rel="alternate" hreflang="en" href="https://flowapps.store/en/">
+<link rel="alternate" hreflang="es" href="https://flowapps.store/es/">
+<link rel="alternate" hreflang="de" href="https://flowapps.store/de/">
+<link rel="alternate" hreflang="zh-Hans" href="https://flowapps.store/zh/">
+<link rel="alternate" hreflang="ja" href="https://flowapps.store/ja/">
+<link rel="alternate" hreflang="ko" href="https://flowapps.store/ko/">
+<link rel="alternate" hreflang="x-default" href="https://flowapps.store/en/">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<!-- Le « ?v= » change avec le dessin de la marque : sans lui, les navigateurs gardent l’ancienne icône d’onglet des semaines. -->
+<link rel="icon" href="/assets/favicon.png?v=ddfb0c" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=ddfb0c">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FLOW">
+<meta property="og:title" content="FLOW — 165 款 iPhone 和 Mac 应用，没有任何多余的东西">
+<meta property="og:description" content="一个需求，一款应用，共 11 个世界。无需账号，没有广告，不做追踪。">
+<meta property="og:image" content="https://flowapps.store/assets/univers/marque.png">
+<meta property="og:url" content="https://flowapps.store/zh/">
+<meta property="og:locale" content="zh_CN">
+
+<link rel="stylesheet" href="/assets/univers/univers.css">
+<style>:root { --cols: 15; --rangs: 11; }</style>
+<!-- Sans script, la page reste une page : tout le contenu est dans le HTML. -->
+<script>document.documentElement.className = 'js';</script>
+</head>
+<body>
+
+<a class="evitement" href="#apps">跳到应用列表</a>
+
+<!-- Le chargement : le mot se remplit pendant que les emblèmes arrivent. -->
+<div class="chargement" id="chargement" aria-hidden="true">
+  <div class="chargement-mot"><span>FLOW</span><span class="plein" id="motPlein">FLOW</span></div>
+  <div class="chargement-pct"><span id="pct">0</span>&nbsp;%</div>
+</div>
+
+<!-- La scène, fixe derrière le texte : le fond coloré et les tuiles en volume. -->
+<div class="scene" id="scene" aria-hidden="true">
+  <canvas id="fond"></canvas>
+  <div class="socle socle-haut"></div>
+  <div class="socle socle-bas"></div>
+  <div class="monde" id="monde">
+<div class="tuile" data-i="0" data-id="planifier" data-nom="规划时间" data-texte="晚上、一周、一个月：提前决定时间花在哪里，再看看哪些做到了。" data-n="16" data-c="#202841" style="--c:#202841"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/tomorrow.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">应用</span></div><span class="reflet"></span></div></div>
+<div class="tuile" data-i="1" data-id="faire" data-nom="动手去做" data-texte="每一种开始的方式都有一张清单：按精力、按时长、按优先级、按一天中的时段。" data-n="19" data-c="#5C918A" style="--c:#5C918A"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/todo.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">应用</span></div><span class="reflet"></span></div></div>
+<div class="tuile" data-i="2" data-id="projets" data-nom="项目与专注" data-texte="推进需要长期投入的事，守住真正有进展的那几个小时。" data-n="11" data-c="#2A4A80" style="--c:#2A4A80"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/deepwork.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">应用</span></div><span class="reflet"></span></div></div>
+<div class="tuile" data-i="3" data-id="corps" data-nom="照顾身体" data-texte="喝水、睡眠、三餐、姿势：发生时就记下，然后看趋势。" data-n="17" data-c="#402F50" style="--c:#402F50"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/sleep.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">应用</span></div><span class="reflet"></span></div></div>
+<div class="tuile" data-i="4" data-id="bouger" data-nom="运动与出门" data-texte="组数、跑步、地点：你在户外和健身房做的事。" data-n="10" data-c="#B17E30" style="--c:#B17E30"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/running.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">应用</span></div><span class="reflet"></span></div></div>
+<div class="tuile" data-i="5" data-id="apprendre" data-nom="学习" data-texte="语言、书籍、概念：离线学习，每天一点点。" data-n="20" data-c="#6C5F54" style="--c:#6C5F54"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/anglais.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">应用</span></div><span class="reflet"></span></div></div>
+<div class="tuile" data-i="6" data-id="connaitre" data-nom="认识自己" data-texte="你正在成为怎样的人，只计数不评判：习惯、成就、人生的阶段。" data-n="20" data-c="#9C5A68" style="--c:#9C5A68"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/identite.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">应用</span></div><span class="reflet"></span></div></div>
+<div class="tuile" data-i="7" data-id="autres" data-nom="与他人" data-texte="朋友、表达、倾听：人与人之间发生的事。" data-n="16" data-c="#702537" style="--c:#702537"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/friends.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">应用</span></div><span class="reflet"></span></div></div>
+<div class="tuile" data-i="8" data-id="ecouter" data-nom="聆听、停歇、祈祷" data-texte="音乐、安静、祈祷：停下来的那些时刻。" data-n="14" data-c="#6B8A72" style="--c:#6B8A72"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/pause.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">应用</span></div><span class="reflet"></span></div></div>
+<div class="tuile" data-i="9" data-id="foyer" data-nom="家与物" data-texte="钱、物品、家务：不用操心，家也井井有条。" data-n="8" data-c="#5F6B36" style="--c:#5F6B36"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/budget.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">应用</span></div><span class="reflet"></span></div></div>
+<div class="tuile" data-i="10" data-id="outils" data-nom="工具" data-texte="让 iPhone 和 Mac 保持整洁，并把各个应用连在一起。" data-n="14" data-c="#C67247" style="--c:#C67247"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/sidenote.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">应用</span></div><span class="reflet"></span></div></div>
+  </div>
+</div>
+
+<!-- Le cadre : coins, barre d'avancement, lettres. -->
+<div class="hud" aria-hidden="true">
+  <div class="hud-barre"><i id="avancement"></i></div>
+  <span class="coin coin-hg"></span><span class="coin coin-hd"></span>
+  <span class="coin coin-bg"></span><span class="coin coin-bd"></span>
+  <div class="hud-lettres" id="lettres"><span>F</span><span>L</span><span>O</span><span>W</span></div>
+  <div class="hud-graduations"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+</div>
+
+<header class="barre">
+  <button class="son" id="son" type="button" aria-pressed="false" data-actif="声音已开" data-coupe="声音已关">
+    <span class="son-etat" id="sonEtat">声音已关</span>
+    <span class="son-ondes" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+  </button>
+  <a class="logo" href="/zh/" aria-label="FLOW，首页">FLOW</a>
+  <div class="barre-droite">
+    <button class="lien-menu" id="ouvrirMenu" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="points" aria-hidden="true"><i></i><i></i><i></i><i></i></span>菜单
+    </button>
+    <a class="bouton" href="mailto:contact@flowapps.store">联系</a>
+  </div>
+</header>
+
+<div class="menu" id="menu" hidden>
+  <button class="menu-fermer" id="fermerMenu" type="button">关闭</button>
+  <nav aria-label="菜单">
+    <ol class="menu-grand">
+      <li><a href="#univers">各个世界</a></li>
+      <li><a href="#principes">原则</a></li>
+      <li><a href="#apps">全部应用</a></li>
+      <li><a href="#questions">常见问题</a></li>
+      <li><a href="#contact">联系</a></li>
+    </ol>
+    <ul class="menu-petit">
+      <li><a href="/anglais/">Anglais（法语页面）</a></li>
+      <li><a href="/anglais/assistance/">支持（法语）</a></li>
+      <li><a href="/mentions-legales/">法律声明（法语）</a></li>
+      <li><a href="mailto:contact@flowapps.store">contact@flowapps.store</a></li>
+    </ul>
+    <!-- Les autres langues de la page. -->
+    <ul class="menu-langues" aria-label="语言">
+      <li><a href="/" hreflang="fr" lang="fr" data-code="fr" data-invite="Lire cette page en français">Français</a></li>
+      <li><a href="/en/" hreflang="en" lang="en" data-code="en" data-invite="Read this page in English">English</a></li>
+      <li><a href="/es/" hreflang="es" lang="es" data-code="es" data-invite="Leer esta página en español">Español</a></li>
+      <li><a href="/de/" hreflang="de" lang="de" data-code="de" data-invite="Diese Seite auf Deutsch lesen">Deutsch</a></li>
+      <li><a href="/zh/" hreflang="zh-Hans" lang="zh-Hans" data-code="zh" data-invite="用中文阅读本页" aria-current="page">中文</a></li>
+      <li><a href="/ja/" hreflang="ja" lang="ja" data-code="ja" data-invite="このページを日本語で読む">日本語</a></li>
+      <li><a href="/ko/" hreflang="ko" lang="ko" data-code="ko" data-invite="이 페이지를 한국어로 읽기">한국어</a></li>
+    </ul>
+  </nav>
+</div>
+
+<main>
+
+<!-- 1 · Les univers : le carrousel. -->
+<section class="s s-gamme" id="univers" data-scene="gamme">
+  <div class="gamme-tete">
+    <p class="surtitre">165 款应用 · 11 个世界 · iPhone 和 Mac</p>
+    <h1 class="decoupe">一款应用，只做一件事。别无其他。</h1>
+  </div>
+  <div class="gamme-pied">
+    <div class="gamme-nom">
+      <button class="fleche" id="prec" type="button" aria-label="上一个世界">←</button>
+      <p class="nom-famille" id="nomFamille" aria-live="polite">规划时间</p>
+      <button class="fleche" id="suiv" type="button" aria-label="下一个世界">→</button>
+    </div>
+    <label class="glissiere">
+      <span class="lu">选择一个世界</span>
+      <input id="glissiere" type="range" min="0" max="10" step="1" value="0">
+    </label>
+    <p class="indice">向下滚动探索</p>
+  </div>
+  <!-- Sans script : la liste des univers, en liens. -->
+  <ul class="gamme-liste">
+<li><a href="#univers-planifier" style="--c:#202841">规划时间<span>16 款应用</span></a></li>
+<li><a href="#univers-faire" style="--c:#5C918A">动手去做<span>19 款应用</span></a></li>
+<li><a href="#univers-projets" style="--c:#2A4A80">项目与专注<span>11 款应用</span></a></li>
+<li><a href="#univers-corps" style="--c:#402F50">照顾身体<span>17 款应用</span></a></li>
+<li><a href="#univers-bouger" style="--c:#B17E30">运动与出门<span>10 款应用</span></a></li>
+<li><a href="#univers-apprendre" style="--c:#6C5F54">学习<span>20 款应用</span></a></li>
+<li><a href="#univers-connaitre" style="--c:#9C5A68">认识自己<span>20 款应用</span></a></li>
+<li><a href="#univers-autres" style="--c:#702537">与他人<span>16 款应用</span></a></li>
+<li><a href="#univers-ecouter" style="--c:#6B8A72">聆听、停歇、祈祷<span>14 款应用</span></a></li>
+<li><a href="#univers-foyer" style="--c:#5F6B36">家与物<span>8 款应用</span></a></li>
+<li><a href="#univers-outils" style="--c:#C67247">工具<span>14 款应用</span></a></li>
+  </ul>
+</section>
+
+<!-- 2 · Le profil de l'univers choisi. -->
+<section class="s s-profil" data-scene="profil">
+  <div class="colonne">
+    <p class="surtitre">这个世界</p>
+    <h2 class="decoupe" id="pNom">规划时间</h2>
+    <p class="chapeau" id="pTexte">晚上、一周、一个月：提前决定时间花在哪里，再看看哪些做到了。</p>
+    <ul class="minis" id="pMinis" aria-hidden="true"></ul>
+    <a class="bouton clair" id="pLien" href="#apps"><span>这个世界有 <span id="pN">16</span> 款应用</span></a>
+  </div>
+</section>
+
+<!-- 3 · Les principes : ce que les apps FLOW ne feront jamais. -->
+<div id="principes">
+<section class="s s-principe" data-scene="principe" data-k="0">
+  <div class="colonne">
+    <p class="barre-rouge"><s>注册账号</s></p>
+    <h2 class="decoupe">无需账号</h2>
+    <p class="chapeau">装上就能用。FLOW 没有账号：不用注册，也没有密码。</p>
+  </div>
+</section>
+<section class="s s-principe" data-scene="principe" data-k="1">
+  <div class="colonne">
+    <p class="barre-rouge"><s>展示广告</s></p>
+    <h2 class="decoupe">没有广告</h2>
+    <p class="chapeau">没有任何东西会打断你：没有横幅，也不必看完视频才能继续。</p>
+  </div>
+</section>
+<section class="s s-principe" data-scene="principe" data-k="2">
+  <div class="colonne">
+    <p class="barre-rouge"><s>收集你的数据</s></p>
+    <h2 class="decoupe">不做追踪</h2>
+    <p class="chapeau">不收集任何数据。你记下的内容留在你的设备上；在 iPhone 和 Mac 之间，它通过你自己的 iCloud 传递。</p>
+  </div>
+</section>
+<section class="s s-principe" data-scene="principe" data-k="3">
+  <div class="colonne">
+    <p class="barre-rouge"><s>要求联网</s></p>
+    <h2 class="decoupe">离线优先</h2>
+    <p class="chapeau">在地铁里、飞机上或乡下：内容就在应用里。FLOW 不依赖任何服务器。</p>
+  </div>
+</section>
+</div>
+<nav class="reperes" id="reperes" aria-label="四条原则">
+  <button type="button" data-k="0" aria-label="无需账号"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5"/><path d="M5 20c.6-3.6 3.4-5.5 7-5.5s6.4 1.9 7 5.5"/><path d="M4 4l16 16"/></svg></button>
+  <button type="button" data-k="1" aria-label="没有广告"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="6" width="17" height="12" rx="2"/><path d="M8 15l2-6 2 6M8.7 13h2.6M15 15V9h1.2a3 3 0 0 1 0 6z"/></svg></button>
+  <button type="button" data-k="2" aria-label="不做追踪"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="2.6"/><path d="M4 4l16 16"/></svg></button>
+  <button type="button" data-k="3" aria-label="离线优先"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 9.5a13 13 0 0 1 17 0M6.5 13a8.5 8.5 0 0 1 11 0M9.5 16.3a4 4 0 0 1 5 0"/><circle cx="12" cy="19.3" r=".9"/><path d="M4 4l16 16"/></svg></button>
+</nav>
+
+<!-- 4 · L'argument. -->
+<section class="s s-argument" data-scene="argument">
+  <div class="centre">
+    <p class="surtitre">家族的规则</p>
+    <h2 class="decoupe geant">一款应用只做一件事。并且把它做到底。</h2>
+    <p class="chapeau">165 款应用，11 个世界，同一种面貌：颜料底色上的象牙色符号。</p>
+    <a class="bouton clair" href="#apps">查看全部 165 款应用</a>
+  </div>
+</section>
+
+<!-- 5 · Toute la gamme. -->
+<section class="s-catalogue" id="apps" data-scene="catalogue">
+  <div class="large">
+    <p class="surtitre">完整系列</p>
+    <h2 class="decoupe">全部应用</h2>
+    <p class="chapeau">Anglais（面向法语使用者的英语课程）将最先登陆 App Store。其余应用正在准备中。</p>
+    <div class="outils">
+      <label class="recherche">
+        <span class="lu">搜索应用</span>
+        <input id="recherche" type="search" placeholder="搜索：喝水、任务、意大利语…" autocomplete="off">
+      </label>
+      <div class="puces" id="puces">
+        <button class="puce actif" type="button" data-id="">全部<span>165</span></button>
+<button class="puce" type="button" data-id="planifier" style="--c:#202841">规划时间<span>16</span></button>
+<button class="puce" type="button" data-id="faire" style="--c:#5C918A">动手去做<span>19</span></button>
+<button class="puce" type="button" data-id="projets" style="--c:#2A4A80">项目与专注<span>11</span></button>
+<button class="puce" type="button" data-id="corps" style="--c:#402F50">照顾身体<span>17</span></button>
+<button class="puce" type="button" data-id="bouger" style="--c:#B17E30">运动与出门<span>10</span></button>
+<button class="puce" type="button" data-id="apprendre" style="--c:#6C5F54">学习<span>20</span></button>
+<button class="puce" type="button" data-id="connaitre" style="--c:#9C5A68">认识自己<span>20</span></button>
+<button class="puce" type="button" data-id="autres" style="--c:#702537">与他人<span>16</span></button>
+<button class="puce" type="button" data-id="ecouter" style="--c:#6B8A72">聆听、停歇、祈祷<span>14</span></button>
+<button class="puce" type="button" data-id="foyer" style="--c:#5F6B36">家与物<span>8</span></button>
+<button class="puce" type="button" data-id="outils" style="--c:#C67247">工具<span>14</span></button>
+      </div>
+    </div>
+    <p class="vide" id="vide" hidden>没有符合这次搜索的应用。</p>
+<section class="groupe" id="univers-planifier" data-id="planifier" style="--c:#202841">
+<header class="groupe-tete"><h3>规划时间</h3><p>晚上、一周、一个月：提前决定时间花在哪里，再看看哪些做到了。</p><span class="groupe-n">16 款应用</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#202841" data-nom="-tomorrow-晚上做决定-早上去执行-两分钟定好明天的计划"><span class="ico" style="--x:0;--y:0"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Tomorrow</span></span><span class="carte-ligne">晚上做决定，早上去执行：两分钟定好明天的计划。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#606C37" data-nom="-myweek-一周的时间表-先定一个标准周-之后每一周各有各的样子"><span class="ico" style="--x:1;--y:0"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">MyWeek</span></span><span class="carte-ligne">一周的时间表：先定一个标准周，之后每一周各有各的样子。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B0573B" data-nom="-weekdo-本周任务-三件要事-顺延的任务有记录-周一做回顾"><span class="ico" style="--x:2;--y:0"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">WeekDo</span></span><span class="carte-ligne">本周任务：三件要事，顺延的任务有记录，周一做回顾。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6F2537" data-nom="-weekh-按小时看一周-七天-每个小时前面一个勾选框"><span class="ico" style="--x:3;--y:0"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">WeekH</span></span><span class="carte-ligne">按小时看一周：七天，每个小时前面一个勾选框。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2D4A3B" data-nom="-weekplan-根据每天能承担的分量-把任务分配到七天里"><span class="ico" style="--x:4;--y:0"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">WeekPlan</span></span><span class="carte-ligne">根据每天能承担的分量，把任务分配到七天里。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#9C5B69" data-nom="-mois-这个月要做的所有事-放在一页上"><span class="ico" style="--x:5;--y:0"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Mois</span></span><span class="carte-ligne">这个月要做的所有事，放在一页上。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3F6FA0" data-nom="-annee-一整年-放在一页上"><span class="ico" style="--x:6;--y:0"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Année</span></span><span class="carte-ligne">一整年，放在一页上。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2A4A80" data-nom="-day-hour-以一刻钟为单位看一天-连同你的日程-今晚之前还排得下什么"><span class="ico" style="--x:7;--y:0"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Day Hour</span></span><span class="carte-ligne">以一刻钟为单位看一天，连同你的日程：今晚之前还排得下什么。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5C918A" data-nom="-calendar-你的日程日历-那些不由自己决定的时间"><span class="ico" style="--x:8;--y:0"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Calendar</span></span><span class="carte-ligne">你的日程日历：那些不由自己决定的时间。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#866A8F" data-nom="-days-todo-一天占一整屏-当天的任务-不用瞄准就能勾掉"><span class="ico" style="--x:9;--y:0"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Days todo</span></span><span class="carte-ligne">一天占一整屏：当天的任务，不用瞄准就能勾掉。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2F7280" data-nom="-time-实际花掉的时间-先测量-再回看"><span class="ico" style="--x:10;--y:0"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Time</span></span><span class="carte-ligne">实际花掉的时间，先测量，再回看。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5F3B64" data-nom="-rythme-把一天分成-90-分钟的时段-每段有一个意图"><span class="ico" style="--x:11;--y:0"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Rythme</span></span><span class="carte-ligne">把一天分成 90 分钟的时段，每段有一个意图。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3B3B3B" data-nom="-sablier-开始之前先给自己定个时间-再看有没有守住"><span class="ico" style="--x:12;--y:0"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Sablier</span></span><span class="carte-ligne">开始之前先给自己定个时间，再看有没有守住。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#4B5667" data-nom="-bloc-把任务归成几个时间块-一块接一块做完"><span class="ico" style="--x:13;--y:0"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Bloc</span></span><span class="carte-ligne">把任务归成几个时间块，一块接一块做完。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B17D2F" data-nom="-progress-今天已经过去多少-以进度条显示在菜单栏和锁定屏幕上"><span class="ico" style="--x:14;--y:0"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Progress</span></span><span class="carte-ligne">今天已经过去多少，以进度条显示在菜单栏和锁定屏幕上。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6E4C35" data-nom="-alarme-真的会响的闹钟-以及你到底是怎么起床的真相"><span class="ico" style="--x:0;--y:1"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Alarme</span></span><span class="carte-ligne">真的会响的闹钟，以及你到底是怎么起床的真相。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+</ul>
+</section>
+<section class="groupe" id="univers-faire" data-id="faire" style="--c:#5C918A">
+<header class="groupe-tete"><h3>动手去做</h3><p>每一种开始的方式都有一张清单：按精力、按时长、按优先级、按一天中的时段。</p><span class="groupe-n">19 款应用</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#5C918A" data-nom="-todo-极简的当日任务-今天-明天-某一天"><span class="ico" style="--x:1;--y:1"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Todo</span></span><span class="carte-ligne">极简的当日任务：今天、明天、某一天。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3F6FA0" data-nom="-clarte-功能完整又安静的任务管理器-无需账号"><span class="ico" style="--x:2;--y:1"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Clarté</span></span><span class="carte-ligne">功能完整又安静的任务管理器，无需账号。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#86698F" data-nom="-listdo-用拇指勾选的清单-用完重置-不必重写"><span class="ico" style="--x:3;--y:1"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">ListDo</span></span><span class="carte-ligne">用拇指勾选的清单，用完重置，不必重写。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#8A3E24" data-nom="-kanban-把任务放进看板-装在口袋里"><span class="ico" style="--x:4;--y:1"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Kanban</span></span><span class="carte-ligne">把任务放进看板，装在口袋里。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2A4A80" data-nom="-board-看板-并排的列表-还有可以在列表之间拖动的卡片"><span class="ico" style="--x:5;--y:1"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Board</span></span><span class="carte-ligne">看板、并排的列表，还有可以在列表之间拖动的卡片。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#402F50" data-nom="-prioritydo-先做哪一件-两两对决-排出严格的顺序"><span class="ico" style="--x:6;--y:1"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">PriorityDo</span></span><span class="carte-ligne">先做哪一件？两两对决，排出严格的顺序。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6F2436" data-nom="-eisenhower-紧急与重要矩阵-另有一个-待定-区-放那些从未被判断过的事"><span class="ico" style="--x:7;--y:1"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Eisenhower</span></span><span class="carte-ligne">紧急与重要矩阵，另有一个“待定”区，放那些从未被判断过的事。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#1F5B5F" data-nom="-delaydo-把小任务按时长分类-仅此而已"><span class="ico" style="--x:8;--y:1"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">DelayDo</span></span><span class="carte-ligne">把小任务按时长分类，仅此而已。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#4B5667" data-nom="-energydo-说出你现在的状态-应用给出与之相配的任务-绝不更吃力"><span class="ico" style="--x:9;--y:1"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">EnergyDo</span></span><span class="carte-ligne">说出你现在的状态：应用给出与之相配的任务，绝不更吃力。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3B3B3B" data-nom="-day-energy-按所需精力给任务归类-然后知道现在该做什么"><span class="ico" style="--x:10;--y:1"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Day Energy</span></span><span class="carte-ligne">按所需精力给任务归类，然后知道现在该做什么。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#7B5B2D" data-nom="-essentiel-为接下来的每一天定一个方向-以及决定这一天的两三件事"><span class="ico" style="--x:11;--y:1"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Essentiel</span></span><span class="carte-ligne">为接下来的每一天定一个方向，以及决定这一天的两三件事。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#606C37" data-nom="-contexte-你所处的时刻决定哪些任务浮上来-走路时-排队时-躺在床上时"><span class="ico" style="--x:12;--y:1"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Contexte</span></span><span class="carte-ligne">你所处的时刻决定哪些任务浮上来：走路时、排队时、躺在床上时。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2D4A3A" data-nom="-domaine-按生活领域归类任务-不设任何日期"><span class="ico" style="--x:13;--y:1"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Domaine</span></span><span class="carte-ligne">按生活领域归类任务，不设任何日期。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#9C5A68" data-nom="-actions-现在做什么-当前时段-它的倒计时-以及对应的任务"><span class="ico" style="--x:14;--y:1"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Actions</span></span><span class="carte-ligne">“现在做什么？”：当前时段、它的倒计时，以及对应的任务。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#C67146" data-nom="-meal-do-每顿饭前后-该做的-该看的-该听的"><span class="ico" style="--x:0;--y:2"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Meal Do</span></span><span class="carte-ligne">每顿饭前后，该做的、该看的、该听的。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B6767F" data-nom="-matin-早晨的任务-一套每天重来的例行事项-最难的先做"><span class="ico" style="--x:1;--y:2"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Matin</span></span><span class="carte-ligne">早晨的任务：一套每天重来的例行事项，最难的先做。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#08744D" data-nom="-apres-midi-下午的任务分三段-重新开始-发力-收尾"><span class="ico" style="--x:2;--y:2"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Après-midi</span></span><span class="carte-ligne">下午的任务分三段：重新开始、发力、收尾。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B17D30" data-nom="-midi-午休时间里做得完的事-按时长排列"><span class="ico" style="--x:3;--y:2"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Midi</span></span><span class="carte-ligne">午休时间里做得完的事，按时长排列。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5A4498" data-nom="-soir-今晚睡前这段时间里-还剩下要做的事"><span class="ico" style="--x:4;--y:2"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Soir</span></span><span class="carte-ligne">今晚睡前这段时间里，还剩下要做的事。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+</ul>
+</section>
+<section class="groupe" id="univers-projets" data-id="projets" style="--c:#2A4A80">
+<header class="groupe-tete"><h3>项目与专注</h3><p>推进需要长期投入的事，守住真正有进展的那几个小时。</p><span class="groupe-n">11 款应用</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#866A8F" data-nom="-project-所有项目放在一处-每个时段只做一个-日-周-月-年"><span class="ico" style="--x:5;--y:2"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Project</span></span><span class="carte-ligne">所有项目放在一处，每个时段只做一个：日、周、月、年。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2D4A3A" data-nom="-feuille-project-每个项目一列-带着它的路线图-步骤展开-任务勾选"><span class="ico" style="--x:6;--y:2"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Feuille Project</span></span><span class="carte-ligne">每个项目一列，带着它的路线图：步骤展开，任务勾选。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#4070A0" data-nom="-admin-办完的行政手续-一天一天地计数"><span class="ico" style="--x:7;--y:2"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Admin</span></span><span class="carte-ligne">办完的行政手续，一天一天地计数。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2F7280" data-nom="-cv-简历需要的一切-在发生当天记下-每次只补一个空缺"><span class="ico" style="--x:8;--y:2"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">CV</span></span><span class="carte-ligne">简历需要的一切，在发生当天记下，每次只补一个空缺。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2A4A80" data-nom="-deepwork-开始一段深度工作-统计真正专注的小时数"><span class="ico" style="--x:9;--y:2"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">DeepWork</span></span><span class="carte-ligne">开始一段深度工作，统计真正专注的小时数。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#473558" data-nom="-away-在-mac-上提醒眼睛休息-并统计你真正休息了几次"><span class="ico detouree" style="--x:10;--y:2"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Away</span></span><span class="carte-ligne">在 Mac 上提醒眼睛休息，并统计你真正休息了几次。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3B3B3B" data-nom="-distraction-每一次分心-点一下就记下-连同原因"><span class="ico" style="--x:11;--y:2"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Distraction</span></span><span class="carte-ligne">每一次分心，点一下就记下，连同原因。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#9C5B69" data-nom="-video-看过的视频-一个手势就计数-并显示离上限还剩多少"><span class="ico" style="--x:12;--y:2"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Vidéo</span></span><span class="carte-ligne">看过的视频，一个手势就计数，并显示离上限还剩多少。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B17D2F" data-nom="-dashboard-驾驶舱-磁贴式仪表盘-愿景-路线图"><span class="ico" style="--x:13;--y:2"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Dashboard</span></span><span class="carte-ligne">驾驶舱：磁贴式仪表盘、愿景、路线图。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#702537" data-nom="-business-学习商业并加以运用-十三门科目-三个等级"><span class="ico" style="--x:14;--y:2"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Business</span></span><span class="carte-ligne">学习商业并加以运用：十三门科目，三个等级。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B0583C" data-nom="-productivity-一项一项地学效率方法-十六个领域-九个等级"><span class="ico" style="--x:0;--y:3"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Productivity</span></span><span class="carte-ligne">一项一项地学效率方法：十六个领域，九个等级。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+</ul>
+</section>
+<section class="groupe" id="univers-corps" data-id="corps" style="--c:#402F50">
+<header class="groupe-tete"><h3>照顾身体</h3><p>喝水、睡眠、三餐、姿势：发生时就记下，然后看趋势。</p><span class="groupe-n">17 款应用</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#307380" data-nom="-water-喝下的水-喝的时候就记下-并显示还要保持的节奏"><span class="ico" style="--x:1;--y:3"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Water</span></span><span class="carte-ligne">喝下的水，喝的时候就记下，并显示还要保持的节奏。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#4070A0" data-nom="-douche-froide-语音引导的冷水澡-分九级-从-15-秒到-5-分钟"><span class="ico" style="--x:2;--y:3"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Douche froide</span></span><span class="carte-ligne">语音引导的冷水澡，分九级，从 15 秒到 5 分钟。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6C8A73" data-nom="-smile-点一下就记下刷牙-另有两分钟的引导刷牙"><span class="ico" style="--x:3;--y:3"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Smile</span></span><span class="carte-ligne">点一下就记下刷牙，另有两分钟的引导刷牙。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#402F50" data-nom="-sleep-你的每一晚-满分-100-的评分-睡眠债-以及按睡眠周期设定的闹钟"><span class="ico" style="--x:4;--y:3"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Sleep</span></span><span class="carte-ligne">你的每一晚、满分 100 的评分、睡眠债，以及按睡眠周期设定的闹钟。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B67780" data-nom="-sieste-点一下开始小睡-静音模式下闹钟也会响"><span class="ico" style="--x:5;--y:3"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Sieste</span></span><span class="carte-ligne">点一下开始小睡，静音模式下闹钟也会响。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3A3A3A" data-nom="-jeune-断食从开始的那一刻启动-终于有了计数"><span class="ico" style="--x:6;--y:3"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Jeûne</span></span><span class="carte-ligne">断食从开始的那一刻启动，终于有了计数。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6F2436" data-nom="-poids-两步完成称重记录-看的是趋势-而不是当天的数字"><span class="ico" style="--x:7;--y:3"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Poids</span></span><span class="carte-ligne">两步完成称重记录，看的是趋势，而不是当天的数字。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2B4B80" data-nom="-posture-塌腰驼背的次数和挺直的次数-都记下来"><span class="ico" style="--x:8;--y:3"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Posture</span></span><span class="carte-ligne">塌腰驼背的次数和挺直的次数，都记下来。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#C67247" data-nom="-fatigue-犯困的时候就记下-并给出三种重新振作的方法"><span class="ico" style="--x:9;--y:3"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Fatigue</span></span><span class="carte-ligne">犯困的时候就记下，并给出三种重新振作的方法。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#866A8F" data-nom="-fossette-让脸部更有线条-用照片测量脸颊指数-以及钠钾餐盘"><span class="ico" style="--x:10;--y:3"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Fossette</span></span><span class="carte-ligne">让脸部更有线条：用照片测量脸颊指数，以及钠钾餐盘。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B17E30" data-nom="-meal-饮食日记-食品储藏柜-以及餐盘评分"><span class="ico" style="--x:11;--y:3"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Meal</span></span><span class="carte-ligne">饮食日记、食品储藏柜，以及餐盘评分。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6E4B34" data-nom="-coffee-每一杯都记下-体内还剩多少咖啡因-用进度条显示"><span class="ico" style="--x:12;--y:3"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Coffee</span></span><span class="carte-ligne">每一杯都记下，体内还剩多少咖啡因，用进度条显示。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#9C5A68" data-nom="-sante-你的-apple-健康数据-存进你自己的笔记里"><span class="ico" style="--x:13;--y:3"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Santé</span></span><span class="carte-ligne">你的 Apple 健康数据，存进你自己的笔记里。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2E4B3B" data-nom="-astuce-说出你现在的状态-适合此刻的小窍门-已分类并附说明"><span class="ico" style="--x:14;--y:3"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Astuce</span></span><span class="carte-ligne">说出你现在的状态：适合此刻的小窍门，已分类并附说明。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#606C37" data-nom="-alpha-放过的念头和忍住的冲动-都记下来"><span class="ico" style="--x:0;--y:4"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Alpha</span></span><span class="carte-ligne">放过的念头和忍住的冲动，都记下来。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#07734C" data-nom="-meal-time-正餐-加餐和喝水的时间-以日历呈现"><span class="ico" style="--x:1;--y:4"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Meal Time</span></span><span class="carte-ligne">正餐、加餐和喝水的时间，以日历呈现。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#8A3E25" data-nom="-anatomie-一块一块地学习人体-一套为期九年的课程"><span class="ico" style="--x:2;--y:4"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Anatomie</span></span><span class="carte-ligne">一块一块地学习人体，一套为期九年的课程。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+</ul>
+</section>
+<section class="groupe" id="univers-bouger" data-id="bouger" style="--c:#B17E30">
+<header class="groupe-tete"><h3>运动与出门</h3><p>组数、跑步、地点：你在户外和健身房做的事。</p><span class="groupe-n">10 款应用</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#6E4C35" data-nom="-body-你健身房里的器械-你在每台上的设置-以及你的组数"><span class="ico" style="--x:3;--y:4"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Body</span></span><span class="carte-ligne">你健身房里的器械、你在每台上的设置，以及你的组数。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B0583C" data-nom="-pompes-一个手势记下一组俯卧撑-带休息计时"><span class="ico" style="--x:4;--y:4"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Pompes</span></span><span class="carte-ligne">一个手势记下一组俯卧撑，带休息计时。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#4070A0" data-nom="-tractions-十秒记下一组引体向上-握法-负重-休息计时"><span class="ico" style="--x:5;--y:4"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Tractions</span></span><span class="carte-ligne">十秒记下一组引体向上：握法、负重、休息计时。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6C8A73" data-nom="-etirements-在身体图上点一下就得到一个拉伸动作-另有引导课程"><span class="ico" style="--x:6;--y:4"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Étirements</span></span><span class="carte-ligne">在身体图上点一下就得到一个拉伸动作，另有引导课程。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B17E30" data-nom="-running-开始-计划并回看你的跑步"><span class="ico" style="--x:7;--y:4"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Running</span></span><span class="carte-ligne">开始、计划并回看你的跑步。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6F2537" data-nom="-move-移动中听的-读的-做的-通勤-步行-跑步-运动"><span class="ico" style="--x:8;--y:4"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Move</span></span><span class="carte-ligne">移动中听的、读的、做的：通勤、步行、跑步、运动。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#1F5B5F" data-nom="-go-地点不多-总是那几个-用地点预算来衡量这一天"><span class="ico" style="--x:9;--y:4"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Go</span></span><span class="carte-ligne">地点不多，总是那几个：用地点预算来衡量这一天。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#402F50" data-nom="-lieux-rituel-每个地点都有自己的专注仪式-一步一步进行"><span class="ico" style="--x:10;--y:4"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Lieux Rituel</span></span><span class="carte-ligne">每个地点都有自己的专注仪式，一步一步进行。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2A4A80" data-nom="-atlas-去过的所有地方-当场记下日期和你的评价"><span class="ico" style="--x:11;--y:4"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Atlas</span></span><span class="carte-ligne">去过的所有地方，当场记下日期和你的评价。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#606C37" data-nom="-steps-当天的步数显示在手表-iphone-和-mac-上-无需任何输入"><span class="ico" style="--x:12;--y:4"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Steps</span></span><span class="carte-ligne">当天的步数显示在手表、iPhone 和 Mac 上，无需任何输入。</span><span class="carte-plat">Apple Watch、iPhone 和 Mac</span></span></div></li>
+</ul>
+</section>
+<section class="groupe" id="univers-apprendre" data-id="apprendre" style="--c:#6C5F54">
+<header class="groupe-tete"><h3>学习</h3><p>语言、书籍、概念：离线学习，每天一点点。</p><span class="groupe-n">20 款应用</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#6E4B34" data-nom="-book-你的书架-每一分钟的阅读计时-你的笔记和摘录"><span class="ico" style="--x:13;--y:4"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Book</span></span><span class="carte-ligne">你的书架、每一分钟的阅读计时、你的笔记和摘录。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#1F2740" data-nom="-reader-所有值得读的内容放在一处-文章-pdf-epub-订阅源"><span class="ico" style="--x:14;--y:4"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Reader</span></span><span class="carte-ligne">所有值得读的内容放在一处：文章、PDF、EPUB、订阅源。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#1F5B5F" data-nom="-francais-面向法语母语者-每次五分钟扩充法语词汇-有卡片-测验-还要根据释义想出那个词"><span class="ico" style="--x:0;--y:5"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Français</span></span><span class="carte-ligne">面向法语母语者：每次五分钟扩充法语词汇，有卡片、测验，还要根据释义想出那个词。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3F6FA0" data-nom="-revision-用间隔重复法离线复习你的概念"><span class="ico" style="--x:1;--y:5"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Révision</span></span><span class="carte-ligne">用间隔重复法离线复习你的概念。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2A4A80" data-nom="-lecons-提前写好课程内容-之后在笔记里找到它们"><span class="ico" style="--x:2;--y:5"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Leçons</span></span><span class="carte-ligne">提前写好课程内容，之后在笔记里找到它们。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#866A8F" data-nom="-brain-九个小游戏-每天活动一下大脑"><span class="ico" style="--x:3;--y:5"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Brain</span></span><span class="carte-ligne">九个小游戏，每天活动一下大脑。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2D4A3A" data-nom="-chess-离线下国际象棋-每一局都带走一条心得"><span class="ico" style="--x:4;--y:5"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Chess</span></span><span class="carte-ligne">离线下国际象棋，每一局都带走一条心得。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6C8A73" data-nom="-citation-所有摘录放在一处-粘贴即归档"><span class="ico" style="--x:5;--y:5"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Citation</span></span><span class="carte-ligne">所有摘录放在一处：粘贴即归档。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#702537" data-nom="-cine-你的影片库-影片卡-观影日记-以及两两对决排出的榜单"><span class="ico" style="--x:6;--y:5"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Ciné</span></span><span class="carte-ligne">你的影片库：影片卡、观影日记，以及两两对决排出的榜单。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#402F50" data-nom="-polyglotte-所有语言的总览-见过和掌握的词-你的节奏-你的连续天数"><span class="ico" style="--x:7;--y:5"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Polyglotte</span></span><span class="carte-ligne">所有语言的总览：见过和掌握的词、你的节奏、你的连续天数。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#9C5B69" data-nom="-allemand-学德语直到-c2-der-die-das-四个格-以及句末的动词-用法语讲解"><span class="ico" style="--x:8;--y:5"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Allemand</span><span class="etat">即将登陆 App Store</span></span><span class="carte-ligne">学德语直到 C2：der、die、das，四个格，以及句末的动词，用法语讲解。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B0583B" data-nom="-espagnole-为法语使用者准备的西班牙语-从零到-c2-动词变位-容易绊倒法语使用者的语法-西班牙或美洲口音"><span class="ico" style="--x:9;--y:5"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Espagnole</span><span class="etat">即将登陆 App Store</span></span><span class="carte-ligne">为法语使用者准备的西班牙语，从零到 C2：动词变位、容易绊倒法语使用者的语法、西班牙或美洲口音。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3A3A3A" data-nom="-italien-意大利语从第一个词到-c2-用法语讲解-按单元推进的课程-以及掌握所有变位形式的变位工具"><span class="ico" style="--x:10;--y:5"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Italien</span><span class="etat">即将登陆 App Store</span></span><span class="carte-ligne">意大利语从第一个词到 C2，用法语讲解：按单元推进的课程，以及掌握所有变位形式的变位工具。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B17E30" data-nom="-russe-从西里尔字母开始学俄语-用法语讲解-六个格-动词的体-每个词都标出重音"><span class="ico" style="--x:11;--y:5"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Russe</span></span><span class="carte-ligne">从西里尔字母开始学俄语，用法语讲解：六个格、动词的体、每个词都标出重音。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#4B5667" data-nom="-persan-一步一步学波斯语的词汇和变位-用法语讲解-伊朗波斯语或阿富汗达里语"><span class="ico" style="--x:12;--y:5"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Persan</span></span><span class="carte-ligne">一步一步学波斯语的词汇和变位，用法语讲解：伊朗波斯语或阿富汗达里语。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><a class="carte" style="--c:#6C5F54" data-nom="-anglais-为法语使用者准备的英语-从-a1-到-c2-共-11166-个词-43-节语法课-真人美式或英式发音-完全免费" href="/anglais/"><span class="ico" style="--x:13;--y:5"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Anglais</span><span class="etat">即将登陆 App Store</span></span><span class="carte-ligne">为法语使用者准备的英语：从 A1 到 C2 共 11166 个词，43 节语法课，真人美式或英式发音。完全免费。</span><span class="carte-plat">iPhone 和 Mac</span></span></a></li>
+<li><div class="carte" style="--c:#B67780" data-nom="-roumanie-罗马尼亚语从第一句-buna-到-c2-用法语讲解-附在词尾的冠词-属格与格-虚拟式"><span class="ico" style="--x:14;--y:5"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Roumanie</span></span><span class="carte-ligne">罗马尼亚语从第一句“bună”到 C2，用法语讲解：附在词尾的冠词、属格与格、虚拟式。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#8A3F25" data-nom="-turquie-土耳其语从-merhaba-到-c2-用法语讲解-无需网络"><span class="ico" style="--x:0;--y:6"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Turquie</span></span><span class="carte-ligne">土耳其语从“merhaba”到 C2，用法语讲解，无需网络。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#08744D" data-nom="-chinois-汉语普通话-从四个声调到-c2-用法语讲解-无需网络"><span class="ico" style="--x:1;--y:6"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Chinois</span></span><span class="carte-ligne">汉语普通话，从四个声调到 C2，用法语讲解，无需网络。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5B4598" data-nom="-japonais-独自离线学日语-一步一步来-用法语讲解"><span class="ico" style="--x:2;--y:6"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Japonais</span></span><span class="carte-ligne">独自离线学日语，一步一步来，用法语讲解。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+</ul>
+</section>
+<section class="groupe" id="univers-connaitre" data-id="connaitre" style="--c:#9C5A68">
+<header class="groupe-tete"><h3>认识自己</h3><p>你正在成为怎样的人，只计数不评判：习惯、成就、人生的阶段。</p><span class="groupe-n">20 款应用</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#9C5A68" data-nom="-identite-不是-你做了吗-而是-你正在成为谁-每个行动都是一票"><span class="ico" style="--x:3;--y:6"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Identité</span></span><span class="carte-ligne">不是“你做了吗？”，而是“你正在成为谁？”：每个行动都是一票。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#202841" data-nom="-bad-identite-坏习惯造就的负面身份-正视它-才能拆掉它"><span class="ico" style="--x:4;--y:6"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Bad identité</span></span><span class="carte-ligne">坏习惯造就的负面身份，正视它，才能拆掉它。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B17E30" data-nom="-valeur-你这一生获得的一切-连同凭证一起保存-留给怀疑自己的日子"><span class="ico" style="--x:5;--y:6"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Valeur</span></span><span class="carte-ligne">你这一生获得的一切，连同凭证一起保存，留给怀疑自己的日子。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2A4A80" data-nom="-discipline-每一次自律-点一下就计数"><span class="ico" style="--x:6;--y:6"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Discipline</span></span><span class="carte-ligne">每一次自律，点一下就计数。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#A3634B" data-nom="-habit-十秒勾完你的习惯-有连续记录-中断后回来也不必自责"><span class="ico detouree" style="--x:7;--y:6"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Habit</span></span><span class="carte-ligne">十秒勾完你的习惯，有连续记录，中断后回来也不必自责。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#C06E53" data-nom="-rituels-为一天中的每个时刻准备的一连串动作"><span class="ico detouree" style="--x:8;--y:6"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Rituels</span></span><span class="carte-ligne">为一天中的每个时刻准备的一连串动作。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3B3B3B" data-nom="-bilan-用三次三十秒的小结把握一天的脉搏-早上-中午-晚上"><span class="ico" style="--x:9;--y:6"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Bilan</span></span><span class="carte-ligne">用三次三十秒的小结把握一天的脉搏：早上、中午、晚上。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5F3B64" data-nom="-reussite-你所有的成就-按月归档"><span class="ico" style="--x:10;--y:6"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Réussite</span></span><span class="carte-ligne">你所有的成就，按月归档。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2D4A3A" data-nom="-mensonge-日常的小谎言-点一下就计数"><span class="ico" style="--x:11;--y:6"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Mensonge</span></span><span class="carte-ligne">日常的小谎言，点一下就计数。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#606B37" data-nom="-refuse-每一次拒绝的提议-连同理由-事后再回看-还会这样做吗"><span class="ico" style="--x:12;--y:6"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Refusé</span></span><span class="carte-ligne">每一次拒绝的提议，连同理由，事后再回看：还会这样做吗？</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2F7280" data-nom="-oublie-发现忘事时就记下-以及真正管用的对策"><span class="ico" style="--x:13;--y:6"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Oublié</span></span><span class="carte-ligne">发现忘事时就记下，以及真正管用的对策。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3F6FA0" data-nom="-decharge-每一次清空压在心上的东西-邮件-照片-房间-文件"><span class="ico" style="--x:14;--y:6"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Déchargé</span></span><span class="carte-ligne">每一次清空压在心上的东西：邮件、照片、房间、文件。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6F2537" data-nom="-haine-一个安放一天怒气的地方-不把它留在心里"><span class="ico" style="--x:0;--y:7"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Haine</span></span><span class="carte-ligne">一个安放一天怒气的地方，不把它留在心里。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6C5F54" data-nom="-perte-你弄丢的东西-记下来-让自己更留心"><span class="ico" style="--x:1;--y:7"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Perte</span></span><span class="carte-ligne">你弄丢的东西，记下来，让自己更留心。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5D918A" data-nom="-phase-从出生至今的人生阶段-排在一条时间线上"><span class="ico" style="--x:2;--y:7"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Phase</span></span><span class="carte-ligne">从出生至今的人生阶段，排在一条时间线上。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#4B5667" data-nom="-souvenir-你所有的回忆-从出生开始"><span class="ico" style="--x:3;--y:7"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Souvenir</span></span><span class="carte-ligne">你所有的回忆，从出生开始。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#866A8F" data-nom="-nouveaute-进入你生活的新事物-以及你从中得到了什么"><span class="ico" style="--x:4;--y:7"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Nouveauté</span></span><span class="carte-ligne">进入你生活的新事物，以及你从中得到了什么。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#7A5A2C" data-nom="-photo-每天一张自拍-然后是延时影片和对比视图"><span class="ico" style="--x:5;--y:7"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Photo</span></span><span class="carte-ligne">每天一张自拍，然后是延时影片和对比视图。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5B4598" data-nom="-bouleversement-从童年至今-你人生中的重大转折"><span class="ico" style="--x:6;--y:7"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Bouleversement</span></span><span class="carte-ligne">从童年至今，你人生中的重大转折。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#07734C" data-nom="-regard-迎上去的目光和躲开的目光-都记下来"><span class="ico" style="--x:7;--y:7"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Regard</span></span><span class="carte-ligne">迎上去的目光和躲开的目光，都记下来。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+</ul>
+</section>
+<section class="groupe" id="univers-autres" data-id="autres" style="--c:#702537">
+<header class="groupe-tete"><h3>与他人</h3><p>朋友、表达、倾听：人与人之间发生的事。</p><span class="groupe-n">16 款应用</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#702537" data-nom="-friends-最好的朋友放在一处-以及你们见面的次数"><span class="ico" style="--x:8;--y:7"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Friends</span></span><span class="carte-ligne">最好的朋友放在一处，以及你们见面的次数。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#8A3F25" data-nom="-drague-收到的好感信号-当场记下-以及你后来怎么做的"><span class="ico" style="--x:9;--y:7"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Drague</span></span><span class="carte-ligne">收到的好感信号，当场记下，以及你后来怎么做的。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5C918A" data-nom="-sociale-你的社交电量-什么耗电-什么充电-你的平衡区间"><span class="ico" style="--x:10;--y:7"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Sociale</span></span><span class="carte-ligne">你的社交电量：什么耗电、什么充电、你的平衡区间。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3F6FA0" data-nom="-sujets-想对每个人说的话-见到对方的那一刻就已备好"><span class="ico" style="--x:11;--y:7"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Sujets</span></span><span class="carte-ligne">想对每个人说的话，见到对方的那一刻就已备好。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3F2E4F" data-nom="-parole-公开讲话-限时的讲稿-计时的排练-事后复盘"><span class="ico" style="--x:12;--y:7"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Parole</span></span><span class="carte-ligne">公开讲话：限时的讲稿、计时的排练、事后复盘。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#86698F" data-nom="-eloquence-开口说-应用听得出-嗯-呃-口头禅和停顿-然后测出你的语速"><span class="ico" style="--x:13;--y:7"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Éloquence</span></span><span class="carte-ligne">开口说：应用听得出“嗯”“呃”、口头禅和停顿，然后测出你的语速。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B17E30" data-nom="-humble-选择倾听而不是谈论自己的次数-都记下来"><span class="ico" style="--x:14;--y:7"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Humble</span></span><span class="carte-ligne">选择倾听而不是谈论自己的次数，都记下来。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3A3A3A" data-nom="-coupe-敢于开口-守住自己位置的次数-都记下来"><span class="ico" style="--x:0;--y:8"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Coupé</span></span><span class="carte-ligne">敢于开口、守住自己位置的次数，都记下来。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#1F5B5F" data-nom="-negocie-每一次成功的谈判-以及你争取到了什么"><span class="ico" style="--x:1;--y:8"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Négocié</span></span><span class="carte-ligne">每一次成功的谈判，以及你争取到了什么。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5F6B36" data-nom="-sms-短信发出时就计数-朝着目标或控制在上限之内"><span class="ico" style="--x:2;--y:8"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">SMS</span></span><span class="carte-ligne">短信发出时就计数，朝着目标或控制在上限之内。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2A4A80" data-nom="-courriels-发出的邮件-发送时用拇指点一下就计数"><span class="ico" style="--x:3;--y:8"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Courriels</span></span><span class="carte-ligne">发出的邮件，发送时用拇指点一下就计数。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#85786D" data-nom="-audience-你的-instagram-受众究竟由谁组成-互关-粉丝-幽灵"><span class="ico detouree" style="--x:4;--y:8"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Audience</span></span><span class="carte-ligne">你的 Instagram 受众究竟由谁组成：互关、粉丝、幽灵。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#7B5B2D" data-nom="-inspiration-一周一个名字-谁启发了你-你向他借来哪个做法"><span class="ico" style="--x:5;--y:8"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Inspiration</span></span><span class="carte-ligne">一周一个名字：谁启发了你，你向他借来哪个做法。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#C67146" data-nom="-risque-日常冒的险-每一次配一句话"><span class="ico" style="--x:6;--y:8"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Risque</span></span><span class="carte-ligne">日常冒的险，每一次配一句话。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#4B5667" data-nom="-silence-对话中主动选择的沉默-都记下来"><span class="ico" style="--x:7;--y:8"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Silence</span></span><span class="carte-ligne">对话中主动选择的沉默，都记下来。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#07734C" data-nom="-conversation-已经和别人聊过的话题-免得再重复"><span class="ico" style="--x:8;--y:8"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Conversation</span></span><span class="carte-ligne">已经和别人聊过的话题，免得再重复。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+</ul>
+</section>
+<section class="groupe" id="univers-ecouter" data-id="ecouter" style="--c:#6B8A72">
+<header class="groupe-tete"><h3>聆听、停歇、祈祷</h3><p>音乐、安静、祈祷：停下来的那些时刻。</p><span class="groupe-n">14 款应用</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#6B8A72" data-nom="-pause-此时此地-用你现有的时间-休息时做点什么"><span class="ico" style="--x:9;--y:8"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Pause</span></span><span class="carte-ligne">此时此地，用你现有的时间，休息时做点什么。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#8F515C" data-nom="-ecoutes-音乐一首一首地计数-并显示离上限还剩多少"><span class="ico detouree" style="--x:10;--y:8"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Écoutes</span></span><span class="carte-ligne">音乐一首一首地计数，并显示离上限还剩多少。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2D4A3B" data-nom="-spotify-你听过的一切-一首一首地计数-附完整存档"><span class="ico" style="--x:11;--y:8"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Spotify</span></span><span class="carte-ligne">你听过的一切，一首一首地计数，附完整存档。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2B4B80" data-nom="-podcast-日常听的播客-不知不觉就计了数"><span class="ico" style="--x:12;--y:8"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Podcast</span></span><span class="carte-ligne">日常听的播客，不知不觉就计了数。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3F2E4F" data-nom="-chansons-每天一首歌-歌词一句一句勾选-卡拉ok-复习"><span class="ico" style="--x:13;--y:8"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Chansons</span></span><span class="carte-ligne">每天一首歌：歌词一句一句勾选，卡拉OK，复习。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#7B5B2D" data-nom="-coran-整部-古兰经-离线可读-每天读一段"><span class="ico" style="--x:14;--y:8"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Coran</span></span><span class="carte-ligne">整部《古兰经》离线可读，每天读一段。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#1E5A5E" data-nom="-muslim-每天更诚实-更勤于功修-并且看得见"><span class="ico" style="--x:0;--y:9"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Muslim</span></span><span class="carte-ligne">每天更诚实、更勤于功修，并且看得见。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3B3B3B" data-nom="-prieres-每天的五次礼拜-三秒钟记下"><span class="ico" style="--x:1;--y:9"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Prières</span></span><span class="carte-ligne">每天的五次礼拜，三秒钟记下。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#1F2740" data-nom="-meditation-冥想课程-以及可叠成三层的-59-种声音"><span class="ico" style="--x:2;--y:9"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Méditation</span></span><span class="carte-ligne">冥想课程，以及可叠成三层的 59 种声音。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#4A5566" data-nom="-sounds-工作或放松时听的声音景观"><span class="ico" style="--x:3;--y:9"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Sounds</span></span><span class="carte-ligne">工作或放松时听的声音景观。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#07734C" data-nom="-chance-一天里的好运-一件一件记下"><span class="ico" style="--x:4;--y:9"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Chance</span></span><span class="carte-ligne">一天里的好运，一件一件记下。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B17D2F" data-nom="-gratitude-每天三到五件值得感恩的事"><span class="ico" style="--x:5;--y:9"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Gratitude</span></span><span class="carte-ligne">每天三到五件值得感恩的事。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B0573B" data-nom="-recompense-你的奖励-以及你每天给自己的奖励"><span class="ico" style="--x:6;--y:9"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Récompense</span></span><span class="carte-ligne">你的奖励，以及你每天给自己的奖励。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#866A8F" data-nom="-negative-把不顺心的事放下来-不让情绪留在心里"><span class="ico" style="--x:7;--y:9"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Negative</span></span><span class="carte-ligne">把不顺心的事放下来，不让情绪留在心里。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+</ul>
+</section>
+<section class="groupe" id="univers-foyer" data-id="foyer" style="--c:#5F6B36">
+<header class="groupe-tete"><h3>家与物</h3><p>钱、物品、家务：不用操心，家也井井有条。</p><span class="groupe-n">8 款应用</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#5F6B36" data-nom="-budget-一句话记下开销-还有预算和存钱罐"><span class="ico" style="--x:8;--y:9"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Budget</span></span><span class="carte-ligne">一句话记下开销，还有预算和存钱罐。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2E4B3B" data-nom="-achats-你所有的购买计划-按时间远近归类-并为想买的东西留一段冷静期"><span class="ico" style="--x:9;--y:9"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Achats</span></span><span class="carte-ligne">你所有的购买计划，按时间远近归类，并为想买的东西留一段冷静期。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6E4B34" data-nom="-objet-你拥有的一切-按你自己的方式整理"><span class="ico" style="--x:10;--y:9"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Objet</span></span><span class="carte-ligne">你拥有的一切，按你自己的方式整理。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#C67247" data-nom="-cuisine-你会做的菜-汇成一本菜谱"><span class="ico" style="--x:11;--y:9"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Cuisine</span></span><span class="carte-ligne">你会做的菜，汇成一本菜谱。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B17D2F" data-nom="-rangement-面前有二十分钟-先收拾什么"><span class="ico" style="--x:12;--y:9"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Rangement</span></span><span class="carte-ligne">面前有二十分钟：先收拾什么。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#307380" data-nom="-proprete-分区域做家务-各有提醒"><span class="ico" style="--x:13;--y:9"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Propreté</span></span><span class="carte-ligne">分区域做家务，各有提醒。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5D918A" data-nom="-tri-删除的照片-视频和文件-边整理边计数"><span class="ico" style="--x:14;--y:9"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Tri</span></span><span class="carte-ligne">删除的照片、视频和文件，边整理边计数。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3F6FA0" data-nom="-appareil-哪台设备做什么-一项活动-一台主力设备"><span class="ico" style="--x:0;--y:10"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Appareil</span></span><span class="carte-ligne">哪台设备做什么：一项活动，一台主力设备。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+</ul>
+</section>
+<section class="groupe" id="univers-outils" data-id="outils" style="--c:#C67247">
+<header class="groupe-tete"><h3>工具</h3><p>让 iPhone 和 Mac 保持整洁，并把各个应用连在一起。</p><span class="groupe-n">14 款应用</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#3A3A3A" data-nom="-accueil-家族的主屏幕-你的-flow-应用和它们当天的数字-以大号小组件呈现"><span class="ico" style="--x:1;--y:10"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Accueil</span></span><span class="carte-ligne">家族的主屏幕：你的 FLOW 应用和它们当天的数字，以大号小组件呈现。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#402F50" data-nom="-barre-菜单栏里的一行字-今天的任务-已过去的一天-下一个日程"><span class="ico" style="--x:2;--y:10"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Barre</span></span><span class="carte-ligne">菜单栏里的一行字：今天的任务、已过去的一天、下一个日程。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#84404E" data-nom="-mac-你在-mac-上真正做了什么-在后台记录-用了哪些应用-多长时间-绝不记录你输入的内容"><span class="ico detouree" style="--x:3;--y:10"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Mac</span></span><span class="carte-ligne">你在 Mac 上真正做了什么，在后台记录：用了哪些应用、多长时间，绝不记录你输入的内容。</span><span class="carte-plat">Mac</span></span></div></li>
+<li><div class="carte" style="--c:#1E5A5E" data-nom="-cleaner-清理-mac-而不弄坏任何东西-每一项都有说明-全部移到废纸篓"><span class="ico" style="--x:4;--y:10"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Cleaner</span></span><span class="carte-ligne">清理 Mac 而不弄坏任何东西：每一项都有说明，全部移到废纸篓。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2D4A3A" data-nom="-charge-把电量保持在-80-以下-并确认上限确实生效"><span class="ico" style="--x:5;--y:10"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Charge</span></span><span class="carte-ligne">把电量保持在 80% 以下，并确认上限确实生效。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#866A8F" data-nom="-obsidian-你的笔记库-只是更快"><span class="ico" style="--x:6;--y:10"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Obsidian</span></span><span class="carte-ligne">你的笔记库，只是更快。</span><span class="carte-plat">iPhone</span></span></div></li>
+<li><div class="carte" style="--c:#C67247" data-nom="-sidenote-屏幕边缘的笔记-需要时就在那里"><span class="ico" style="--x:7;--y:10"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">SideNote</span></span><span class="carte-ligne">屏幕边缘的笔记，需要时就在那里。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2A4A80" data-nom="-note-只显示结果-从不显示代码的编辑器-同一段文字-两种面貌"><span class="ico" style="--x:8;--y:10"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Note</span></span><span class="carte-ligne">只显示结果、从不显示代码的编辑器：同一段文字，两种面貌。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#4070A0" data-nom="-mindmap-把项目画成思维导图-任务可以直接勾选"><span class="ico" style="--x:9;--y:10"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">MindMap</span></span><span class="carte-ligne">把项目画成思维导图，任务可以直接勾选。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#202841" data-nom="-verrou-在头脑清醒时定下规则-之后由-iphone-来执行"><span class="ico" style="--x:10;--y:10"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Verrou</span></span><span class="carte-ligne">在头脑清醒时定下规则，之后由 iPhone 来执行。</span><span class="carte-plat">iPhone</span></span></div></li>
+<li><div class="carte" style="--c:#94989D" data-nom="-writer-又快又准地写法语-光标会停在出错的地方"><span class="ico detouree" style="--x:11;--y:10"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Writer</span></span><span class="carte-ligne">又快又准地写法语：光标会停在出错的地方。</span><span class="carte-plat">Mac</span></span></div></li>
+<li><div class="carte" style="--c:#492421" data-nom="-verrou-mac-按你定下的规则-在-mac-上屏蔽网站-应用和互联网"><span class="ico" style="--x:12;--y:10"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Verrou Mac</span></span><span class="carte-ligne">按你定下的规则，在 Mac 上屏蔽网站、应用和互联网。</span><span class="carte-plat">Mac</span></span></div></li>
+<li><div class="carte" style="--c:#7A5A2C" data-nom="-backup-再也不丢文件-每个版本都保留-什么都找得回来"><span class="ico" style="--x:13;--y:10"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Backup</span></span><span class="carte-ligne">再也不丢文件：每个版本都保留，什么都找得回来。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5B4598" data-nom="-security-mac-和-iphone-的哨兵-什么在保护你-什么在自行启动"><span class="ico" style="--x:14;--y:10"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Security</span></span><span class="carte-ligne">Mac 和 iPhone 的哨兵：什么在保护你，什么在自行启动。</span><span class="carte-plat">iPhone 和 Mac</span></span></div></li>
+</ul>
+</section>
+  </div>
+</section>
+
+<!-- 6 · Les questions. -->
+<section class="s-faq" id="questions" data-scene="texte">
+  <div class="etroit">
+    <h2 class="decoupe">常见问题</h2>
+    <div class="faq">
+      <details>
+        <summary>FLOW 是什么？</summary>
+        <p>一个为 iPhone 和 Mac 打造的应用家族。每款应用只做一件事：数你喝了几杯水、准备明天的安排、学意大利语。它们有同样的面貌和同样的原则。</p>
+      </details>
+      <details>
+        <summary>在哪里下载这些应用？</summary>
+        <p>Anglais 将最先登陆 App Store；Italien、Espagnole 和 Allemand 随后推出。其余应用正在准备中。</p>
+      </details>
+      <details>
+        <summary>需要注册账号吗？</summary>
+        <p>不需要。FLOW 没有账号。少数应用会连接你已经在用的服务，比如你的日历或 Apple 健康：由你本人在自己的设备上授权。</p>
+      </details>
+      <details>
+        <summary>我的数据去了哪里？</summary>
+        <p>哪里也不去。它们留在你的设备上。在 iPhone 和 Mac 之间，它们通过你自己的 iCloud 传递。FLOW 没有任何服务器。</p>
+      </details>
+      <details>
+        <summary>没有网络能用吗？</summary>
+        <p>基本可以：内容就在应用里。只有需要读取在线服务的应用，才在读取时用到网络。</p>
+      </details>
+      <details>
+        <summary>iPhone 还是 Mac？</summary>
+        <p>几乎所有应用两边都有，界面相同，并且互相同步。少数只在 Mac 上或只在 iPhone 上：每款应用下方都有标注。</p>
+      </details>
+      <details>
+        <summary>要付费吗？</summary>
+        <p>Anglais 完全免费。其他应用的价格将在发布时公布。</p>
+      </details>
+      <details>
+        <summary>这些应用是什么语言的？</summary>
+        <p>目前是法语。这个页面有翻译，应用本身是法语的。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · Le contact et le pied de page. -->
+<section class="s-contact" id="contact" data-scene="texte">
+  <div class="etroit centre-texte">
+    <h2 class="decoupe">写信给我</h2>
+    <p class="chapeau">有问题、有应用点子、发现了错误？每一条消息我都会读。</p>
+    <a class="bouton clair grand" href="mailto:contact@flowapps.store">contact@flowapps.store</a>
+  </div>
+  <footer class="pied">
+    <nav aria-label="页脚链接">
+      <a href="/anglais/">FLOW — Anglais</a>
+      <a href="/anglais/assistance/">支持（法语）</a>
+      <a href="/mentions-legales/">法律声明（法语）</a>
+    </nav>
+    <ul class="pied-langues" aria-label="语言">
+      <li><a href="/" hreflang="fr" lang="fr" data-code="fr" data-invite="Lire cette page en français">Français</a></li>
+      <li><a href="/en/" hreflang="en" lang="en" data-code="en" data-invite="Read this page in English">English</a></li>
+      <li><a href="/es/" hreflang="es" lang="es" data-code="es" data-invite="Leer esta página en español">Español</a></li>
+      <li><a href="/de/" hreflang="de" lang="de" data-code="de" data-invite="Diese Seite auf Deutsch lesen">Deutsch</a></li>
+      <li><a href="/zh/" hreflang="zh-Hans" lang="zh-Hans" data-code="zh" data-invite="用中文阅读本页" aria-current="page">中文</a></li>
+      <li><a href="/ja/" hreflang="ja" lang="ja" data-code="ja" data-invite="このページを日本語で読む">日本語</a></li>
+      <li><a href="/ko/" hreflang="ko" lang="ko" data-code="ko" data-invite="이 페이지를 한국어로 읽기">한국어</a></li>
+    </ul>
+    <span>© 2026 Helal Andesha</span>
+  </footer>
+</section>
+
+<!-- 8 · Le retour : la page boucle sur son début. -->
+<section class="s s-retour" data-scene="retour" aria-hidden="true">
+  <p class="indice">回到开头</p>
+</section>
+
+</main>
+
+<a class="invite" id="invite" hidden></a>
+
+<script type="application/json" id="minis">{"planifier":[{"n":"Tomorrow","x":0,"y":0},{"n":"MyWeek","x":1,"y":0},{"n":"WeekDo","x":2,"y":0},{"n":"WeekH","x":3,"y":0},{"n":"WeekPlan","x":4,"y":0},{"n":"Mois","x":5,"y":0},{"n":"Année","x":6,"y":0},{"n":"Day Hour","x":7,"y":0},{"n":"Calendar","x":8,"y":0}],"faire":[{"n":"Todo","x":1,"y":1},{"n":"Clarté","x":2,"y":1},{"n":"ListDo","x":3,"y":1},{"n":"Kanban","x":4,"y":1},{"n":"Board","x":5,"y":1},{"n":"PriorityDo","x":6,"y":1},{"n":"Eisenhower","x":7,"y":1},{"n":"DelayDo","x":8,"y":1},{"n":"EnergyDo","x":9,"y":1}],"projets":[{"n":"Project","x":5,"y":2},{"n":"Feuille Project","x":6,"y":2},{"n":"Admin","x":7,"y":2},{"n":"CV","x":8,"y":2},{"n":"DeepWork","x":9,"y":2},{"n":"Distraction","x":11,"y":2},{"n":"Vidéo","x":12,"y":2},{"n":"Dashboard","x":13,"y":2},{"n":"Business","x":14,"y":2}],"corps":[{"n":"Water","x":1,"y":3},{"n":"Douche froide","x":2,"y":3},{"n":"Smile","x":3,"y":3},{"n":"Sleep","x":4,"y":3},{"n":"Sieste","x":5,"y":3},{"n":"Jeûne","x":6,"y":3},{"n":"Poids","x":7,"y":3},{"n":"Posture","x":8,"y":3},{"n":"Fatigue","x":9,"y":3}],"bouger":[{"n":"Body","x":3,"y":4},{"n":"Pompes","x":4,"y":4},{"n":"Tractions","x":5,"y":4},{"n":"Étirements","x":6,"y":4},{"n":"Running","x":7,"y":4},{"n":"Move","x":8,"y":4},{"n":"Go","x":9,"y":4},{"n":"Lieux Rituel","x":10,"y":4},{"n":"Atlas","x":11,"y":4}],"apprendre":[{"n":"Book","x":13,"y":4},{"n":"Reader","x":14,"y":4},{"n":"Français","x":0,"y":5},{"n":"Révision","x":1,"y":5},{"n":"Leçons","x":2,"y":5},{"n":"Brain","x":3,"y":5},{"n":"Chess","x":4,"y":5},{"n":"Citation","x":5,"y":5},{"n":"Ciné","x":6,"y":5}],"connaitre":[{"n":"Identité","x":3,"y":6},{"n":"Bad identité","x":4,"y":6},{"n":"Valeur","x":5,"y":6},{"n":"Discipline","x":6,"y":6},{"n":"Bilan","x":9,"y":6},{"n":"Réussite","x":10,"y":6},{"n":"Mensonge","x":11,"y":6},{"n":"Refusé","x":12,"y":6},{"n":"Oublié","x":13,"y":6}],"autres":[{"n":"Friends","x":8,"y":7},{"n":"Drague","x":9,"y":7},{"n":"Sociale","x":10,"y":7},{"n":"Sujets","x":11,"y":7},{"n":"Parole","x":12,"y":7},{"n":"Éloquence","x":13,"y":7},{"n":"Humble","x":14,"y":7},{"n":"Coupé","x":0,"y":8},{"n":"Négocié","x":1,"y":8}],"ecouter":[{"n":"Pause","x":9,"y":8},{"n":"Spotify","x":11,"y":8},{"n":"Podcast","x":12,"y":8},{"n":"Chansons","x":13,"y":8},{"n":"Coran","x":14,"y":8},{"n":"Muslim","x":0,"y":9},{"n":"Prières","x":1,"y":9},{"n":"Méditation","x":2,"y":9},{"n":"Sounds","x":3,"y":9}],"foyer":[{"n":"Budget","x":8,"y":9},{"n":"Achats","x":9,"y":9},{"n":"Objet","x":10,"y":9},{"n":"Cuisine","x":11,"y":9},{"n":"Rangement","x":12,"y":9},{"n":"Propreté","x":13,"y":9},{"n":"Tri","x":14,"y":9},{"n":"Appareil","x":0,"y":10}],"outils":[{"n":"Accueil","x":1,"y":10},{"n":"Barre","x":2,"y":10},{"n":"Cleaner","x":4,"y":10},{"n":"Charge","x":5,"y":10},{"n":"Obsidian","x":6,"y":10},{"n":"SideNote","x":7,"y":10},{"n":"Note","x":8,"y":10},{"n":"MindMap","x":9,"y":10},{"n":"Verrou","x":10,"y":10}]}</script>
+<script src="/assets/univers/univers.js" defer></script>
+</body>
+</html>

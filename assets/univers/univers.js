@@ -26,7 +26,10 @@
   const lisse = t => t * t * (3 - 2 * t);
   const modulo = (i, n) => ((i % n) + n) % n;
   const hexa = h => [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16) / 255);
-  const sansAccent = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  // Mêmes règles que `cle_recherche` dans construire.py : sans accent, en minuscules.
+  const sansAccent = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').normalize('NFC').toLowerCase();
+  const sansEspaces = /[\u3040-\u30ff\u3400-\u9fff]/;                    // chinois, japonais : pas d'espace entre les mots
+  const ideogrammes = /[\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af]/;     // … et le coréen, pour la recherche
 
   // La couleur du fond : le pigment ramené à une même clarté, pour que l'ivoire
   // du texte s'y lise toujours (4,5:1 au moins), que l'univers soit Encre ou Céladon.
@@ -44,7 +47,7 @@
     const texte = el.textContent.trim();
     el.setAttribute('aria-label', texte);
     el.textContent = '';
-    texte.split(/[ \n\t]+/).forEach((mot, i) => {
+    morceaux(texte).forEach(([mot, espace], i) => {
       const boite = document.createElement('span');
       boite.className = 'mot';
       boite.setAttribute('aria-hidden', 'true');
@@ -52,8 +55,36 @@
       dedans.style.setProperty('--i', i);
       dedans.textContent = mot;
       boite.append(dedans);
-      el.append(boite, ' ');
+      el.append(boite, espace ? ' ' : '');
     });
+  }
+  // Les mots d'un titre, et s'il faut une espace après chacun. Le chinois et le
+  // japonais n'en mettent pas : on demande les mots au navigateur, et la
+  // ponctuation reste collée au mot qu'elle ferme (ou qu'elle ouvre).
+  function morceaux(texte) {
+    if (!sansEspaces.test(texte)) return texte.split(/[ \n\t]+/).map(m => [m, true]);
+    const parts = 'Segmenter' in Intl
+      ? [...new Intl.Segmenter(document.documentElement.lang, { granularity: 'word' }).segment(texte)]
+          .map(p => ({ t: p.segment, mot: p.isWordLike }))
+      : [...texte].map(c => ({ t: c, mot: /[\p{L}\p{N}]/u.test(c) }));
+    const sortie = [];
+    let avant = '';
+    parts.forEach(p => {
+      if (/^\s+$/.test(p.t)) { if (sortie.length) sortie[sortie.length - 1][1] = true; }
+      else if (p.mot) { sortie.push([avant + p.t, false]); avant = ''; }
+      else if (/^[「『（《〈“‘(\[]+$/.test(p.t) || !sortie.length) avant += p.t;
+      else sortie[sortie.length - 1][0] += p.t;
+    });
+    if (avant && sortie.length) sortie[sortie.length - 1][0] += avant;
+    return sortie.length ? sortie : [[texte, false]];
+  }
+  // Un mot ne se coupe pas : s'il déborde de sa colonne (« SEGUIMIENTO »,
+  // « KONZENTRATION »), c'est tout le titre qui rétrécit pour qu'il y tienne.
+  function ajuster(el) {
+    el.style.fontSize = '';
+    const place = el.clientWidth;
+    const large = Math.max(0, ...$$('.mot', el).map(m => m.getBoundingClientRect().width));
+    if (place && large > place) el.style.fontSize = parseFloat(getComputedStyle(el).fontSize) * place / large * 0.98 + 'px';
   }
   $$('.decoupe').forEach(decouper);
 
@@ -85,6 +116,7 @@
     gliss.setAttribute('aria-valuetext', f.nom);
     pNom.textContent = f.nom;
     decouper(pNom);
+    ajuster(nomEl); ajuster(pNom);
     pTexte.textContent = f.texte;
     pN.textContent = f.n;
     pMinis.replaceChildren(...minis[f.id].map(m => {
@@ -115,6 +147,8 @@
   function mesurer() {
     W = innerWidth; H = innerHeight; petit = W < 760;
     T = parseFloat(getComputedStyle(tuiles[0]).width) || 200;
+    etapes.forEach(e => { e.y = e.el.getBoundingClientRect().top + scrollY; });
+    $$('.decoupe, #nomFamille').forEach(ajuster);
     etapes.forEach(e => { e.y = e.el.getBoundingClientRect().top + scrollY; });
     total = Math.max(1, racine.scrollHeight - H);
     tailleFond();
@@ -250,7 +284,7 @@
     if (sonActif) sonActif = allumerSon();
     else if (maitre) maitre.gain.linearRampToValueAtTime(0, audio.currentTime + 0.5);
     boutonSon.setAttribute('aria-pressed', sonActif);
-    etatSon.textContent = sonActif ? 'Son actif' : 'Son coupé';
+    etatSon.textContent = sonActif ? boutonSon.dataset.actif : boutonSon.dataset.coupe;
     if (sonActif) tic(choix);
   });
 
@@ -334,13 +368,14 @@
   const groupes = $$('.groupe'), puces = $$('.puce'), champ = $('#recherche');
   let filtre = '';
   function filtrer() {
-    const mots = sansAccent(champ.value).split(/[^a-z0-9]+/).filter(Boolean);
+    const mots = sansAccent(champ.value).split(/[^\p{L}\p{N}_]+/u).filter(Boolean)
+      .map(m => ideogrammes.test(m) ? m : '-' + m);       // un mot latin se cherche par son début
     let vus = 0;
     groupes.forEach(g => {
       const bonne = !filtre || g.dataset.id === filtre;
       let n = 0;
       $$('.carte', g).forEach(c => {
-        const garde = bonne && mots.every(m => c.dataset.nom.includes('-' + m));
+        const garde = bonne && mots.every(m => c.dataset.nom.includes(m));
         c.parentElement.classList.toggle('cache', !garde);
         if (garde) n++;
       });
@@ -359,6 +394,42 @@
   }));
   champ.addEventListener('input', filtrer);
   $('#pLien').addEventListener('click', () => { filtre = F[choix].id; champ.value = ''; filtrer(); });
+  // ── L'invitation à lire dans sa langue ────────────────────
+  // Jamais de redirection : on propose, le visiteur décide. Un refus tient
+  // le temps de la visite.
+  (function inviter() {
+    const invite = $('#invite'), ici = document.documentElement.lang.slice(0, 2);
+    const liens = $$('.menu-langues a');
+    let refuse = false;
+    try { refuse = sessionStorage.getItem('flow-langue') === 'non'; } catch (_) { /* stockage fermé */ }
+    if (!invite || refuse) return;
+    for (const voulue of navigator.languages || [navigator.language || '']) {
+      const code = voulue.slice(0, 2).toLowerCase();
+      if (code === ici) return;                              // la page est déjà dans une de ses langues
+      const lien = liens.find(a => a.dataset.code === code);
+      if (!lien) continue;
+      invite.href = lien.href;
+      invite.lang = lien.lang;
+      invite.textContent = lien.dataset.invite;
+      const fermer = document.createElement('button');
+      fermer.type = 'button';
+      fermer.textContent = '×';
+      fermer.setAttribute('aria-label', $('#fermerMenu').textContent);
+      fermer.addEventListener('click', ev => {
+        ev.preventDefault();
+        invite.hidden = true;
+        try { sessionStorage.setItem('flow-langue', 'non'); } catch (_) { /* stockage fermé */ }
+      });
+      invite.append(fermer);
+      invite.hidden = false;
+      // Elle ne suit pas la lecture : passé le premier écran, elle s'efface.
+      const loin = () => invite.classList.toggle('loin', scrollY > innerHeight * 0.6);
+      addEventListener('scroll', loin, { passive: true });
+      loin();
+      return;
+    }
+  })();
+
   // La lueur qui suit le pointeur sur une carte.
   $('#apps').addEventListener('pointermove', ev => {
     const c = ev.target.closest('.carte');

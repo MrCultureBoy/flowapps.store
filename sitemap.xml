@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://flowapps.store/</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://flowapps.store/</loc><lastmod>2026-10-08</lastmod></url>
+  <url><loc>https://flowapps.store/en/</loc><lastmod>2026-10-08</lastmod></url>
+  <url><loc>https://flowapps.store/es/</loc><lastmod>2026-10-08</lastmod></url>
+  <url><loc>https://flowapps.store/de/</loc><lastmod>2026-10-08</lastmod></url>
+  <url><loc>https://flowapps.store/zh/</loc><lastmod>2026-10-08</lastmod></url>
+  <url><loc>https://flowapps.store/ja/</loc><lastmod>2026-10-08</lastmod></url>
+  <url><loc>https://flowapps.store/ko/</loc><lastmod>2026-10-08</lastmod></url>
   <url><loc>https://flowapps.store/anglais/</loc><lastmod>2026-09-27</lastmod></url>
   <url><loc>https://flowapps.store/anglais/assistance/</loc><lastmod>2026-09-27</lastmod></url>
   <url><loc>https://flowapps.store/anglais/confidentialite/</loc><lastmod>2026-09-27</lastmod></url>

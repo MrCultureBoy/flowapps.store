@@ -193,12 +193,34 @@ button { font: inherit; letter-spacing: inherit; text-transform: inherit; color:
 .menu-petit { list-style: none; margin: 40px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 28px; font: 12px/1.4 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--douce); }
 .menu-petit a { text-decoration: none; }
 .menu-petit a:hover { color: var(--ivoire); }
+/* Les langues : chaque nom est écrit dans sa propre langue, donc sans capitales forcées. */
+.menu-langues, .pied-langues { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.menu-langues { margin-top: 28px; }
+.menu-langues a, .pied-langues a {
+  display: block; padding: 8px 12px; border: 1px solid var(--trait); border-radius: 999px;
+  font: 13px/1 var(--sans); letter-spacing: 0; text-transform: none; text-decoration: none; color: var(--douce);
+}
+.menu-langues a:hover, .pied-langues a:hover { color: var(--ivoire); border-color: var(--douce); }
+.menu-langues a[aria-current], .pied-langues a[aria-current] { color: var(--nuit); background: var(--ivoire); border-color: var(--ivoire); }
+.pied-langues { flex-basis: 100%; }
+
+/* L'invitation à lire la page dans sa langue : une pastille, jamais une redirection. */
+.invite {
+  position: fixed; z-index: 12; right: 34px; bottom: 30px;   /* sous le menu et le chargement */
+  display: flex; align-items: center; gap: 12px; max-width: calc(100vw - 32px);
+  padding: 12px 12px 12px 18px; border-radius: 999px; background: var(--ivoire); color: var(--nuit);
+  font: 600 14px/1.2 var(--sans); text-decoration: none; box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+}
+.invite[hidden] { display: none; }
+.invite { transition: opacity .3s, translate .3s; }
+.invite.loin { opacity: 0; pointer-events: none; }
+.invite button { width: 26px; height: 26px; border-radius: 50%; background: rgba(23, 19, 15, .1); font: 18px/1 var(--sans); flex: none; }
 
 /* ── Les sections ──────────────────────────────────────────── */
 main { position: relative; z-index: 1; }
 .surtitre { margin: 0; font: 11px/1.4 var(--mono); letter-spacing: .18em; text-transform: uppercase; color: var(--douce); }
 h1, h2, h3, p { margin: 0; }
-.decoupe { font: italic 700 clamp(34px, 5.4vw, 78px)/.98 var(--serif); letter-spacing: -.012em; text-transform: uppercase; text-wrap: balance; }
+.decoupe { font: italic 700 clamp(34px, 5.4vw, 78px)/.98 var(--serif); letter-spacing: -.012em; text-transform: uppercase; text-wrap: balance; max-width: 100%; }   /* borné : c'est `ajuster` (univers.js) qui rétrécit un mot trop long */
 .decoupe.geant { font-size: clamp(32px, 5.2vw, 80px); }
 .chapeau { max-width: 40ch; font-size: clamp(16px, 1.25vw, 19px); line-height: 1.5; color: var(--encre); opacity: .9; text-wrap: pretty; }
 
@@ -398,6 +420,25 @@ html.calme .chargement { display: none; }
 html.banc *, html.banc *::before, html.banc *::after { transition: none !important; animation: none !important; }
 html.banc { scroll-behavior: auto; }
 
+/* ── Chinois, japonais, coréen ─────────────────────────────── */
+/* Ces écritures n'ont pas d'italique : le navigateur pencherait les signes de
+   force. Elles demandent aussi plus d'air entre les lignes, et une largeur de
+   colonne comptée en signes (em), pas en chiffres (ch). */
+:lang(zh) { --serif: ui-serif, "New York", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", "SimSun", serif; }
+:lang(ja) { --serif: ui-serif, "New York", "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif CJK JP", serif; }
+:lang(ko) { --serif: ui-serif, "New York", "AppleMyungjo", "Nanum Myeongjo", "Noto Serif CJK KR", "Batang", serif; }
+:is(:lang(zh), :lang(ja), :lang(ko)) :is(.decoupe, .nom-famille, .menu-grand a, .groupe-tete h3, .gamme-tete h1) {
+  font-style: normal; letter-spacing: 0; line-height: 1.18;
+}
+:is(:lang(zh), :lang(ja), :lang(ko)) :is(.surtitre, .indice, .barre-rouge, .carte-plat, .etat, .groupe-n, .puce, .bouton, .lien-menu, .menu-petit, .pied) { letter-spacing: .04em; }
+:is(:lang(zh), :lang(ja)) .chapeau { max-width: 24em; line-break: strict; }
+:is(:lang(zh), :lang(ja)) .centre .chapeau { max-width: 28em; }
+:is(:lang(zh), :lang(ja)) .gamme-tete h1 { max-width: 16em; }
+:is(:lang(zh), :lang(ja)) .nom-famille { max-width: 9em; }
+:lang(ko) :is(.chapeau, .carte-ligne, .faq p, .groupe-tete p) { word-break: keep-all; }
+/* Le nom d'une app reste en lettres latines : il garde l'allure du reste du site. */
+:is(:lang(zh), :lang(ja), :lang(ko)) [lang="fr"] { font-family: var(--sans); }
+
 /* ── Sans script ───────────────────────────────────────────── */
 html:not(.js) .s { min-height: 0; padding-top: 10vh; padding-bottom: 6vh; }
 html:not(.js) .s-gamme { padding-top: 130px; }
@@ -426,4 +467,7 @@ html:not(.js) .barre { position: absolute; }
   .groupe-n { grid-column: 1; grid-row: auto; }
   .outils { padding-top: 70px; }
   .menu-fermer { right: 18px; top: 26px; }
+  /* Au centre, et la glissière des univers remonte pour lui laisser la place. */
+  .invite { right: auto; left: 50%; translate: -50% 0; bottom: 14px; font-size: 13px; white-space: nowrap; }
+  body:has(.invite:not([hidden])) .s-gamme { padding-bottom: 76px; }
 }

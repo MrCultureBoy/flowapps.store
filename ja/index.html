@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FLOW — iPhone と Mac のための 165 のアプリ。余計なものは何もなし</title>
+<meta name="description" content="FLOW は iPhone と Mac のための 165 本のアプリのファミリーです。計画する、実行する、語学を学ぶ、自分をいたわる。アカウント不要、広告なし、追跡なし。">
+<meta name="theme-color" content="#17130F">
+<link rel="canonical" href="https://flowapps.store/ja/">
+<link rel="alternate" hreflang="fr" href="https://flowapps.store/">
+<link rel="alternate" hreflang="en" href="https://flowapps.store/en/">
+<link rel="alternate" hreflang="es" href="https://flowapps.store/es/">
+<link rel="alternate" hreflang="de" href="https://flowapps.store/de/">
+<link rel="alternate" hreflang="zh-Hans" href="https://flowapps.store/zh/">
+<link rel="alternate" hreflang="ja" href="https://flowapps.store/ja/">
+<link rel="alternate" hreflang="ko" href="https://flowapps.store/ko/">
+<link rel="alternate" hreflang="x-default" href="https://flowapps.store/en/">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="ko_KR">
+<!-- Le « ?v= » change avec le dessin de la marque : sans lui, les navigateurs gardent l’ancienne icône d’onglet des semaines. -->
+<link rel="icon" href="/assets/favicon.png?v=ddfb0c" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=ddfb0c">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FLOW">
+<meta property="og:title" content="FLOW — iPhone と Mac のための 165 のアプリ。余計なものは何もなし">
+<meta property="og:description" content="ひとつの用途にひとつのアプリ、11 の世界。アカウント不要、広告なし、追跡なし。">
+<meta property="og:image" content="https://flowapps.store/assets/univers/marque.png">
+<meta property="og:url" content="https://flowapps.store/ja/">
+<meta property="og:locale" content="ja_JP">
+
+<link rel="stylesheet" href="/assets/univers/univers.css">
+<style>:root { --cols: 15; --rangs: 11; }</style>
+<!-- Sans script, la page reste une page : tout le contenu est dans le HTML. -->
+<script>document.documentElement.className = 'js';</script>
+</head>
+<body>
+
+<a class="evitement" href="#apps">アプリ一覧へ移動</a>
+
+<!-- Le chargement : le mot se remplit pendant que les emblèmes arrivent. -->
+<div class="chargement" id="chargement" aria-hidden="true">
+  <div class="chargement-mot"><span>FLOW</span><span class="plein" id="motPlein">FLOW</span></div>
+  <div class="chargement-pct"><span id="pct">0</span>&nbsp;%</div>
+</div>
+
+<!-- La scène, fixe derrière le texte : le fond coloré et les tuiles en volume. -->
+<div class="scene" id="scene" aria-hidden="true">
+  <canvas id="fond"></canvas>
+  <div class="socle socle-haut"></div>
+  <div class="socle socle-bas"></div>
+  <div class="monde" id="monde">
+<div class="tuile" data-i="0" data-id="planifier" data-nom="時間を計画する" data-texte="夜、週、月。時間の使い道を先に決めて、何が守れたかを確かめる。" data-n="16" data-c="#202841" style="--c:#202841"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/tomorrow.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">アプリ</span></div><span class="reflet"></span></div></div>
+<div class="tuile" data-i="1" data-id="faire" data-nom="実行する" data-texte="取りかかり方ごとにリストをひとつ。エネルギー別、所要時間別、優先度別、時間帯別。" data-n="19" data-c="#5C918A" style="--c:#5C918A"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/todo.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">アプリ</span></div><span class="reflet"></span></div></div>
+<div class="tuile" data-i="2" data-id="projets" data-nom="プロジェクトと集中" data-texte="長く続くものを進め、本当に前に進める時間を守る。" data-n="11" data-c="#2A4A80" style="--c:#2A4A80"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/deepwork.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">アプリ</span></div><span class="reflet"></span></div></div>
+<div class="tuile" data-i="3" data-id="corps" data-nom="体をいたわる" data-texte="水、睡眠、食事、姿勢。その場で記録して、傾向を読む。" data-n="17" data-c="#402F50" style="--c:#402F50"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/sleep.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">アプリ</span></div><span class="reflet"></span></div></div>
+<div class="tuile" data-i="4" data-id="bouger" data-nom="動く、出かける" data-texte="セット、ランニング、場所。屋外やジムですること。" data-n="10" data-c="#B17E30" style="--c:#B17E30"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/running.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">アプリ</span></div><span class="reflet"></span></div></div>
+<div class="tuile" data-i="5" data-id="apprendre" data-nom="学ぶ" data-texte="言語、本、概念。オフラインで、毎日少しずつ学ぶ。" data-n="20" data-c="#6C5F54" style="--c:#6C5F54"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/anglais.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">アプリ</span></div><span class="reflet"></span></div></div>
+<div class="tuile" data-i="6" data-id="connaitre" data-nom="自分を知る" data-texte="あなたがどう変わっていくかを、評価せずに数える。習慣、達成、人生の節目。" data-n="20" data-c="#9C5A68" style="--c:#9C5A68"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/identite.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">アプリ</span></div><span class="reflet"></span></div></div>
+<div class="tuile" data-i="7" data-id="autres" data-nom="人とのかかわり" data-texte="友人、話すこと、聞くこと。人との間で起きること。" data-n="16" data-c="#702537" style="--c:#702537"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/friends.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">アプリ</span></div><span class="reflet"></span></div></div>
+<div class="tuile" data-i="8" data-id="ecouter" data-nom="聴く、休む、祈る" data-texte="音楽、静けさ、祈り。立ち止まるひととき。" data-n="14" data-c="#6B8A72" style="--c:#6B8A72"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/pause.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">アプリ</span></div><span class="reflet"></span></div></div>
+<div class="tuile" data-i="9" data-id="foyer" data-nom="家と持ち物" data-texte="お金、持ち物、掃除。意識しなくても整う暮らし。" data-n="8" data-c="#5F6B36" style="--c:#5F6B36"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/budget.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">アプリ</span></div><span class="reflet"></span></div></div>
+<div class="tuile" data-i="10" data-id="outils" data-nom="ツール" data-texte="iPhone と Mac を整え、アプリ同士をつなぐもの。" data-n="14" data-c="#C67247" style="--c:#C67247"><div class="tuile-corps"><i class="tranche" style="--z:1"></i><i class="tranche" style="--z:2"></i><i class="tranche" style="--z:3"></i><i class="tranche" style="--z:4"></i><i class="tranche" style="--z:5"></i><i class="tranche" style="--z:6"></i><img class="face" src="/assets/univers/emblemes/sidenote.jpg" alt="" width="512" height="512" decoding="async"><div class="dos"><span class="dos-n"></span><span class="dos-mot">アプリ</span></div><span class="reflet"></span></div></div>
+  </div>
+</div>
+
+<!-- Le cadre : coins, barre d'avancement, lettres. -->
+<div class="hud" aria-hidden="true">
+  <div class="hud-barre"><i id="avancement"></i></div>
+  <span class="coin coin-hg"></span><span class="coin coin-hd"></span>
+  <span class="coin coin-bg"></span><span class="coin coin-bd"></span>
+  <div class="hud-lettres" id="lettres"><span>F</span><span>L</span><span>O</span><span>W</span></div>
+  <div class="hud-graduations"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+</div>
+
+<header class="barre">
+  <button class="son" id="son" type="button" aria-pressed="false" data-actif="サウンド オン" data-coupe="サウンド オフ">
+    <span class="son-etat" id="sonEtat">サウンド オフ</span>
+    <span class="son-ondes" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+  </button>
+  <a class="logo" href="/ja/" aria-label="FLOW、ホーム">FLOW</a>
+  <div class="barre-droite">
+    <button class="lien-menu" id="ouvrirMenu" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="points" aria-hidden="true"><i></i><i></i><i></i><i></i></span>メニュー
+    </button>
+    <a class="bouton" href="mailto:contact@flowapps.store">お問い合わせ</a>
+  </div>
+</header>
+
+<div class="menu" id="menu" hidden>
+  <button class="menu-fermer" id="fermerMenu" type="button">閉じる</button>
+  <nav aria-label="メニュー">
+    <ol class="menu-grand">
+      <li><a href="#univers">世界</a></li>
+      <li><a href="#principes">原則</a></li>
+      <li><a href="#apps">すべてのアプリ</a></li>
+      <li><a href="#questions">よくある質問</a></li>
+      <li><a href="#contact">お問い合わせ</a></li>
+    </ol>
+    <ul class="menu-petit">
+      <li><a href="/anglais/">Anglais（フランス語）</a></li>
+      <li><a href="/anglais/assistance/">サポート（フランス語）</a></li>
+      <li><a href="/mentions-legales/">法的表示（フランス語）</a></li>
+      <li><a href="mailto:contact@flowapps.store">contact@flowapps.store</a></li>
+    </ul>
+    <!-- Les autres langues de la page. -->
+    <ul class="menu-langues" aria-label="言語">
+      <li><a href="/" hreflang="fr" lang="fr" data-code="fr" data-invite="Lire cette page en français">Français</a></li>
+      <li><a href="/en/" hreflang="en" lang="en" data-code="en" data-invite="Read this page in English">English</a></li>
+      <li><a href="/es/" hreflang="es" lang="es" data-code="es" data-invite="Leer esta página en español">Español</a></li>
+      <li><a href="/de/" hreflang="de" lang="de" data-code="de" data-invite="Diese Seite auf Deutsch lesen">Deutsch</a></li>
+      <li><a href="/zh/" hreflang="zh-Hans" lang="zh-Hans" data-code="zh" data-invite="用中文阅读本页">中文</a></li>
+      <li><a href="/ja/" hreflang="ja" lang="ja" data-code="ja" data-invite="このページを日本語で読む" aria-current="page">日本語</a></li>
+      <li><a href="/ko/" hreflang="ko" lang="ko" data-code="ko" data-invite="이 페이지를 한국어로 읽기">한국어</a></li>
+    </ul>
+  </nav>
+</div>
+
+<main>
+
+<!-- 1 · Les univers : le carrousel. -->
+<section class="s s-gamme" id="univers" data-scene="gamme">
+  <div class="gamme-tete">
+    <p class="surtitre">165 のアプリ · 11 の世界 · iPhone と Mac</p>
+    <h1 class="decoupe">ひとつのアプリに、ひとつのこと。ほかには何もいらない。</h1>
+  </div>
+  <div class="gamme-pied">
+    <div class="gamme-nom">
+      <button class="fleche" id="prec" type="button" aria-label="前の世界">←</button>
+      <p class="nom-famille" id="nomFamille" aria-live="polite">時間を計画する</p>
+      <button class="fleche" id="suiv" type="button" aria-label="次の世界">→</button>
+    </div>
+    <label class="glissiere">
+      <span class="lu">世界を選ぶ</span>
+      <input id="glissiere" type="range" min="0" max="10" step="1" value="0">
+    </label>
+    <p class="indice">スクロールして見る</p>
+  </div>
+  <!-- Sans script : la liste des univers, en liens. -->
+  <ul class="gamme-liste">
+<li><a href="#univers-planifier" style="--c:#202841">時間を計画する<span>16 アプリ</span></a></li>
+<li><a href="#univers-faire" style="--c:#5C918A">実行する<span>19 アプリ</span></a></li>
+<li><a href="#univers-projets" style="--c:#2A4A80">プロジェクトと集中<span>11 アプリ</span></a></li>
+<li><a href="#univers-corps" style="--c:#402F50">体をいたわる<span>17 アプリ</span></a></li>
+<li><a href="#univers-bouger" style="--c:#B17E30">動く、出かける<span>10 アプリ</span></a></li>
+<li><a href="#univers-apprendre" style="--c:#6C5F54">学ぶ<span>20 アプリ</span></a></li>
+<li><a href="#univers-connaitre" style="--c:#9C5A68">自分を知る<span>20 アプリ</span></a></li>
+<li><a href="#univers-autres" style="--c:#702537">人とのかかわり<span>16 アプリ</span></a></li>
+<li><a href="#univers-ecouter" style="--c:#6B8A72">聴く、休む、祈る<span>14 アプリ</span></a></li>
+<li><a href="#univers-foyer" style="--c:#5F6B36">家と持ち物<span>8 アプリ</span></a></li>
+<li><a href="#univers-outils" style="--c:#C67247">ツール<span>14 アプリ</span></a></li>
+  </ul>
+</section>
+
+<!-- 2 · Le profil de l'univers choisi. -->
+<section class="s s-profil" data-scene="profil">
+  <div class="colonne">
+    <p class="surtitre">この世界</p>
+    <h2 class="decoupe" id="pNom">時間を計画する</h2>
+    <p class="chapeau" id="pTexte">夜、週、月。時間の使い道を先に決めて、何が守れたかを確かめる。</p>
+    <ul class="minis" id="pMinis" aria-hidden="true"></ul>
+    <a class="bouton clair" id="pLien" href="#apps"><span>この世界のアプリ <span id="pN">16</span> 本</span></a>
+  </div>
+</section>
+
+<!-- 3 · Les principes : ce que les apps FLOW ne feront jamais. -->
+<div id="principes">
+<section class="s s-principe" data-scene="principe" data-k="0">
+  <div class="colonne">
+    <p class="barre-rouge"><s>アカウントを作る</s></p>
+    <h2 class="decoupe">アカウント不要</h2>
+    <p class="chapeau">インストールしたら、すぐ使えます。FLOW にアカウントはありません。登録もパスワードも不要です。</p>
+  </div>
+</section>
+<section class="s s-principe" data-scene="principe" data-k="1">
+  <div class="colonne">
+    <p class="barre-rouge"><s>広告を表示する</s></p>
+    <h2 class="decoupe">広告なし</h2>
+    <p class="chapeau">作業を中断するものは何もありません。バナーも、続けるために見る動画もありません。</p>
+  </div>
+</section>
+<section class="s s-principe" data-scene="principe" data-k="2">
+  <div class="colonne">
+    <p class="barre-rouge"><s>あなたのデータを集める</s></p>
+    <h2 class="decoupe">追跡なし</h2>
+    <p class="chapeau">データは一切収集しません。記録した内容はあなたのデバイスに残り、iPhone と Mac の間はあなた自身の iCloud を通って移動します。</p>
+  </div>
+</section>
+<section class="s s-principe" data-scene="principe" data-k="3">
+  <div class="colonne">
+    <p class="barre-rouge"><s>接続を求める</s></p>
+    <h2 class="decoupe">オフライン優先</h2>
+    <p class="chapeau">地下鉄でも、機内でも、田舎でも。コンテンツはアプリの中にあります。FLOW が頼るサーバーはありません。</p>
+  </div>
+</section>
+</div>
+<nav class="reperes" id="reperes" aria-label="4 つの原則">
+  <button type="button" data-k="0" aria-label="アカウント不要"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5"/><path d="M5 20c.6-3.6 3.4-5.5 7-5.5s6.4 1.9 7 5.5"/><path d="M4 4l16 16"/></svg></button>
+  <button type="button" data-k="1" aria-label="広告なし"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="6" width="17" height="12" rx="2"/><path d="M8 15l2-6 2 6M8.7 13h2.6M15 15V9h1.2a3 3 0 0 1 0 6z"/></svg></button>
+  <button type="button" data-k="2" aria-label="追跡なし"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="2.6"/><path d="M4 4l16 16"/></svg></button>
+  <button type="button" data-k="3" aria-label="オフライン優先"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 9.5a13 13 0 0 1 17 0M6.5 13a8.5 8.5 0 0 1 11 0M9.5 16.3a4 4 0 0 1 5 0"/><circle cx="12" cy="19.3" r=".9"/><path d="M4 4l16 16"/></svg></button>
+</nav>
+
+<!-- 4 · L'argument. -->
+<section class="s s-argument" data-scene="argument">
+  <div class="centre">
+    <p class="surtitre">ファミリーのルール</p>
+    <h2 class="decoupe geant">アプリがするのは、ひとつのことだけ。そして、それを最後までやり抜く。</h2>
+    <p class="chapeau">165 のアプリ、11 の世界、ひとつの佇まい。顔料の地に、アイボリーのシンボル。</p>
+    <a class="bouton clair" href="#apps">165 のアプリをすべて見る</a>
+  </div>
+</section>
+
+<!-- 5 · Toute la gamme. -->
+<section class="s-catalogue" id="apps" data-scene="catalogue">
+  <div class="large">
+    <p class="surtitre">全ラインナップ</p>
+    <h2 class="decoupe">すべてのアプリ</h2>
+    <p class="chapeau">フランス語話者向けの英語コース Anglais が、最初に App Store に登場します。ほかのアプリは準備中です。</p>
+    <div class="outils">
+      <label class="recherche">
+        <span class="lu">アプリを検索</span>
+        <input id="recherche" type="search" placeholder="検索：水、タスク、イタリア語…" autocomplete="off">
+      </label>
+      <div class="puces" id="puces">
+        <button class="puce actif" type="button" data-id="">すべて<span>165</span></button>
+<button class="puce" type="button" data-id="planifier" style="--c:#202841">時間を計画する<span>16</span></button>
+<button class="puce" type="button" data-id="faire" style="--c:#5C918A">実行する<span>19</span></button>
+<button class="puce" type="button" data-id="projets" style="--c:#2A4A80">プロジェクトと集中<span>11</span></button>
+<button class="puce" type="button" data-id="corps" style="--c:#402F50">体をいたわる<span>17</span></button>
+<button class="puce" type="button" data-id="bouger" style="--c:#B17E30">動く、出かける<span>10</span></button>
+<button class="puce" type="button" data-id="apprendre" style="--c:#6C5F54">学ぶ<span>20</span></button>
+<button class="puce" type="button" data-id="connaitre" style="--c:#9C5A68">自分を知る<span>20</span></button>
+<button class="puce" type="button" data-id="autres" style="--c:#702537">人とのかかわり<span>16</span></button>
+<button class="puce" type="button" data-id="ecouter" style="--c:#6B8A72">聴く、休む、祈る<span>14</span></button>
+<button class="puce" type="button" data-id="foyer" style="--c:#5F6B36">家と持ち物<span>8</span></button>
+<button class="puce" type="button" data-id="outils" style="--c:#C67247">ツール<span>14</span></button>
+      </div>
+    </div>
+    <p class="vide" id="vide" hidden>この検索に合うアプリはありません。</p>
+<section class="groupe" id="univers-planifier" data-id="planifier" style="--c:#202841">
+<header class="groupe-tete"><h3>時間を計画する</h3><p>夜、週、月。時間の使い道を先に決めて、何が守れたかを確かめる。</p><span class="groupe-n">16 アプリ</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#202841" data-nom="-tomorrow-夜に決めて-朝に実行する-明日の計画を-2-分で仕上げる"><span class="ico" style="--x:0;--y:0"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Tomorrow</span></span><span class="carte-ligne">夜に決めて、朝に実行する。明日の計画を 2 分で仕上げる。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#606C37" data-nom="-myweek-1-週間の時間割-基本の-1-週間を作り-あとは週ごとに変えていく"><span class="ico" style="--x:1;--y:0"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">MyWeek</span></span><span class="carte-ligne">1 週間の時間割。基本の 1 週間を作り、あとは週ごとに変えていく。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B0573B" data-nom="-weekdo-今週のタスク-重要な-3-つ-持ち越しの記録-月曜の振り返り"><span class="ico" style="--x:2;--y:0"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">WeekDo</span></span><span class="carte-ligne">今週のタスク。重要な 3 つ、持ち越しの記録、月曜の振り返り。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6F2537" data-nom="-weekh-1-週間を-1-時間ごとに-7-日間-すべての時間にチェックボックス"><span class="ico" style="--x:3;--y:0"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">WeekH</span></span><span class="carte-ligne">1 週間を 1 時間ごとに。7 日間、すべての時間にチェックボックス。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2D4A3B" data-nom="-weekplan-それぞれの日が担える量に合わせて-タスクを-7-日間に振り分ける"><span class="ico" style="--x:4;--y:0"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">WeekPlan</span></span><span class="carte-ligne">それぞれの日が担える量に合わせて、タスクを 7 日間に振り分ける。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#9C5B69" data-nom="-mois-今月やることのすべてを-1-ページに"><span class="ico" style="--x:5;--y:0"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Mois</span></span><span class="carte-ligne">今月やることのすべてを、1 ページに。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3F6FA0" data-nom="-annee-1-年まるごとを-1-ページに"><span class="ico" style="--x:6;--y:0"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Année</span></span><span class="carte-ligne">1 年まるごとを、1 ページに。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2A4A80" data-nom="-day-hour-1-日を-15-分刻みで-予定とともに-今夜までにまだ入るもの"><span class="ico" style="--x:7;--y:0"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Day Hour</span></span><span class="carte-ligne">1 日を 15 分刻みで、予定とともに。今夜までにまだ入るもの。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5C918A" data-nom="-calendar-あなたの予定のカレンダー-自分では決められない時間"><span class="ico" style="--x:8;--y:0"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Calendar</span></span><span class="carte-ligne">あなたの予定のカレンダー。自分では決められない時間。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#866A8F" data-nom="-days-todo-1-日を-1-画面いっぱいに-その日のタスクを-狙わなくてもチェックできる"><span class="ico" style="--x:9;--y:0"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Days todo</span></span><span class="carte-ligne">1 日を 1 画面いっぱいに。その日のタスクを、狙わなくてもチェックできる。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2F7280" data-nom="-time-実際に使った時間を計り-あとで見返す"><span class="ico" style="--x:10;--y:0"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Time</span></span><span class="carte-ligne">実際に使った時間を計り、あとで見返す。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5F3B64" data-nom="-rythme-1-日を-90-分の区切りに分け-それぞれに意図をひとつ"><span class="ico" style="--x:11;--y:0"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Rythme</span></span><span class="carte-ligne">1 日を 90 分の区切りに分け、それぞれに意図をひとつ。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3B3B3B" data-nom="-sablier-始める前に時間を決め-守れたかを確かめる"><span class="ico" style="--x:12;--y:0"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Sablier</span></span><span class="carte-ligne">始める前に時間を決め、守れたかを確かめる。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#4B5667" data-nom="-bloc-タスクをブロックにまとめ-続けてこなす"><span class="ico" style="--x:13;--y:0"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Bloc</span></span><span class="carte-ligne">タスクをブロックにまとめ、続けてこなす。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B17D2F" data-nom="-progress-1-日のうち過ぎた分を-メニューバーとロック画面にゲージで表示"><span class="ico" style="--x:14;--y:0"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Progress</span></span><span class="carte-ligne">1 日のうち過ぎた分を、メニューバーとロック画面にゲージで表示。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6E4C35" data-nom="-alarme-本当に鳴るアラームと-自分の起き方の本当のところ"><span class="ico" style="--x:0;--y:1"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Alarme</span></span><span class="carte-ligne">本当に鳴るアラームと、自分の起き方の本当のところ。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+</ul>
+</section>
+<section class="groupe" id="univers-faire" data-id="faire" style="--c:#5C918A">
+<header class="groupe-tete"><h3>実行する</h3><p>取りかかり方ごとにリストをひとつ。エネルギー別、所要時間別、優先度別、時間帯別。</p><span class="groupe-n">19 アプリ</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#5C918A" data-nom="-todo-削ぎ落とした今日のタスク-今日-明日-いつか"><span class="ico" style="--x:1;--y:1"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Todo</span></span><span class="carte-ligne">削ぎ落とした今日のタスク。今日、明日、いつか。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3F6FA0" data-nom="-clarte-アカウント不要の-充実していて静かなタスク管理"><span class="ico" style="--x:2;--y:1"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Clarté</span></span><span class="carte-ligne">アカウント不要の、充実していて静かなタスク管理。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#86698F" data-nom="-listdo-親指でチェックし-書き直さずにリセットして使うリスト"><span class="ico" style="--x:3;--y:1"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">ListDo</span></span><span class="carte-ligne">親指でチェックし、書き直さずにリセットして使うリスト。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#8A3E24" data-nom="-kanban-タスクをカンバンボードにして-ポケットの中に"><span class="ico" style="--x:4;--y:1"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Kanban</span></span><span class="carte-ligne">タスクをカンバンボードにして、ポケットの中に。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2A4A80" data-nom="-board-ボード-横に並ぶリスト-リストからリストへ動かせるカード"><span class="ico" style="--x:5;--y:1"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Board</span></span><span class="carte-ligne">ボード、横に並ぶリスト、リストからリストへ動かせるカード。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#402F50" data-nom="-prioritydo-どれから始める-一対一の比較を重ねて決める-厳密な順番"><span class="ico" style="--x:6;--y:1"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">PriorityDo</span></span><span class="carte-ligne">どれから始める？ 一対一の比較を重ねて決める、厳密な順番。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6F2436" data-nom="-eisenhower-緊急-重要のマトリクス-まだ判断していないもののための-要判断-ゾーン付き"><span class="ico" style="--x:7;--y:1"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Eisenhower</span></span><span class="carte-ligne">緊急・重要のマトリクス。まだ判断していないもののための「要判断」ゾーン付き。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#1F5B5F" data-nom="-delaydo-小さなタスクを所要時間で分類-それだけ"><span class="ico" style="--x:8;--y:1"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">DelayDo</span></span><span class="carte-ligne">小さなタスクを所要時間で分類。それだけ。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#4B5667" data-nom="-energydo-今の調子を伝えると-その状態に合うタスクを提案-それ以上きついものは出しません"><span class="ico" style="--x:9;--y:1"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">EnergyDo</span></span><span class="carte-ligne">今の調子を伝えると、その状態に合うタスクを提案。それ以上きついものは出しません。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3B3B3B" data-nom="-day-energy-必要なエネルギーでタスクを分け-今やることがわかる"><span class="ico" style="--x:10;--y:1"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Day Energy</span></span><span class="carte-ligne">必要なエネルギーでタスクを分け、今やることがわかる。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#7B5B2D" data-nom="-essentiel-これからの-1-日ごとに-方針と-その日を決める-2-3-のタスク"><span class="ico" style="--x:11;--y:1"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Essentiel</span></span><span class="carte-ligne">これからの 1 日ごとに、方針と、その日を決める 2〜3 のタスク。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#606C37" data-nom="-contexte-今いる状況で-浮かび上がるタスクが決まる-歩きながら-列に並びながら-ベッドの中で"><span class="ico" style="--x:12;--y:1"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Contexte</span></span><span class="carte-ligne">今いる状況で、浮かび上がるタスクが決まる。歩きながら、列に並びながら、ベッドの中で。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2D4A3A" data-nom="-domaine-タスクを生活の領域ごとに-日付は一切なし"><span class="ico" style="--x:13;--y:1"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Domaine</span></span><span class="carte-ligne">タスクを生活の領域ごとに。日付は一切なし。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#9C5A68" data-nom="-actions-さて-次は-今の時間枠-そのカウントダウン-それに合うタスク"><span class="ico" style="--x:14;--y:1"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Actions</span></span><span class="carte-ligne">「さて、次は？」今の時間枠、そのカウントダウン、それに合うタスク。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#C67146" data-nom="-meal-do-食事の前後に-やること-観るもの-聴くもの"><span class="ico" style="--x:0;--y:2"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Meal Do</span></span><span class="carte-ligne">食事の前後に、やること、観るもの、聴くもの。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B6767F" data-nom="-matin-朝のタスク-毎朝繰り返すルーティンと-いちばん大変なものを最初に"><span class="ico" style="--x:1;--y:2"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Matin</span></span><span class="carte-ligne">朝のタスク。毎朝繰り返すルーティンと、いちばん大変なものを最初に。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#08744D" data-nom="-apres-midi-午後のタスクを-3-段階で-再開-勢い-仕上げ"><span class="ico" style="--x:2;--y:2"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Après-midi</span></span><span class="carte-ligne">午後のタスクを 3 段階で。再開、勢い、仕上げ。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B17D30" data-nom="-midi-昼休みに収まることを-所要時間ごとに"><span class="ico" style="--x:3;--y:2"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Midi</span></span><span class="carte-ligne">昼休みに収まることを、所要時間ごとに。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5A4498" data-nom="-soir-寝るまでの時間で-今夜まだやること"><span class="ico" style="--x:4;--y:2"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Soir</span></span><span class="carte-ligne">寝るまでの時間で、今夜まだやること。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+</ul>
+</section>
+<section class="groupe" id="univers-projets" data-id="projets" style="--c:#2A4A80">
+<header class="groupe-tete"><h3>プロジェクトと集中</h3><p>長く続くものを進め、本当に前に進める時間を守る。</p><span class="groupe-n">11 アプリ</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#866A8F" data-nom="-project-すべてのプロジェクトを-1-か所に-日-週-月-年の枠ごとにひとつだけ"><span class="ico" style="--x:5;--y:2"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Project</span></span><span class="carte-ligne">すべてのプロジェクトを 1 か所に。日、週、月、年の枠ごとにひとつだけ。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2D4A3A" data-nom="-feuille-project-プロジェクトごとに-1-列-ロードマップ付き-展開したステップ-チェックしたタスク"><span class="ico" style="--x:6;--y:2"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Feuille Project</span></span><span class="carte-ligne">プロジェクトごとに 1 列、ロードマップ付き。展開したステップ、チェックしたタスク。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#4070A0" data-nom="-admin-片づけた事務手続きを-日ごとに数える"><span class="ico" style="--x:7;--y:2"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Admin</span></span><span class="carte-ligne">片づけた事務手続きを、日ごとに数える。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2F7280" data-nom="-cv-履歴書に必要なことを-起きたその日に記録-埋める空白は一度にひとつ"><span class="ico" style="--x:8;--y:2"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">CV</span></span><span class="carte-ligne">履歴書に必要なことを、起きたその日に記録。埋める空白は一度にひとつ。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2A4A80" data-nom="-deepwork-ディープワークのセッションを始め-本当に集中した時間を数える"><span class="ico" style="--x:9;--y:2"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">DeepWork</span></span><span class="carte-ligne">ディープワークのセッションを始め、本当に集中した時間を数える。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#473558" data-nom="-away-mac-で目を休める休憩と-実際に取った休憩の記録"><span class="ico detouree" style="--x:10;--y:2"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Away</span></span><span class="carte-ligne">Mac で目を休める休憩と、実際に取った休憩の記録。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3B3B3B" data-nom="-distraction-気が散るたびに-ワンタップで原因と一緒に記録"><span class="ico" style="--x:11;--y:2"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Distraction</span></span><span class="carte-ligne">気が散るたびに、ワンタップで原因と一緒に記録。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#9C5B69" data-nom="-video-観た動画をワンタップで数え-上限までの残りを表示"><span class="ico" style="--x:12;--y:2"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Vidéo</span></span><span class="carte-ligne">観た動画をワンタップで数え、上限までの残りを表示。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B17D2F" data-nom="-dashboard-コックピット-タイルのダッシュボード-ビジョン-ロードマップ"><span class="ico" style="--x:13;--y:2"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Dashboard</span></span><span class="carte-ligne">コックピット。タイルのダッシュボード、ビジョン、ロードマップ。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#702537" data-nom="-business-ビジネスを学び-実践する-13-科目-3-レベル"><span class="ico" style="--x:14;--y:2"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Business</span></span><span class="carte-ligne">ビジネスを学び、実践する。13 科目、3 レベル。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B0583C" data-nom="-productivity-生産性のテクニックをひとつずつ学ぶ-16-分野-9-レベル"><span class="ico" style="--x:0;--y:3"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Productivity</span></span><span class="carte-ligne">生産性のテクニックをひとつずつ学ぶ。16 分野、9 レベル。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+</ul>
+</section>
+<section class="groupe" id="univers-corps" data-id="corps" style="--c:#402F50">
+<header class="groupe-tete"><h3>体をいたわる</h3><p>水、睡眠、食事、姿勢。その場で記録して、傾向を読む。</p><span class="groupe-n">17 アプリ</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#307380" data-nom="-water-飲んだ水を飲んだときに記録し-あとどのペースで飲めばいいかがわかる"><span class="ico" style="--x:1;--y:3"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Water</span></span><span class="carte-ligne">飲んだ水を飲んだときに記録し、あとどのペースで飲めばいいかがわかる。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#4070A0" data-nom="-douche-froide-音声ガイド付きの冷水シャワー-15-秒から-5-分まで-9-段階"><span class="ico" style="--x:2;--y:3"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Douche froide</span></span><span class="carte-ligne">音声ガイド付きの冷水シャワー。15 秒から 5 分まで 9 段階。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6C8A73" data-nom="-smile-歯みがきをワンタップで記録-2-分間のガイド付き"><span class="ico" style="--x:3;--y:3"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Smile</span></span><span class="carte-ligne">歯みがきをワンタップで記録。2 分間のガイド付き。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#402F50" data-nom="-sleep-毎晩の睡眠-100-点満点のスコア-睡眠負債-睡眠サイクルに合わせた目覚まし"><span class="ico" style="--x:4;--y:3"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Sleep</span></span><span class="carte-ligne">毎晩の睡眠、100 点満点のスコア、睡眠負債、睡眠サイクルに合わせた目覚まし。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B67780" data-nom="-sieste-ワンタップで始める昼寝と-消音モードでも鳴る目覚まし"><span class="ico" style="--x:5;--y:3"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Sieste</span></span><span class="carte-ligne">ワンタップで始める昼寝と、消音モードでも鳴る目覚まし。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3A3A3A" data-nom="-jeune-始めた瞬間にスタートする断食-ようやく数えられる"><span class="ico" style="--x:6;--y:3"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Jeûne</span></span><span class="carte-ligne">始めた瞬間にスタートする断食。ようやく数えられる。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6F2436" data-nom="-poids-2-ステップで体重を記録-今日の数字より傾向を見る"><span class="ico" style="--x:7;--y:3"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Poids</span></span><span class="carte-ligne">2 ステップで体重を記録。今日の数字より傾向を見る。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2B4B80" data-nom="-posture-姿勢が崩れた回数と-背筋を伸ばした回数を数える"><span class="ico" style="--x:8;--y:3"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Posture</span></span><span class="carte-ligne">姿勢が崩れた回数と、背筋を伸ばした回数を数える。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#C67247" data-nom="-fatigue-眠気が来たときに記録し-立て直す-3-つの方法を示す"><span class="ico" style="--x:9;--y:3"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Fatigue</span></span><span class="carte-ligne">眠気が来たときに記録し、立て直す 3 つの方法を示す。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#866A8F" data-nom="-fossette-顔をすっきりさせる-写真で測る頬の指数と-ナトリウム-カリウムの食事"><span class="ico" style="--x:10;--y:3"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Fossette</span></span><span class="carte-ligne">顔をすっきりさせる。写真で測る頬の指数と、ナトリウム・カリウムの食事。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B17E30" data-nom="-meal-食事の記録-食料のストック-ひと皿のスコア"><span class="ico" style="--x:11;--y:3"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Meal</span></span><span class="carte-ligne">食事の記録、食料のストック、ひと皿のスコア。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6E4B34" data-nom="-coffee-1-杯ごとに記録し-体に残るカフェインをゲージで表示"><span class="ico" style="--x:12;--y:3"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Coffee</span></span><span class="carte-ligne">1 杯ごとに記録し、体に残るカフェインをゲージで表示。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#9C5A68" data-nom="-sante-apple-のヘルスケアのデータを-自分のノートに保存"><span class="ico" style="--x:13;--y:3"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Santé</span></span><span class="carte-ligne">Apple のヘルスケアのデータを、自分のノートに保存。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2E4B3B" data-nom="-astuce-今の調子を伝えると-その場面に合うコツを-分類と解説付きで"><span class="ico" style="--x:14;--y:3"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Astuce</span></span><span class="carte-ligne">今の調子を伝えると、その場面に合うコツを、分類と解説付きで。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#606C37" data-nom="-alpha-流した考えと-こらえた衝動を数える"><span class="ico" style="--x:0;--y:4"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Alpha</span></span><span class="carte-ligne">流した考えと、こらえた衝動を数える。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#07734C" data-nom="-meal-time-食事-おやつ-水分補給の時間をカレンダーで"><span class="ico" style="--x:1;--y:4"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Meal Time</span></span><span class="carte-ligne">食事、おやつ、水分補給の時間をカレンダーで。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#8A3E25" data-nom="-anatomie-人体をひとつずつ学ぶ-9-年間のプログラム"><span class="ico" style="--x:2;--y:4"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Anatomie</span></span><span class="carte-ligne">人体をひとつずつ学ぶ、9 年間のプログラム。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+</ul>
+</section>
+<section class="groupe" id="univers-bouger" data-id="bouger" style="--c:#B17E30">
+<header class="groupe-tete"><h3>動く、出かける</h3><p>セット、ランニング、場所。屋外やジムですること。</p><span class="groupe-n">10 アプリ</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#6E4C35" data-nom="-body-通っているジムのマシン-それぞれの設定-セットの記録"><span class="ico" style="--x:3;--y:4"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Body</span></span><span class="carte-ligne">通っているジムのマシン、それぞれの設定、セットの記録。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B0583C" data-nom="-pompes-腕立て伏せの-1-セットをワンタップで記録-休憩タイマー付き"><span class="ico" style="--x:4;--y:4"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Pompes</span></span><span class="carte-ligne">腕立て伏せの 1 セットをワンタップで記録。休憩タイマー付き。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#4070A0" data-nom="-tractions-懸垂の-1-セットを-10-秒で記録-握り方-加重-休憩タイマー"><span class="ico" style="--x:5;--y:4"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Tractions</span></span><span class="carte-ligne">懸垂の 1 セットを 10 秒で記録。握り方、加重、休憩タイマー。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6C8A73" data-nom="-etirements-体のマップをタップしてストレッチをひとつ-ガイド付きのセッションも"><span class="ico" style="--x:6;--y:4"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Étirements</span></span><span class="carte-ligne">体のマップをタップしてストレッチをひとつ。ガイド付きのセッションも。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B17E30" data-nom="-running-ランニングを始め-計画し-振り返る"><span class="ico" style="--x:7;--y:4"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Running</span></span><span class="carte-ligne">ランニングを始め、計画し、振り返る。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6F2537" data-nom="-move-移動中に聴くもの-読むもの-すること-交通機関-ウォーキング-ランニング-スポーツ"><span class="ico" style="--x:8;--y:4"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Move</span></span><span class="carte-ligne">移動中に聴くもの、読むもの、すること。交通機関、ウォーキング、ランニング、スポーツ。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#1F5B5F" data-nom="-go-行く場所は少なく-いつも同じ-1-日を-場所の予算-で数える"><span class="ico" style="--x:9;--y:4"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Go</span></span><span class="carte-ligne">行く場所は少なく、いつも同じ。1 日を「場所の予算」で数える。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#402F50" data-nom="-lieux-rituel-場所ごとの集中の儀式を-ステップごとに進める"><span class="ico" style="--x:10;--y:4"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Lieux Rituel</span></span><span class="carte-ligne">場所ごとの集中の儀式を、ステップごとに進める。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2A4A80" data-nom="-atlas-訪れた場所をすべて-その場で日付と感想とともに記録"><span class="ico" style="--x:11;--y:4"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Atlas</span></span><span class="carte-ligne">訪れた場所をすべて、その場で日付と感想とともに記録。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#606C37" data-nom="-steps-今日の歩数を-時計-iphone-mac-に-入力は不要"><span class="ico" style="--x:12;--y:4"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Steps</span></span><span class="carte-ligne">今日の歩数を、時計、iPhone、Mac に。入力は不要。</span><span class="carte-plat">Apple Watch、iPhone、Mac</span></span></div></li>
+</ul>
+</section>
+<section class="groupe" id="univers-apprendre" data-id="apprendre" style="--c:#6C5F54">
+<header class="groupe-tete"><h3>学ぶ</h3><p>言語、本、概念。オフラインで、毎日少しずつ学ぶ。</p><span class="groupe-n">20 アプリ</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#6E4B34" data-nom="-book-あなたの本棚-1-分単位で計る読書時間-メモと引用"><span class="ico" style="--x:13;--y:4"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Book</span></span><span class="carte-ligne">あなたの本棚、1 分単位で計る読書時間、メモと引用。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#1F2740" data-nom="-reader-読む価値のあるものを-1-か所に-記事-pdf-epub-フィード"><span class="ico" style="--x:14;--y:4"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Reader</span></span><span class="carte-ligne">読む価値のあるものを 1 か所に。記事、PDF、EPUB、フィード。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#1F5B5F" data-nom="-francais-フランス語を母語とする人向け-1-回-5-分で語彙を広げる-カード-クイズ-定義から単語を思い出す問題"><span class="ico" style="--x:0;--y:5"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Français</span></span><span class="carte-ligne">フランス語を母語とする人向け。1 回 5 分で語彙を広げる。カード、クイズ、定義から単語を思い出す問題。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3F6FA0" data-nom="-revision-間隔反復で-概念をオフラインで復習"><span class="ico" style="--x:1;--y:5"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Révision</span></span><span class="carte-ligne">間隔反復で、概念をオフラインで復習。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2A4A80" data-nom="-lecons-レッスンをあらかじめ書いておき-自分のノートで見つける"><span class="ico" style="--x:2;--y:5"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Leçons</span></span><span class="carte-ligne">レッスンをあらかじめ書いておき、自分のノートで見つける。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#866A8F" data-nom="-brain-毎日頭を動かす-9-つの短いゲーム"><span class="ico" style="--x:3;--y:5"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Brain</span></span><span class="carte-ligne">毎日頭を動かす、9 つの短いゲーム。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2D4A3A" data-nom="-chess-オフラインでチェスを指し-毎局ひとつ学びを持ち帰る"><span class="ico" style="--x:4;--y:5"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Chess</span></span><span class="carte-ligne">オフラインでチェスを指し、毎局ひとつ学びを持ち帰る。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6C8A73" data-nom="-citation-すべての引用を-1-か所に-貼り付ければ-整理完了"><span class="ico" style="--x:5;--y:5"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Citation</span></span><span class="carte-ligne">すべての引用を 1 か所に。貼り付ければ、整理完了。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#702537" data-nom="-cine-あなたの映画ライブラリ-作品カード-鑑賞日記-一対一の比較で作るランキング"><span class="ico" style="--x:6;--y:5"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Ciné</span></span><span class="carte-ligne">あなたの映画ライブラリ。作品カード、鑑賞日記、一対一の比較で作るランキング。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#402F50" data-nom="-polyglotte-すべての言語のダッシュボード-出会った単語と身についた単語-ペース-連続記録"><span class="ico" style="--x:7;--y:5"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Polyglotte</span></span><span class="carte-ligne">すべての言語のダッシュボード。出会った単語と身についた単語、ペース、連続記録。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#9C5B69" data-nom="-allemand-c2-までのドイツ語-der-die-das-4-つの格-文末の動詞を-フランス語で解説"><span class="ico" style="--x:8;--y:5"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Allemand</span><span class="etat">App Store に近日公開</span></span><span class="carte-ligne">C2 までのドイツ語。der、die、das、4 つの格、文末の動詞を、フランス語で解説。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B0583B" data-nom="-espagnole-フランス語話者向けのスペイン語-ゼロから-c2-まで-活用-つまずきやすい文法-スペインまたは中南米の音声"><span class="ico" style="--x:9;--y:5"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Espagnole</span><span class="etat">App Store に近日公開</span></span><span class="carte-ligne">フランス語話者向けのスペイン語、ゼロから C2 まで。活用、つまずきやすい文法、スペインまたは中南米の音声。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3A3A3A" data-nom="-italien-最初の-1-語から-c2-までのイタリア語を-フランス語で解説-ユニット制のコースと-すべての活用形を知る活用ツール"><span class="ico" style="--x:10;--y:5"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Italien</span><span class="etat">App Store に近日公開</span></span><span class="carte-ligne">最初の 1 語から C2 までのイタリア語を、フランス語で解説。ユニット制のコースと、すべての活用形を知る活用ツール。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B17E30" data-nom="-russe-キリル文字から始めるロシア語を-フランス語で解説-6-つの格-動詞のアスペクト-すべての単語にアクセント表示"><span class="ico" style="--x:11;--y:5"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Russe</span></span><span class="carte-ligne">キリル文字から始めるロシア語を、フランス語で解説。6 つの格、動詞のアスペクト、すべての単語にアクセント表示。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#4B5667" data-nom="-persan-ペルシア語の語彙と活用を一歩ずつ-フランス語で解説-イランのペルシア語-またはアフガニスタンのダリー語"><span class="ico" style="--x:12;--y:5"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Persan</span></span><span class="carte-ligne">ペルシア語の語彙と活用を一歩ずつ、フランス語で解説。イランのペルシア語、またはアフガニスタンのダリー語。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><a class="carte" style="--c:#6C5F54" data-nom="-anglais-フランス語話者向けの英語-a1-から-c2-まで-11-166-語-文法レッスン-43-回-アメリカまたはイギリスの本物の音声-完全無料" href="/anglais/"><span class="ico" style="--x:13;--y:5"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Anglais</span><span class="etat">App Store に近日公開</span></span><span class="carte-ligne">フランス語話者向けの英語。A1 から C2 まで 11,166 語、文法レッスン 43 回、アメリカまたはイギリスの本物の音声。完全無料。</span><span class="carte-plat">iPhone と Mac</span></span></a></li>
+<li><div class="carte" style="--c:#B67780" data-nom="-roumanie-最初の-buna-から-c2-までのルーマニア語を-フランス語で解説-語尾に付く冠詞-属格-与格-接続法"><span class="ico" style="--x:14;--y:5"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Roumanie</span></span><span class="carte-ligne">最初の「bună」から C2 までのルーマニア語を、フランス語で解説。語尾に付く冠詞、属格・与格、接続法。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#8A3F25" data-nom="-turquie-merhaba-から-c2-までのトルコ語を-フランス語で解説-ネットワーク不要"><span class="ico" style="--x:0;--y:6"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Turquie</span></span><span class="carte-ligne">「merhaba」から C2 までのトルコ語を、フランス語で解説。ネットワーク不要。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#08744D" data-nom="-chinois-4-つの声調から-c2-までの中国語-普通話-を-フランス語で解説-ネットワーク不要"><span class="ico" style="--x:1;--y:6"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Chinois</span></span><span class="carte-ligne">4 つの声調から C2 までの中国語（普通話）を、フランス語で解説。ネットワーク不要。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5B4598" data-nom="-japonais-ひとりで-オフラインで-一歩ずつ学ぶ日本語-解説はフランス語"><span class="ico" style="--x:2;--y:6"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Japonais</span></span><span class="carte-ligne">ひとりで、オフラインで、一歩ずつ学ぶ日本語。解説はフランス語。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+</ul>
+</section>
+<section class="groupe" id="univers-connaitre" data-id="connaitre" style="--c:#9C5A68">
+<header class="groupe-tete"><h3>自分を知る</h3><p>あなたがどう変わっていくかを、評価せずに数える。習慣、達成、人生の節目。</p><span class="groupe-n">20 アプリ</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#9C5A68" data-nom="-identite-やった-ではなく-どんな人になっていく-ひとつひとつの行動が-1-票"><span class="ico" style="--x:3;--y:6"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Identité</span></span><span class="carte-ligne">「やった？」ではなく「どんな人になっていく？」。ひとつひとつの行動が 1 票。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#202841" data-nom="-bad-identite-悪い習慣が作った悪い自己像を-正面から見つめて崩していく"><span class="ico" style="--x:4;--y:6"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Bad identité</span></span><span class="carte-ligne">悪い習慣が作った悪い自己像を、正面から見つめて崩していく。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B17E30" data-nom="-valeur-人生で得てきたものすべてを-証拠と一緒に保管-自信をなくした日のために"><span class="ico" style="--x:5;--y:6"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Valeur</span></span><span class="carte-ligne">人生で得てきたものすべてを、証拠と一緒に保管。自信をなくした日のために。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2A4A80" data-nom="-discipline-自分を律することができた回数を-ワンタップで数える"><span class="ico" style="--x:6;--y:6"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Discipline</span></span><span class="carte-ligne">自分を律することができた回数を、ワンタップで数える。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#A3634B" data-nom="-habit-習慣を-10-秒でチェック-連続記録と-罪悪感のない再開"><span class="ico detouree" style="--x:7;--y:6"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Habit</span></span><span class="carte-ligne">習慣を 10 秒でチェック。連続記録と、罪悪感のない再開。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#C06E53" data-nom="-rituels-1-日のそれぞれの場面のための-一連の動作"><span class="ico detouree" style="--x:8;--y:6"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Rituels</span></span><span class="carte-ligne">1 日のそれぞれの場面のための、一連の動作。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3B3B3B" data-nom="-bilan-30-秒の振り返りを-3-回-朝-昼-夜で-1-日の調子をつかむ"><span class="ico" style="--x:9;--y:6"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Bilan</span></span><span class="carte-ligne">30 秒の振り返りを 3 回。朝、昼、夜で 1 日の調子をつかむ。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5F3B64" data-nom="-reussite-すべての成功を-月ごとに整理"><span class="ico" style="--x:10;--y:6"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Réussite</span></span><span class="carte-ligne">すべての成功を、月ごとに整理。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2D4A3A" data-nom="-mensonge-日常の小さな嘘を-ワンタップで数える"><span class="ico" style="--x:11;--y:6"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Mensonge</span></span><span class="carte-ligne">日常の小さな嘘を、ワンタップで数える。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#606B37" data-nom="-refuse-断った誘いを理由とともに記録し-あとで振り返る-もう一度同じ選択をする"><span class="ico" style="--x:12;--y:6"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Refusé</span></span><span class="carte-ligne">断った誘いを理由とともに記録し、あとで振り返る。もう一度同じ選択をする？</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2F7280" data-nom="-oublie-忘れていたことを気づいたときに記録し-効いた対策も残す"><span class="ico" style="--x:13;--y:6"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Oublié</span></span><span class="carte-ligne">忘れていたことを気づいたときに記録し、効いた対策も残す。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3F6FA0" data-nom="-decharge-重荷になっていたものを片づけるたびに記録-メール-写真-部屋-書類"><span class="ico" style="--x:14;--y:6"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Déchargé</span></span><span class="carte-ligne">重荷になっていたものを片づけるたびに記録。メール、写真、部屋、書類。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6F2537" data-nom="-haine-その日の怒りを置いておく場所-抱え込まないために"><span class="ico" style="--x:0;--y:7"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Haine</span></span><span class="carte-ligne">その日の怒りを置いておく場所。抱え込まないために。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6C5F54" data-nom="-perte-なくしたものを数えて-もっと注意深くなる"><span class="ico" style="--x:1;--y:7"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Perte</span></span><span class="carte-ligne">なくしたものを数えて、もっと注意深くなる。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5D918A" data-nom="-phase-生まれてからの人生の時期を-年表に"><span class="ico" style="--x:2;--y:7"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Phase</span></span><span class="carte-ligne">生まれてからの人生の時期を、年表に。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#4B5667" data-nom="-souvenir-生まれてからの-すべての思い出"><span class="ico" style="--x:3;--y:7"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Souvenir</span></span><span class="carte-ligne">生まれてからの、すべての思い出。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#866A8F" data-nom="-nouveaute-人生に入ってきたものと-そこから得たもの"><span class="ico" style="--x:4;--y:7"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Nouveauté</span></span><span class="carte-ligne">人生に入ってきたものと、そこから得たもの。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#7A5A2C" data-nom="-photo-毎日-1-枚の自分の写真-それからタイムラプスと比較表示"><span class="ico" style="--x:5;--y:7"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Photo</span></span><span class="carte-ligne">毎日 1 枚の自分の写真。それからタイムラプスと比較表示。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5B4598" data-nom="-bouleversement-子どものころからの-人生の大きな転機"><span class="ico" style="--x:6;--y:7"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Bouleversement</span></span><span class="carte-ligne">子どものころからの、人生の大きな転機。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#07734C" data-nom="-regard-受け止めた視線と-そらした視線を数える"><span class="ico" style="--x:7;--y:7"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Regard</span></span><span class="carte-ligne">受け止めた視線と、そらした視線を数える。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+</ul>
+</section>
+<section class="groupe" id="univers-autres" data-id="autres" style="--c:#702537">
+<header class="groupe-tete"><h3>人とのかかわり</h3><p>友人、話すこと、聞くこと。人との間で起きること。</p><span class="groupe-n">16 アプリ</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#702537" data-nom="-friends-親しい友人を-1-か所に-会った回数も"><span class="ico" style="--x:8;--y:7"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Friends</span></span><span class="carte-ligne">親しい友人を 1 か所に。会った回数も。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#8A3F25" data-nom="-drague-受け取った好意のサインをその場で記録し-どう応えたかも残す"><span class="ico" style="--x:9;--y:7"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Drague</span></span><span class="carte-ligne">受け取った好意のサインをその場で記録し、どう応えたかも残す。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5C918A" data-nom="-sociale-あなたの社交バッテリー-減らすもの-充電するもの-ちょうどいいゾーン"><span class="ico" style="--x:10;--y:7"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Sociale</span></span><span class="carte-ligne">あなたの社交バッテリー。減らすもの、充電するもの、ちょうどいいゾーン。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3F6FA0" data-nom="-sujets-それぞれの人に話したいことを-会った瞬間に出せるように"><span class="ico" style="--x:11;--y:7"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Sujets</span></span><span class="carte-ligne">それぞれの人に話したいことを、会った瞬間に出せるように。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3F2E4F" data-nom="-parole-人前で話す-時間を決めたスピーチ-時間を計るリハーサル-振り返り"><span class="ico" style="--x:12;--y:7"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Parole</span></span><span class="carte-ligne">人前で話す。時間を決めたスピーチ、時間を計るリハーサル、振り返り。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#86698F" data-nom="-eloquence-話してみる-アプリが-えー-や口癖や沈黙を聞き取り-話す速さを測る"><span class="ico" style="--x:13;--y:7"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Éloquence</span></span><span class="carte-ligne">話してみる。アプリが「えー」や口癖や沈黙を聞き取り、話す速さを測る。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B17E30" data-nom="-humble-自分の話をせずに耳を傾けた回数を数える"><span class="ico" style="--x:14;--y:7"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Humble</span></span><span class="carte-ligne">自分の話をせずに耳を傾けた回数を数える。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3A3A3A" data-nom="-coupe-自分の居場所を守るために-思い切って発言した回数を数える"><span class="ico" style="--x:0;--y:8"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Coupé</span></span><span class="carte-ligne">自分の居場所を守るために、思い切って発言した回数を数える。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#1F5B5F" data-nom="-negocie-うまくいった交渉と-そこで得たもの"><span class="ico" style="--x:1;--y:8"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Négocié</span></span><span class="carte-ligne">うまくいった交渉と、そこで得たもの。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5F6B36" data-nom="-sms-送信したときに-sms-を数える-目標に向けて-または上限の中で"><span class="ico" style="--x:2;--y:8"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">SMS</span></span><span class="carte-ligne">送信したときに SMS を数える。目標に向けて、または上限の中で。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2A4A80" data-nom="-courriels-送ったメールを-送信の瞬間に親指で数える"><span class="ico" style="--x:3;--y:8"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Courriels</span></span><span class="carte-ligne">送ったメールを、送信の瞬間に親指で数える。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#85786D" data-nom="-audience-あなたの-instagram-のオーディエンスの本当の内訳-相互フォロー-ファン-ゴースト"><span class="ico detouree" style="--x:4;--y:8"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Audience</span></span><span class="carte-ligne">あなたの Instagram のオーディエンスの本当の内訳。相互フォロー、ファン、ゴースト。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#7B5B2D" data-nom="-inspiration-1-週間にひとりの名前-誰に刺激を受け-その人のどの行動を借りるか"><span class="ico" style="--x:5;--y:8"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Inspiration</span></span><span class="carte-ligne">1 週間にひとりの名前。誰に刺激を受け、その人のどの行動を借りるか。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#C67146" data-nom="-risque-日々取ったリスクを-ひとつずつ一文とともに"><span class="ico" style="--x:6;--y:8"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Risque</span></span><span class="carte-ligne">日々取ったリスクを、ひとつずつ一文とともに。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#4B5667" data-nom="-silence-会話の中で自分で選んだ沈黙を数える"><span class="ico" style="--x:7;--y:8"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Silence</span></span><span class="carte-ligne">会話の中で自分で選んだ沈黙を数える。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#07734C" data-nom="-conversation-人とすでに話した話題を記録して-繰り返さない"><span class="ico" style="--x:8;--y:8"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Conversation</span></span><span class="carte-ligne">人とすでに話した話題を記録して、繰り返さない。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+</ul>
+</section>
+<section class="groupe" id="univers-ecouter" data-id="ecouter" style="--c:#6B8A72">
+<header class="groupe-tete"><h3>聴く、休む、祈る</h3><p>音楽、静けさ、祈り。立ち止まるひととき。</p><span class="groupe-n">14 アプリ</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#6B8A72" data-nom="-pause-今いる場所で-今ある時間で-休憩に何をするか"><span class="ico" style="--x:9;--y:8"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Pause</span></span><span class="carte-ligne">今いる場所で、今ある時間で、休憩に何をするか。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#8F515C" data-nom="-ecoutes-音楽を-1-曲ずつ数え-上限までの残りを表示"><span class="ico detouree" style="--x:10;--y:8"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Écoutes</span></span><span class="carte-ligne">音楽を 1 曲ずつ数え、上限までの残りを表示。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2D4A3B" data-nom="-spotify-聴いた曲すべてを-1-曲ずつ数え-完全なアーカイブとともに"><span class="ico" style="--x:11;--y:8"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Spotify</span></span><span class="carte-ligne">聴いた曲すべてを 1 曲ずつ数え、完全なアーカイブとともに。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2B4B80" data-nom="-podcast-日々聴くポッドキャストを-意識せずに数える"><span class="ico" style="--x:12;--y:8"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Podcast</span></span><span class="carte-ligne">日々聴くポッドキャストを、意識せずに数える。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3F2E4F" data-nom="-chansons-1-日-1-曲-歌詞を-1-行ずつチェック-カラオケ-復習"><span class="ico" style="--x:13;--y:8"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Chansons</span></span><span class="carte-ligne">1 日 1 曲。歌詞を 1 行ずつチェック、カラオケ、復習。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#7B5B2D" data-nom="-coran-コーラン全文をオフラインで-1-日にひと節ずつ読む"><span class="ico" style="--x:14;--y:8"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Coran</span></span><span class="carte-ligne">コーラン全文をオフラインで。1 日にひと節ずつ読む。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#1E5A5E" data-nom="-muslim-日ごとにより誠実に-より信仰を実践する人になり-それを目で確かめる"><span class="ico" style="--x:0;--y:9"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Muslim</span></span><span class="carte-ligne">日ごとにより誠実に、より信仰を実践する人になり、それを目で確かめる。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3B3B3B" data-nom="-prieres-1-日-5-回の礼拝を-3-秒で記録"><span class="ico" style="--x:1;--y:9"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Prières</span></span><span class="carte-ligne">1 日 5 回の礼拝を、3 秒で記録。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#1F2740" data-nom="-meditation-瞑想のセッションと-3-層に重ねられる-59-の音"><span class="ico" style="--x:2;--y:9"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Méditation</span></span><span class="carte-ligne">瞑想のセッションと、3 層に重ねられる 59 の音。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#4A5566" data-nom="-sounds-仕事にも休息にも使えるサウンドスケープ"><span class="ico" style="--x:3;--y:9"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Sounds</span></span><span class="carte-ligne">仕事にも休息にも使えるサウンドスケープ。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#07734C" data-nom="-chance-その日の幸運を-ひとつずつ記録"><span class="ico" style="--x:4;--y:9"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Chance</span></span><span class="carte-ligne">その日の幸運を、ひとつずつ記録。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B17D2F" data-nom="-gratitude-1-日に-3-つから-5-つの感謝"><span class="ico" style="--x:5;--y:9"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Gratitude</span></span><span class="carte-ligne">1 日に 3 つから 5 つの感謝。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B0573B" data-nom="-recompense-あなたのごほうびと-毎日自分に与えるごほうび"><span class="ico" style="--x:6;--y:9"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Récompense</span></span><span class="carte-ligne">あなたのごほうびと、毎日自分に与えるごほうび。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#866A8F" data-nom="-negative-うまくいかなかったことを書き出して-感情を抱え込まない"><span class="ico" style="--x:7;--y:9"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Negative</span></span><span class="carte-ligne">うまくいかなかったことを書き出して、感情を抱え込まない。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+</ul>
+</section>
+<section class="groupe" id="univers-foyer" data-id="foyer" style="--c:#5F6B36">
+<header class="groupe-tete"><h3>家と持ち物</h3><p>お金、持ち物、掃除。意識しなくても整う暮らし。</p><span class="groupe-n">8 アプリ</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#5F6B36" data-nom="-budget-一文で記録する支出-予算-貯金箱"><span class="ico" style="--x:8;--y:9"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Budget</span></span><span class="carte-ligne">一文で記録する支出、予算、貯金箱。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2E4B3B" data-nom="-achats-すべての買い物を時期ごとに整理-欲しいものには考える時間を"><span class="ico" style="--x:9;--y:9"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Achats</span></span><span class="carte-ligne">すべての買い物を時期ごとに整理。欲しいものには考える時間を。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#6E4B34" data-nom="-objet-持っているものすべてを-自分で決めた方法で整理"><span class="ico" style="--x:10;--y:9"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Objet</span></span><span class="carte-ligne">持っているものすべてを、自分で決めた方法で整理。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#C67247" data-nom="-cuisine-自分で作れる料理の本"><span class="ico" style="--x:11;--y:9"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Cuisine</span></span><span class="carte-ligne">自分で作れる料理の本。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#B17D2F" data-nom="-rangement-手元に-20-分-まず何を片づけるか"><span class="ico" style="--x:12;--y:9"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Rangement</span></span><span class="carte-ligne">手元に 20 分。まず何を片づけるか。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#307380" data-nom="-proprete-エリアごとの掃除と-そのリマインダー"><span class="ico" style="--x:13;--y:9"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Propreté</span></span><span class="carte-ligne">エリアごとの掃除と、そのリマインダー。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5D918A" data-nom="-tri-削除した写真-動画-ファイルを-整理しながら数える"><span class="ico" style="--x:14;--y:9"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Tri</span></span><span class="carte-ligne">削除した写真、動画、ファイルを、整理しながら数える。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#3F6FA0" data-nom="-appareil-どのデバイスを何に使うか-ひとつの活動に-メインのデバイスをひとつ"><span class="ico" style="--x:0;--y:10"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Appareil</span></span><span class="carte-ligne">どのデバイスを何に使うか。ひとつの活動に、メインのデバイスをひとつ。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+</ul>
+</section>
+<section class="groupe" id="univers-outils" data-id="outils" style="--c:#C67247">
+<header class="groupe-tete"><h3>ツール</h3><p>iPhone と Mac を整え、アプリ同士をつなぐもの。</p><span class="groupe-n">14 アプリ</span></header>
+<ul class="cartes">
+<li><div class="carte" style="--c:#3A3A3A" data-nom="-accueil-ファミリーのホーム画面-flow-のアプリと今日の数字を-大きなウィジェットで"><span class="ico" style="--x:1;--y:10"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Accueil</span></span><span class="carte-ligne">ファミリーのホーム画面。FLOW のアプリと今日の数字を、大きなウィジェットで。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#402F50" data-nom="-barre-メニューバーに-1-行だけ-今日のタスク-過ぎた時間-次の予定"><span class="ico" style="--x:2;--y:10"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Barre</span></span><span class="carte-ligne">メニューバーに 1 行だけ。今日のタスク、過ぎた時間、次の予定。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#84404E" data-nom="-mac-mac-で実際にしていることを-バックグラウンドで記録-アプリと時間だけで-入力内容は決して記録しません"><span class="ico detouree" style="--x:3;--y:10"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Mac</span></span><span class="carte-ligne">Mac で実際にしていることを、バックグラウンドで記録。アプリと時間だけで、入力内容は決して記録しません。</span><span class="carte-plat">Mac</span></span></div></li>
+<li><div class="carte" style="--c:#1E5A5E" data-nom="-cleaner-何も壊さずに-mac-を掃除-すべての項目に説明があり-すべてゴミ箱へ移動します"><span class="ico" style="--x:4;--y:10"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Cleaner</span></span><span class="carte-ligne">何も壊さずに Mac を掃除。すべての項目に説明があり、すべてゴミ箱へ移動します。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2D4A3A" data-nom="-charge-バッテリーを-80-以下に保ち-上限が守られているかを確かめる"><span class="ico" style="--x:5;--y:10"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Charge</span></span><span class="carte-ligne">バッテリーを 80% 以下に保ち、上限が守られているかを確かめる。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#866A8F" data-nom="-obsidian-あなたのノート保管庫を-もっと速く"><span class="ico" style="--x:6;--y:10"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Obsidian</span></span><span class="carte-ligne">あなたのノート保管庫を、もっと速く。</span><span class="carte-plat">iPhone</span></span></div></li>
+<li><div class="carte" style="--c:#C67247" data-nom="-sidenote-画面の端にあるメモ-必要なときにそこにある"><span class="ico" style="--x:7;--y:10"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">SideNote</span></span><span class="carte-ligne">画面の端にあるメモ。必要なときにそこにある。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#2A4A80" data-nom="-note-コードではなく結果を見せるエディタ-ひとつのテキストに-ふたつの表示"><span class="ico" style="--x:8;--y:10"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Note</span></span><span class="carte-ligne">コードではなく結果を見せるエディタ。ひとつのテキストに、ふたつの表示。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#4070A0" data-nom="-mindmap-プロジェクトをマインドマップに-タスクはその場でチェック"><span class="ico" style="--x:9;--y:10"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">MindMap</span></span><span class="carte-ligne">プロジェクトをマインドマップに。タスクはその場でチェック。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#202841" data-nom="-verrou-冷静なときに決めたルールを-あとは-iphone-が守らせる"><span class="ico" style="--x:10;--y:10"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Verrou</span></span><span class="carte-ligne">冷静なときに決めたルールを、あとは iPhone が守らせる。</span><span class="carte-plat">iPhone</span></span></div></li>
+<li><div class="carte" style="--c:#94989D" data-nom="-writer-フランス語を速く正確に書く-間違えるとカーソルがそこで止まる"><span class="ico detouree" style="--x:11;--y:10"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Writer</span></span><span class="carte-ligne">フランス語を速く正確に書く。間違えるとカーソルがそこで止まる。</span><span class="carte-plat">Mac</span></span></div></li>
+<li><div class="carte" style="--c:#492421" data-nom="-verrou-mac-自分で決めたルールに従って-mac-でサイト-アプリ-インターネットをブロック"><span class="ico" style="--x:12;--y:10"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Verrou Mac</span></span><span class="carte-ligne">自分で決めたルールに従って、Mac でサイト、アプリ、インターネットをブロック。</span><span class="carte-plat">Mac</span></span></div></li>
+<li><div class="carte" style="--c:#7A5A2C" data-nom="-backup-もうファイルを失わない-すべてのバージョンを保管し-何でも見つかる"><span class="ico" style="--x:13;--y:10"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Backup</span></span><span class="carte-ligne">もうファイルを失わない。すべてのバージョンを保管し、何でも見つかる。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+<li><div class="carte" style="--c:#5B4598" data-nom="-security-mac-と-iphone-の見張り役-何が守っているか-何が勝手に起動するか"><span class="ico" style="--x:14;--y:10"></span><span class="carte-texte"><span class="carte-nom"><span lang="fr">Security</span></span><span class="carte-ligne">Mac と iPhone の見張り役。何が守っているか、何が勝手に起動するか。</span><span class="carte-plat">iPhone と Mac</span></span></div></li>
+</ul>
+</section>
+  </div>
+</section>
+
+<!-- 6 · Les questions. -->
+<section class="s-faq" id="questions" data-scene="texte">
+  <div class="etroit">
+    <h2 class="decoupe">よくある質問</h2>
+    <div class="faq">
+      <details>
+        <summary>FLOW とは？</summary>
+        <p>iPhone と Mac のためのアプリのファミリーです。どのアプリも、することはひとつだけ。飲んだ水を数える、明日の予定を立てる、イタリア語を学ぶ。同じ佇まいと同じ原則を共有しています。</p>
+      </details>
+      <details>
+        <summary>アプリはどこでダウンロードできますか？</summary>
+        <p>Anglais が最初に App Store に登場し、Italien、Espagnole、Allemand が続きます。ほかのアプリは準備中です。</p>
+      </details>
+      <details>
+        <summary>アカウントは必要ですか？</summary>
+        <p>いいえ。FLOW にアカウントはありません。一部のアプリは、カレンダーや Apple のヘルスケアなど、すでに使っているサービスと連携します。許可するのはあなた自身で、あなたのデバイス上で行います。</p>
+      </details>
+      <details>
+        <summary>データはどこへ行きますか？</summary>
+        <p>どこにも行きません。あなたのデバイスに残ります。iPhone と Mac の間は、あなた自身の iCloud を通ります。FLOW にサーバーはありません。</p>
+      </details>
+      <details>
+        <summary>ネットワークなしで使えますか？</summary>
+        <p>ほとんどの機能は使えます。コンテンツはアプリの中にあります。オンラインサービスを読み込むアプリだけが、そのときにネットワークを必要とします。</p>
+      </details>
+      <details>
+        <summary>iPhone ですか、Mac ですか？</summary>
+        <p>ほぼすべてが両方にあり、同じ画面で、同期します。Mac だけ、または iPhone だけのアプリも少しあり、各アプリの下に記載しています。</p>
+      </details>
+      <details>
+        <summary>有料ですか？</summary>
+        <p>Anglais は完全に無料です。ほかのアプリの価格は公開時にお知らせします。</p>
+      </details>
+      <details>
+        <summary>アプリは何語ですか？</summary>
+        <p>現在はフランス語です。このページは翻訳されていますが、アプリ自体はフランス語です。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · Le contact et le pied de page. -->
+<section class="s-contact" id="contact" data-scene="texte">
+  <div class="etroit centre-texte">
+    <h2 class="decoupe">メッセージをください</h2>
+    <p class="chapeau">質問、アプリのアイデア、不具合の報告など。メッセージはすべて読みます。</p>
+    <a class="bouton clair grand" href="mailto:contact@flowapps.store">contact@flowapps.store</a>
+  </div>
+  <footer class="pied">
+    <nav aria-label="フッターのリンク">
+      <a href="/anglais/">FLOW — Anglais</a>
+      <a href="/anglais/assistance/">サポート（フランス語）</a>
+      <a href="/mentions-legales/">法的表示（フランス語）</a>
+    </nav>
+    <ul class="pied-langues" aria-label="言語">
+      <li><a href="/" hreflang="fr" lang="fr" data-code="fr" data-invite="Lire cette page en français">Français</a></li>
+      <li><a href="/en/" hreflang="en" lang="en" data-code="en" data-invite="Read this page in English">English</a></li>
+      <li><a href="/es/" hreflang="es" lang="es" data-code="es" data-invite="Leer esta página en español">Español</a></li>
+      <li><a href="/de/" hreflang="de" lang="de" data-code="de" data-invite="Diese Seite auf Deutsch lesen">Deutsch</a></li>
+      <li><a href="/zh/" hreflang="zh-Hans" lang="zh-Hans" data-code="zh" data-invite="用中文阅读本页">中文</a></li>
+      <li><a href="/ja/" hreflang="ja" lang="ja" data-code="ja" data-invite="このページを日本語で読む" aria-current="page">日本語</a></li>
+      <li><a href="/ko/" hreflang="ko" lang="ko" data-code="ko" data-invite="이 페이지를 한국어로 읽기">한국어</a></li>
+    </ul>
+    <span>© 2026 Helal Andesha</span>
+  </footer>
+</section>
+
+<!-- 8 · Le retour : la page boucle sur son début. -->
+<section class="s s-retour" data-scene="retour" aria-hidden="true">
+  <p class="indice">最初に戻る</p>
+</section>
+
+</main>
+
+<a class="invite" id="invite" hidden></a>
+
+<script type="application/json" id="minis">{"planifier":[{"n":"Tomorrow","x":0,"y":0},{"n":"MyWeek","x":1,"y":0},{"n":"WeekDo","x":2,"y":0},{"n":"WeekH","x":3,"y":0},{"n":"WeekPlan","x":4,"y":0},{"n":"Mois","x":5,"y":0},{"n":"Année","x":6,"y":0},{"n":"Day Hour","x":7,"y":0},{"n":"Calendar","x":8,"y":0}],"faire":[{"n":"Todo","x":1,"y":1},{"n":"Clarté","x":2,"y":1},{"n":"ListDo","x":3,"y":1},{"n":"Kanban","x":4,"y":1},{"n":"Board","x":5,"y":1},{"n":"PriorityDo","x":6,"y":1},{"n":"Eisenhower","x":7,"y":1},{"n":"DelayDo","x":8,"y":1},{"n":"EnergyDo","x":9,"y":1}],"projets":[{"n":"Project","x":5,"y":2},{"n":"Feuille Project","x":6,"y":2},{"n":"Admin","x":7,"y":2},{"n":"CV","x":8,"y":2},{"n":"DeepWork","x":9,"y":2},{"n":"Distraction","x":11,"y":2},{"n":"Vidéo","x":12,"y":2},{"n":"Dashboard","x":13,"y":2},{"n":"Business","x":14,"y":2}],"corps":[{"n":"Water","x":1,"y":3},{"n":"Douche froide","x":2,"y":3},{"n":"Smile","x":3,"y":3},{"n":"Sleep","x":4,"y":3},{"n":"Sieste","x":5,"y":3},{"n":"Jeûne","x":6,"y":3},{"n":"Poids","x":7,"y":3},{"n":"Posture","x":8,"y":3},{"n":"Fatigue","x":9,"y":3}],"bouger":[{"n":"Body","x":3,"y":4},{"n":"Pompes","x":4,"y":4},{"n":"Tractions","x":5,"y":4},{"n":"Étirements","x":6,"y":4},{"n":"Running","x":7,"y":4},{"n":"Move","x":8,"y":4},{"n":"Go","x":9,"y":4},{"n":"Lieux Rituel","x":10,"y":4},{"n":"Atlas","x":11,"y":4}],"apprendre":[{"n":"Book","x":13,"y":4},{"n":"Reader","x":14,"y":4},{"n":"Français","x":0,"y":5},{"n":"Révision","x":1,"y":5},{"n":"Leçons","x":2,"y":5},{"n":"Brain","x":3,"y":5},{"n":"Chess","x":4,"y":5},{"n":"Citation","x":5,"y":5},{"n":"Ciné","x":6,"y":5}],"connaitre":[{"n":"Identité","x":3,"y":6},{"n":"Bad identité","x":4,"y":6},{"n":"Valeur","x":5,"y":6},{"n":"Discipline","x":6,"y":6},{"n":"Bilan","x":9,"y":6},{"n":"Réussite","x":10,"y":6},{"n":"Mensonge","x":11,"y":6},{"n":"Refusé","x":12,"y":6},{"n":"Oublié","x":13,"y":6}],"autres":[{"n":"Friends","x":8,"y":7},{"n":"Drague","x":9,"y":7},{"n":"Sociale","x":10,"y":7},{"n":"Sujets","x":11,"y":7},{"n":"Parole","x":12,"y":7},{"n":"Éloquence","x":13,"y":7},{"n":"Humble","x":14,"y":7},{"n":"Coupé","x":0,"y":8},{"n":"Négocié","x":1,"y":8}],"ecouter":[{"n":"Pause","x":9,"y":8},{"n":"Spotify","x":11,"y":8},{"n":"Podcast","x":12,"y":8},{"n":"Chansons","x":13,"y":8},{"n":"Coran","x":14,"y":8},{"n":"Muslim","x":0,"y":9},{"n":"Prières","x":1,"y":9},{"n":"Méditation","x":2,"y":9},{"n":"Sounds","x":3,"y":9}],"foyer":[{"n":"Budget","x":8,"y":9},{"n":"Achats","x":9,"y":9},{"n":"Objet","x":10,"y":9},{"n":"Cuisine","x":11,"y":9},{"n":"Rangement","x":12,"y":9},{"n":"Propreté","x":13,"y":9},{"n":"Tri","x":14,"y":9},{"n":"Appareil","x":0,"y":10}],"outils":[{"n":"Accueil","x":1,"y":10},{"n":"Barre","x":2,"y":10},{"n":"Cleaner","x":4,"y":10},{"n":"Charge","x":5,"y":10},{"n":"Obsidian","x":6,"y":10},{"n":"SideNote","x":7,"y":10},{"n":"Note","x":8,"y":10},{"n":"MindMap","x":9,"y":10},{"n":"Verrou","x":10,"y":10}]}</script>
+<script src="/assets/univers/univers.js" defer></script>
+</body>
+</html>
