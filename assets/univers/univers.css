@@ -360,7 +360,7 @@ html:not(.js) .outils { display: none; }
   content: ""; position: absolute; inset: 0; opacity: 0; transition: opacity .3s; pointer-events: none;
   background: radial-gradient(240px circle at var(--mx, 50%) var(--my, 50%), color-mix(in srgb, var(--c) 55%, transparent), transparent 70%);
 }
-.carte:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--c) 55%, var(--ivoire)); }
+.carte:hover { transform: perspective(700px) translateY(-2px) rotateX(var(--tx, 0deg)) rotateY(var(--ty, 0deg)); border-color: color-mix(in srgb, var(--c) 55%, var(--ivoire)); }
 .carte:hover::before { opacity: 1; }
 .carte > * { position: relative; }
 /* Toutes les icônes tiennent dans une seule image : chaque case se vise par sa colonne et sa rangée. */
@@ -471,3 +471,17 @@ html:not(.js) .barre { position: absolute; }
   .invite { right: auto; left: 50%; translate: -50% 0; bottom: 14px; font-size: 13px; white-space: nowrap; }
   body:has(.invite:not([hidden])) .s-gamme { padding-bottom: 76px; }
 }
+
+/* ── Le courant : les 165 apps en volume (toile WebGL), entre le fond et les tuiles ── */
+#courant { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.etiquette {
+  position: fixed; left: 0; top: 0; z-index: 7; pointer-events: none; white-space: nowrap;
+  padding: 7px 11px 6px; border-radius: 9px; background: rgba(23, 19, 15, .82); color: var(--ivoire);
+  border: 1px solid rgba(243, 235, 221, .2); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  font: 600 11px/1 var(--mono); letter-spacing: .16em; text-transform: uppercase;
+  opacity: 0; transition: opacity .18s;
+}
+.etiquette.vue { opacity: 1; }
+body.vise .s-gamme { cursor: pointer; }
+/* La carte d'une app qu'on vient de désigner sur le socle. */
+.carte.designee { outline: 2px solid var(--laiton); outline-offset: 3px; transition: outline-color .6s; }
