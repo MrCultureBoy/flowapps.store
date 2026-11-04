@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<title>Publications · Retour de connexion</title>
+<meta name="theme-color" content="#F3EDE3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#17130F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<main class="doc">
+<h1>Retour vers Publications</h1>
+<p>La connexion est faite : l'app Publications reprend la main sur ton Mac.
+Cette page ne garde rien et n'envoie rien : elle te renvoie seulement à l'app.</p>
+<p><a id="lien" class="bouton" href="flowpublications://connexion">Revenir à Publications</a></p>
+<p class="maj">Connection done: Publications takes over on your Mac. This page stores and sends nothing.</p>
+</main>
+<script>
+(function () {
+  // Le code de connexion passe de l'adresse de cette page à l'app, et nulle part ailleurs.
+  var q = location.search || "";
+  var h = location.hash && location.hash !== "#_" ? location.hash.slice(1) : "";
+  var cible = "flowpublications://connexion" + (q || (h ? "?" + h : ""));
+  document.getElementById("lien").setAttribute("href", cible);
+  location.replace(cible);
+})();
+</script>
+</body>
+</html>
