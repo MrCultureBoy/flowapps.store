@@ -1,6 +1,6 @@
 /* flowapps.store — l'accueil (30/10/2026).
    Lin et graphite : un papier clair, une encre presque noire, le laiton pour seul accent.
-   La couleur vient des apps elles-mêmes (leur pigment). Nuit automatique avec le système.
+   La couleur vient des apps elles-mêmes (leur pigment). Jour par défaut, thèmes au choix (06/11).
    Le mouvement suit quatre durées et deux courbes, partout les mêmes. */
 
 :root {
@@ -16,16 +16,47 @@
   --d1: 160ms; --d2: 260ms; --d3: 480ms; --d4: 820ms;
   --sortie: cubic-bezier(.16, 1, .3, 1);
   --ressort: cubic-bezier(.34, 1.36, .64, 1);
-  color-scheme: light dark;
+  color-scheme: light;
+}
+/* Les thèmes (06/11/2026). Le jour est le défaut, même si l'appareil est en sombre ;
+   le visiteur choisit dans le menu « Thème » (/assets/theme.js), « Auto » suit l'appareil. */
+html[data-theme="sable"] {
+  --fond: #EDE3D1; --fond-2: #E4D8C3; --carte: #F8F1E4; --carte-2: #F2E9D9;
+  --encre: #231C14; --encre-2: #57493A; --encre-3: #8D7C67;
+  --trait: rgba(35, 28, 20, .11); --trait-fort: rgba(35, 28, 20, .22);
+  --laiton: #9A6F35; --laiton-doux: rgba(154, 111, 53, .15);
+}
+html[data-theme="sauge"] {
+  --fond: #E7EBE2; --fond-2: #DDE3D6; --carte: #F5F7F1; --carte-2: #EEF2E9;
+  --encre: #18201A; --encre-2: #47524A; --encre-3: #7D877E;
+  --trait: rgba(24, 32, 26, .1); --trait-fort: rgba(24, 32, 26, .2);
+  --laiton: #8C7440; --laiton-doux: rgba(140, 116, 64, .14);
+}
+html[data-theme="nuit"] {
+  color-scheme: dark;
+  --fond: #141311; --fond-2: #1B1916; --carte: #1E1C19; --carte-2: #232019;
+  --encre: #F1ECE2; --encre-2: #B9B1A4; --encre-3: #847D72;
+  --trait: rgba(241, 236, 226, .09); --trait-fort: rgba(241, 236, 226, .18);
+  --laiton: #CDA56A; --laiton-doux: rgba(205, 165, 106, .14);
+  --ombre: 0 1px 0 rgba(255, 255, 255, .04) inset, 0 18px 40px -24px rgba(0, 0, 0, .7);
 }
 @media (prefers-color-scheme: dark) {
-  :root {
+  html[data-theme="auto"] {
+    color-scheme: dark;
     --fond: #141311; --fond-2: #1B1916; --carte: #1E1C19; --carte-2: #232019;
     --encre: #F1ECE2; --encre-2: #B9B1A4; --encre-3: #847D72;
     --trait: rgba(241, 236, 226, .09); --trait-fort: rgba(241, 236, 226, .18);
     --laiton: #CDA56A; --laiton-doux: rgba(205, 165, 106, .14);
     --ombre: 0 1px 0 rgba(255, 255, 255, .04) inset, 0 18px 40px -24px rgba(0, 0, 0, .7);
   }
+}
+html[data-theme="graphite"] {
+  color-scheme: dark;
+  --fond: #18191B; --fond-2: #1E2022; --carte: #222427; --carte-2: #282A2E;
+  --encre: #ECECEA; --encre-2: #B0B1B0; --encre-3: #7E8081;
+  --trait: rgba(236, 236, 234, .09); --trait-fort: rgba(236, 236, 234, .18);
+  --laiton: #CDA56A; --laiton-doux: rgba(205, 165, 106, .14);
+  --ombre: 0 1px 0 rgba(255, 255, 255, .04) inset, 0 18px 40px -24px rgba(0, 0, 0, .7);
 }
 
 *, *::before, *::after { box-sizing: border-box; }

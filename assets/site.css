@@ -5,7 +5,7 @@
 
 /* ── G1 — Le lin : les neutres ─────────────────────────────── */
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
   --lin: #F3EDE3;          /* fond de l'écran */
   --papier: #FBF8F2;       /* cartes */
   --coton: #FFFDF9;        /* cartes posées sur une bande papier */
@@ -32,9 +32,30 @@
   --r-feuille: 24px;
   --wrap: 1080px;
 }
-/* G1.3 — le soir, le lin devient espresso (jamais noir pur ni noir bleuté). */
+/* Les thèmes (06/11/2026) : le jour (lin) est le défaut, même si l'appareil est en
+   sombre. Menu « Thème » : /assets/theme.js ; « Auto » suit l'appareil.
+   G1.3 — la nuit : le lin devient espresso (jamais noir pur ni noir bleuté). */
+html[data-theme="sable"] {
+  --lin: #EDE3D1; --papier: #F8F1E4; --coton: #FCF7EE; --trait: #DDCDB4;
+  --encre: #2A2118; --encre-douce: #65543F; --encre-pale: #95826A;
+}
+html[data-theme="sauge"] {
+  --lin: #E7EBE2; --papier: #F5F7F1; --coton: #FBFCF8; --trait: #D3DACB;
+  --encre: #1F2720; --encre-douce: #4E5A50; --encre-pale: #849086;
+}
+html[data-theme="nuit"] {
+  color-scheme: dark;
+  --lin: #17130F;
+  --papier: #221C17;
+  --coton: #2C251E;
+  --trait: #3A3129;
+  --encre: #F1E9DC;    /* 15,3:1 sur espresso */
+  --encre-douce: #BFB3A3;
+  --encre-pale: #8A7F71;
+}
 @media (prefers-color-scheme: dark) {
-  :root {
+  html[data-theme="auto"] {
+    color-scheme: dark;
     --lin: #17130F;
     --papier: #221C17;
     --coton: #2C251E;
@@ -43,6 +64,11 @@
     --encre-douce: #BFB3A3;
     --encre-pale: #8A7F71;
   }
+}
+html[data-theme="graphite"] {
+  color-scheme: dark;
+  --lin: #18191B; --papier: #222427; --coton: #2A2C2F; --trait: #34373B;
+  --encre: #ECECEA; --encre-douce: #B0B1B0; --encre-pale: #7E8081;
 }
 
 /* ── G2 — Les pigments : un par app ────────────────────────────
@@ -63,9 +89,34 @@
   --pig-texte: var(--pig-clair);
   --accent: var(--pig-texte);
 }
+html[data-theme="nuit"] .p-taupe,
+html[data-theme="nuit"] .p-petrole,
+html[data-theme="nuit"] .p-graphite,
+html[data-theme="nuit"] .p-terracotta,
+html[data-theme="nuit"] .p-vieux-rose,
+html[data-theme="nuit"] .p-safran,
+html[data-theme="nuit"] .p-rose-the,
+html[data-theme="nuit"] .p-ardoise,
+html[data-theme="nuit"] .p-aubergine,
+html[data-theme="graphite"] .p-taupe,
+html[data-theme="graphite"] .p-petrole,
+html[data-theme="graphite"] .p-graphite,
+html[data-theme="graphite"] .p-terracotta,
+html[data-theme="graphite"] .p-vieux-rose,
+html[data-theme="graphite"] .p-safran,
+html[data-theme="graphite"] .p-rose-the,
+html[data-theme="graphite"] .p-ardoise,
+html[data-theme="graphite"] .p-aubergine { --pig-texte: var(--pig-sombre); }
 @media (prefers-color-scheme: dark) {
-  .p-taupe, .p-petrole, .p-graphite, .p-terracotta, .p-vieux-rose,
-  .p-safran, .p-rose-the, .p-ardoise, .p-aubergine { --pig-texte: var(--pig-sombre); }
+  html[data-theme="auto"] .p-taupe,
+html[data-theme="auto"] .p-petrole,
+html[data-theme="auto"] .p-graphite,
+html[data-theme="auto"] .p-terracotta,
+html[data-theme="auto"] .p-vieux-rose,
+html[data-theme="auto"] .p-safran,
+html[data-theme="auto"] .p-rose-the,
+html[data-theme="auto"] .p-ardoise,
+html[data-theme="auto"] .p-aubergine { --pig-texte: var(--pig-sombre); }
 }
 
 /* ── Base ─────────────────────────────────────────────────── */
