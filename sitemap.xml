@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://flowapps.store/</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://flowapps.store/en/</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://flowapps.store/es/</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://flowapps.store/de/</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://flowapps.store/zh/</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://flowapps.store/ja/</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://flowapps.store/ko/</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://flowapps.store/</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://flowapps.store/en/</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://flowapps.store/es/</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://flowapps.store/de/</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://flowapps.store/zh/</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://flowapps.store/ja/</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://flowapps.store/ko/</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://flowapps.store/anglais/</loc><lastmod>2026-10-21</lastmod></url>
   <url><loc>https://flowapps.store/anglais/assistance/</loc><lastmod>2026-09-27</lastmod></url>
   <url><loc>https://flowapps.store/anglais/confidentialite/</loc><lastmod>2026-09-27</lastmod></url>
@@ -20,4 +20,13 @@
   <url><loc>https://flowapps.store/allemand/assistance/</loc><lastmod>2026-09-27</lastmod></url>
   <url><loc>https://flowapps.store/allemand/confidentialite/</loc><lastmod>2026-09-27</lastmod></url>
   <url><loc>https://flowapps.store/mentions-legales/</loc><lastmod>2026-09-27</lastmod></url>
-<url><loc>https://flowapps.store/langues/</loc></url><url><loc>https://flowapps.store/russe/</loc></url><url><loc>https://flowapps.store/chinois/</loc></url><url><loc>https://flowapps.store/japonais/</loc></url><url><loc>https://flowapps.store/turc/</loc></url><url><loc>https://flowapps.store/roumain/</loc></url><url><loc>https://flowapps.store/persan/</loc></url><url><loc>https://flowapps.store/francais/</loc></url><url><loc>https://flowapps.store/polyglotte/</loc></url></urlset>
+  <url><loc>https://flowapps.store/langues/</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://flowapps.store/russe/</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://flowapps.store/chinois/</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://flowapps.store/japonais/</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://flowapps.store/turc/</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://flowapps.store/roumain/</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://flowapps.store/persan/</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://flowapps.store/francais/</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://flowapps.store/polyglotte/</loc><lastmod>2026-11-06</lastmod></url>
+</urlset>

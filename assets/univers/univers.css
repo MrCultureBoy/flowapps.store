@@ -83,6 +83,12 @@ main, .pied { position: relative; z-index: 1; }
 /* Ce qui monte quand on arrive : une seule courbe, un décalage borné. */
 .js .revele { opacity: 0; transform: translateY(16px); transition: opacity var(--d4) var(--sortie), transform var(--d4) var(--sortie); transition-delay: calc(var(--rang, 0) * 70ms); }
 .js .revele.vu { opacity: 1; transform: none; }
+/* L'ouverture n'attend pas le script (06/11) : sur un téléphone, le titre paraît dès que
+   la feuille de style est là, au lieu d'attendre le script, puis 0,8 s de fondu. */
+.js .ouverture .revele { opacity: 1; transform: none; transition: none; animation: arrivee var(--d3) var(--sortie) both; }
+.js .ouverture h1.revele { animation-delay: 60ms; }
+.js .ouverture .ouverture-bas.revele { animation-delay: 120ms; }
+@keyframes arrivee { from { opacity: 0; transform: translateY(12px); } }
 
 /* La barre. */
 .barre { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--fond) 80%, transparent); -webkit-backdrop-filter: saturate(1.4) blur(14px); backdrop-filter: saturate(1.4) blur(14px); border-bottom: 1px solid transparent; transition: border-color var(--d2); }
@@ -370,6 +376,7 @@ a.carte:hover, .carte:hover { border-color: var(--trait-fort); transform: transl
 /* Mouvement réduit : tout est là, rien ne bouge. */
 @media (prefers-reduced-motion: reduce) {
   .js .revele { opacity: 1; transform: none; transition: none; }
+  .js .ouverture .revele { animation: none; }
   .demo *, .demo { animation: none !important; transition: none !important; }
   .barre-mot s { background-size: 100% 1.5px; transition: none; }
   .nv-dedans { transform: none !important; }
