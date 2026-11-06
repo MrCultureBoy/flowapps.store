@@ -2,75 +2,100 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>FLOW — Russe · Le russe en commençant par l&#x27;alphabet cyrillique : les six cas, l&#x27;aspect des verbes, l&#x27;accent marqué sur chaque mot.</title>
 <meta name="description" content="Le russe en commençant par l&#x27;alphabet cyrillique : les six cas, l&#x27;aspect des verbes, l&#x27;accent marqué sur chaque mot.">
+<meta name="theme-color" content="#F2EDE3">
+<meta name="color-scheme" content="light">
 <link rel="canonical" href="https://flowapps.store/russe/">
 <meta property="og:title" content="FLOW — Russe · Le russe en commençant par l&#x27;alphabet cyrillique : les six cas, l&#x27;aspect des verbes, l&#x27;accent marqué sur chaque mot.">
 <meta property="og:description" content="Le russe en commençant par l&#x27;alphabet cyrillique : les six cas, l&#x27;aspect des verbes, l&#x27;accent marqué sur chaque mot.">
 <meta property="og:url" content="https://flowapps.store/russe/">
 <meta property="og:type" content="website">
-<link rel="icon" href="/assets/favicon.png">
+<meta property="og:image" content="https://flowapps.store/assets/univers/marque.png">
+<link rel="icon" href="/assets/favicon.png" type="image/png" sizes="96x96">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/univers/univers.css">
 <script src="/assets/theme.js"></script>
+<style>
+.barre-dedans .liens { margin-left: auto; }
+.page { padding-top: clamp(48px, 8vw, 96px); }
+.page .tete h1 { font-size: clamp(36px, 5.4vw, 72px); line-height: 1.02; letter-spacing: -.04em; }
+.page .tete .sur a { color: inherit; text-decoration: none; }
+.page .tete .sur a:hover { color: var(--encre); }
+.app-tete { display: flex; align-items: center; gap: 18px; }
+.app-tete .ico { width: 72px; height: 72px; border-radius: 17px; }
+.carte .ico, .app-tete .ico { background: var(--carte-2); object-fit: cover; }
+.carte .etat.gris { background: var(--trait); color: var(--encre-2); }
+.fine { margin-top: 18px; color: var(--encre-3); font-size: 13px; }
+.case.texte { padding-top: 22px; }
+.case.texte h3 { margin-top: 0; }
+.faits { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--trait); }
+.faits li { padding: 18px 0; border-bottom: 1px solid var(--trait); color: var(--encre-2); font-size: 16.5px; }
+.ecrans { display: flex; gap: 16px; margin: 0; padding: 0 0 8px; list-style: none; overflow-x: auto; scroll-snap-type: x mandatory; }
+.ecrans li { flex: none; scroll-snap-align: start; }
+.ecrans img { display: block; width: clamp(180px, 22vw, 240px); height: auto; border-radius: 26px; border: 1px solid var(--trait); box-shadow: var(--ombre); }
+@media (max-width: 760px) { .grille.deux { grid-template-columns: 1fr; } }
+@media (min-width: 761px) { .grille.deux { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+</style>
 </head>
-<body class="p-safran">
+<body>
 
-<header class="top">
-  <div class="wrap">
-    <a class="brand" href="/">FLOW</a>
-    <nav aria-label="Navigation principale">
+<header class="barre posee" id="barre">
+  <div class="cadre barre-dedans">
+    <a class="logo" href="/" aria-label="FLOW, accueil"><span class="logo-f" aria-hidden="true">F<i></i></span>FLOW</a>
+    <nav class="liens" aria-label="Menu">
       <a href="/langues/">Langues</a>
-      <a class="hide-sm" href="/#apps">Toutes les apps</a>
+      <a href="/#nouvelles">Les nouvelles venues</a>
+      <a href="/#univers">Les univers</a>
+      <a href="/#apps">Toutes les apps</a>
     </nav>
   </div>
 </header>
 
 <main>
 
-<div class="hero">
-  <div class="wrap">
-    <img class="hero-icon" src="/assets/icones/langues/russe.png" alt="Icône de Russe" width="88" height="88">
-    <p class="kicker"><a href="/langues/">Langues</a> · Русский</p>
-    <h1>Russe</h1>
-    <p class="lede">Le russe en commençant par l&#x27;alphabet cyrillique : les six cas, l&#x27;aspect des verbes, l&#x27;accent marqué sur chaque mot.</p>
-    <div class="cta-row">
-      <span class="badge soon">En préparation</span>
-      <a class="ghost" href="mailto:contact@flowapps.store?subject=App Russe">Être prévenu de sa sortie →</a>
-    </div>
-    <p class="fine">iPhone et Mac · hors ligne · sans compte · sans publicité</p>
-  </div>
-</div>
-
-<section class="soft">
-  <div class="wrap">
-    <p class="eyebrow">Ce que fait l’app</p>
-    <div class="plan">
-      <h3>Russe</h3>
-      <ul><li>L&#x27;alphabet cyrillique d&#x27;abord, puis un parcours guidé.</li><li>Les six cas et l&#x27;aspect des verbes : l&#x27;app décline et conjugue tout le dictionnaire.</li><li>L&#x27;accent marqué sur chaque mot.</li><li>La répétition espacée, sans compte et sans abonnement.</li></ul>
+<section class="section page">
+  <div class="cadre">
+    <div class="tete">
+      <p class="sur"><a href="/langues/">Langues</a> · Русский</p>
+      <div class="app-tete"><img class="ico" src="/assets/icones/langues/russe.png" alt="Icône de Russe" width="72" height="72"><h1>Russe</h1></div>
+      <p class="chapeau">Le russe en commençant par l&#x27;alphabet cyrillique : les six cas, l&#x27;aspect des verbes, l&#x27;accent marqué sur chaque mot.</p>
+      <div class="boutons" style="margin-top:28px">
+        <a class="bouton plein" href="mailto:contact@flowapps.store?subject=App Russe">Être prévenu de sa sortie<span aria-hidden="true">→</span></a>
+        <a class="bouton creux" href="/langues/">Les autres langues</a>
+      </div>
+      <p class="fine">En préparation · iPhone et Mac · hors ligne · sans compte · sans publicité</p>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="wrap">
-    <p class="eyebrow">Aperçu</p>
-    <h2>De vrais écrans de l’app.</h2>
-    <div class="shots" role="list"><figure role="listitem"><div class="phone"><img src="/assets/russe/1-01-aujourdhui-sombre.jpg" alt="Écran de l’app Russe" width="440" height="956" loading="lazy"></div></figure><figure role="listitem"><div class="phone"><img src="/assets/russe/2-02-parcours-sombre.jpg" alt="Écran de l’app Russe" width="440" height="956" loading="lazy"></div></figure><figure role="listitem"><div class="phone"><img src="/assets/russe/3-05-dictionnaire-sombre.jpg" alt="Écran de l’app Russe" width="440" height="956" loading="lazy"></div></figure></div>
+<section class="section">
+  <div class="cadre etroit">
+    <div class="tete"><p class="sur">Ce que fait l’app</p><h2>Russe, en bref.</h2></div>
+    <ul class="faits"><li>L&#x27;alphabet cyrillique d&#x27;abord, puis un parcours guidé.</li><li>Les six cas et l&#x27;aspect des verbes : l&#x27;app décline et conjugue tout le dictionnaire.</li><li>L&#x27;accent marqué sur chaque mot.</li><li>La répétition espacée, sans compte et sans abonnement.</li></ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="cadre">
+    <div class="tete"><p class="sur">Aperçu</p><h2>De vrais écrans de l’app.</h2></div>
+    <ul class="ecrans"><li><img src="/assets/russe/1-01-aujourdhui-sombre.jpg" alt="Écran de l’app Russe" width="440" height="956" loading="lazy"></li><li><img src="/assets/russe/2-02-parcours-sombre.jpg" alt="Écran de l’app Russe" width="440" height="956" loading="lazy"></li><li><img src="/assets/russe/3-05-dictionnaire-sombre.jpg" alt="Écran de l’app Russe" width="440" height="956" loading="lazy"></li></ul>
   </div>
 </section>
 </main>
 
-<footer class="foot">
-  <div class="wrap">
+<footer class="pied">
+  <div class="cadre pied-dedans">
+    <a class="logo" href="/"><span class="logo-f" aria-hidden="true">F<i></i></span>FLOW</a>
+    <span class="pied-mention">Apprendre une langue depuis le français · iPhone et Mac</span>
     <nav aria-label="Liens du pied de page">
       <a href="/langues/">Langues</a>
-      <a href="/">Toutes les apps</a>
+      <a href="/#apps">Toutes les apps</a>
       <a href="/mentions-legales/">Mentions légales</a>
       <a href="mailto:contact@flowapps.store">contact@flowapps.store</a>
+      <span>© 2026 Helal Andesha</span>
     </nav>
-    <span class="copy">© 2026 Helal Andesha</span>
   </div>
 </footer>
 

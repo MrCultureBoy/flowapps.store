@@ -2,169 +2,108 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>FLOW — Langues · apprendre une langue depuis le français</title>
 <meta name="description" content="Onze apps pour apprendre une langue depuis le français, et Polyglotte pour toutes les suivre.">
+<meta name="theme-color" content="#F2EDE3">
+<meta name="color-scheme" content="light">
 <link rel="canonical" href="https://flowapps.store/langues/">
 <meta property="og:title" content="FLOW — Langues · apprendre une langue depuis le français">
 <meta property="og:description" content="Onze apps pour apprendre une langue depuis le français, et Polyglotte pour toutes les suivre.">
 <meta property="og:url" content="https://flowapps.store/langues/">
 <meta property="og:type" content="website">
-<link rel="icon" href="/assets/favicon.png">
+<meta property="og:image" content="https://flowapps.store/assets/univers/marque.png">
+<link rel="icon" href="/assets/favicon.png" type="image/png" sizes="96x96">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/univers/univers.css">
 <script src="/assets/theme.js"></script>
-<style>.apps{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}.apps .app-icon{width:60px}.apps .app-card{gap:12px}</style>
+<style>
+.barre-dedans .liens { margin-left: auto; }
+.page { padding-top: clamp(48px, 8vw, 96px); }
+.page .tete h1 { font-size: clamp(36px, 5.4vw, 72px); line-height: 1.02; letter-spacing: -.04em; }
+.page .tete .sur a { color: inherit; text-decoration: none; }
+.page .tete .sur a:hover { color: var(--encre); }
+.app-tete { display: flex; align-items: center; gap: 18px; }
+.app-tete .ico { width: 72px; height: 72px; border-radius: 17px; }
+.carte .ico, .app-tete .ico { background: var(--carte-2); object-fit: cover; }
+.carte .etat.gris { background: var(--trait); color: var(--encre-2); }
+.fine { margin-top: 18px; color: var(--encre-3); font-size: 13px; }
+.case.texte { padding-top: 22px; }
+.case.texte h3 { margin-top: 0; }
+.faits { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--trait); }
+.faits li { padding: 18px 0; border-bottom: 1px solid var(--trait); color: var(--encre-2); font-size: 16.5px; }
+.ecrans { display: flex; gap: 16px; margin: 0; padding: 0 0 8px; list-style: none; overflow-x: auto; scroll-snap-type: x mandatory; }
+.ecrans li { flex: none; scroll-snap-align: start; }
+.ecrans img { display: block; width: clamp(180px, 22vw, 240px); height: auto; border-radius: 26px; border: 1px solid var(--trait); box-shadow: var(--ombre); }
+@media (max-width: 760px) { .grille.deux { grid-template-columns: 1fr; } }
+@media (min-width: 761px) { .grille.deux { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+</style>
 </head>
-<body class="p-taupe">
+<body>
 
-<header class="top">
-  <div class="wrap">
-    <a class="brand" href="/">FLOW</a>
-    <nav aria-label="Navigation principale">
+<header class="barre posee" id="barre">
+  <div class="cadre barre-dedans">
+    <a class="logo" href="/" aria-label="FLOW, accueil"><span class="logo-f" aria-hidden="true">F<i></i></span>FLOW</a>
+    <nav class="liens" aria-label="Menu">
       <a href="/langues/" aria-current="page">Langues</a>
-      <a class="hide-sm" href="/#apps">Toutes les apps</a>
+      <a href="/#nouvelles">Les nouvelles venues</a>
+      <a href="/#univers">Les univers</a>
+      <a href="/#apps">Toutes les apps</a>
     </nav>
   </div>
 </header>
 
 <main>
 
-<div class="hero">
-  <div class="wrap">
-    <p class="kicker">Langues</p>
-    <h1>Apprendre une langue depuis le français.</h1>
-    <p class="lede">Une app par langue, pensée pour un francophone : la grammaire expliquée en français, la répétition espacée, et tout dans le téléphone, même sans réseau.</p>
-    <p class="fine">Onze langues · un tableau de bord · iPhone et Mac</p>
-  </div>
-</div>
-
-<section>
-  <div class="wrap">
-    <div class="apps">
-      <a class="app-card" href="/anglais/">
-        <img class="app-icon" src="/assets/icones/langues/anglais.png" alt="" width="64" height="64">
-        <div class="corps">
-          <div class="tete"><h3>Anglais</h3><span class="pill">App Store, hors UE</span></div>
-          <p>11 166 mots du A1 au C2, 43 leçons de grammaire, une vraie voix américaine ou britannique. Entièrement gratuite.</p>
-          <span class="role">English</span>
-        </div>
-      </a>
-      <a class="app-card" href="/allemand/">
-        <img class="app-icon" src="/assets/icones/langues/allemand.png" alt="" width="64" height="64">
-        <div class="corps">
-          <div class="tete"><h3>Allemand</h3><span class="pill muted">Bientôt</span></div>
-          <p>L&#x27;allemand jusqu&#x27;au C2 : der, die, das, les quatre cas et le verbe en fin de phrase, expliqués en français.</p>
-          <span class="role">Deutsch</span>
-        </div>
-      </a>
-      <a class="app-card" href="/espagnol/">
-        <img class="app-icon" src="/assets/icones/langues/espagnol.png" alt="" width="64" height="64">
-        <div class="corps">
-          <div class="tete"><h3>Espagnol</h3><span class="pill muted">Bientôt</span></div>
-          <p>L&#x27;espagnol de zéro au C2 : la conjugaison, la grammaire qui piège un francophone, une voix d&#x27;Espagne ou d&#x27;Amérique.</p>
-          <span class="role">Español</span>
-        </div>
-      </a>
-      <a class="app-card" href="/italien/">
-        <img class="app-icon" src="/assets/icones/langues/italien.png" alt="" width="64" height="64">
-        <div class="corps">
-          <div class="tete"><h3>Italien</h3><span class="pill muted">Bientôt</span></div>
-          <p>L&#x27;italien du premier mot au C2 : un parcours par unités et un conjugueur qui connaît toutes les formes.</p>
-          <span class="role">Italiano</span>
-        </div>
-      </a>
-      <a class="app-card" href="/russe/">
-        <img class="app-icon" src="/assets/icones/langues/russe.png" alt="" width="64" height="64">
-        <div class="corps">
-          <div class="tete"><h3>Russe</h3><span class="pill muted">En préparation</span></div>
-          <p>Le russe en commençant par l&#x27;alphabet cyrillique : les six cas, l&#x27;aspect des verbes, l&#x27;accent marqué sur chaque mot.</p>
-          <span class="role">Русский</span>
-        </div>
-      </a>
-      <a class="app-card" href="/chinois/">
-        <img class="app-icon" src="/assets/icones/langues/chinois.png" alt="" width="64" height="64">
-        <div class="corps">
-          <div class="tete"><h3>Chinois</h3><span class="pill muted">En préparation</span></div>
-          <p>Le chinois mandarin, des quatre tons au C2, sans réseau.</p>
-          <span class="role">中文</span>
-        </div>
-      </a>
-      <a class="app-card" href="/japonais/">
-        <img class="app-icon" src="/assets/icones/langues/japonais.png" alt="" width="64" height="64">
-        <div class="corps">
-          <div class="tete"><h3>Japonais</h3><span class="pill muted">En préparation</span></div>
-          <p>Le japonais appris seul et hors ligne, pas à pas.</p>
-          <span class="role">日本語</span>
-        </div>
-      </a>
-      <a class="app-card" href="/turc/">
-        <img class="app-icon" src="/assets/icones/langues/turc.png" alt="" width="64" height="64">
-        <div class="corps">
-          <div class="tete"><h3>Turc</h3><span class="pill muted">En préparation</span></div>
-          <p>Le turc de « merhaba » au C2, sans réseau.</p>
-          <span class="role">Türkçe</span>
-        </div>
-      </a>
-      <a class="app-card" href="/roumain/">
-        <img class="app-icon" src="/assets/icones/langues/roumain.png" alt="" width="64" height="64">
-        <div class="corps">
-          <div class="tete"><h3>Roumain</h3><span class="pill muted">En préparation</span></div>
-          <p>Le roumain du premier « bună » au C2 : l&#x27;article collé au bout du mot, le génitif-datif, le subjonctif.</p>
-          <span class="role">Română</span>
-        </div>
-      </a>
-      <a class="app-card" href="/persan/">
-        <img class="app-icon" src="/assets/icones/langues/persan.png" alt="" width="64" height="64">
-        <div class="corps">
-          <div class="tete"><h3>Persan</h3><span class="pill muted">En préparation</span></div>
-          <p>Le vocabulaire et la conjugaison du persan, pas à pas : persan d&#x27;Iran ou dari d&#x27;Afghanistan.</p>
-          <span class="role">فارسی</span>
-        </div>
-      </a>
-      <a class="app-card" href="/francais/">
-        <img class="app-icon" src="/assets/icones/langues/francais.png" alt="" width="64" height="64">
-        <div class="corps">
-          <div class="tete"><h3>Français</h3><span class="pill muted">En préparation</span></div>
-          <p>Enrichir un français déjà natif, cinq minutes à la fois : des cartes, un quiz, et le mot à retrouver depuis sa définition.</p>
-          <span class="role">Français</span>
-        </div>
-      </a>
-      <a class="app-card" href="/polyglotte/">
-        <img class="app-icon" src="/assets/icones/langues/polyglotte.png" alt="" width="64" height="64">
-        <div class="corps">
-          <div class="tete"><h3>Polyglotte</h3><span class="pill muted">En préparation</span></div>
-          <p>Le tableau de bord de toutes tes langues : les mots rencontrés et acquis, ton rythme, ta série.</p>
-          <span class="role">Toutes tes langues</span>
-        </div>
-      </a>
+<section class="section page">
+  <div class="cadre">
+    <div class="tete">
+      <p class="sur">Langues · 12 apps</p>
+      <h1>Apprendre une langue depuis le français.</h1>
+      <p class="chapeau">Une app par langue, pensée pour un francophone : la grammaire expliquée en français, la répétition espacée, et tout dans le téléphone, même sans réseau.</p>
+      <p class="fine">Onze langues · un tableau de bord · iPhone et Mac</p>
     </div>
+    <ul class="cartes">
+<li><a class="carte" href="/anglais/"><img class="ico" src="/assets/icones/langues/anglais.png" alt="" width="52" height="52"><span class="carte-texte"><span class="carte-nom">Anglais<span class="etat">App Store, hors UE</span></span><span class="carte-ligne">11 166 mots du A1 au C2, 43 leçons de grammaire, une vraie voix américaine ou britannique. Entièrement gratuite.</span><span class="carte-plat">English</span></span></a></li>
+<li><a class="carte" href="/allemand/"><img class="ico" src="/assets/icones/langues/allemand.png" alt="" width="52" height="52"><span class="carte-texte"><span class="carte-nom">Allemand<span class="etat gris">Bientôt</span></span><span class="carte-ligne">L&#x27;allemand jusqu&#x27;au C2 : der, die, das, les quatre cas et le verbe en fin de phrase, expliqués en français.</span><span class="carte-plat">Deutsch</span></span></a></li>
+<li><a class="carte" href="/espagnol/"><img class="ico" src="/assets/icones/langues/espagnol.png" alt="" width="52" height="52"><span class="carte-texte"><span class="carte-nom">Espagnol<span class="etat gris">Bientôt</span></span><span class="carte-ligne">L&#x27;espagnol de zéro au C2 : la conjugaison, la grammaire qui piège un francophone, une voix d&#x27;Espagne ou d&#x27;Amérique.</span><span class="carte-plat">Español</span></span></a></li>
+<li><a class="carte" href="/italien/"><img class="ico" src="/assets/icones/langues/italien.png" alt="" width="52" height="52"><span class="carte-texte"><span class="carte-nom">Italien<span class="etat gris">Bientôt</span></span><span class="carte-ligne">L&#x27;italien du premier mot au C2 : un parcours par unités et un conjugueur qui connaît toutes les formes.</span><span class="carte-plat">Italiano</span></span></a></li>
+<li><a class="carte" href="/russe/"><img class="ico" src="/assets/icones/langues/russe.png" alt="" width="52" height="52"><span class="carte-texte"><span class="carte-nom">Russe<span class="etat gris">En préparation</span></span><span class="carte-ligne">Le russe en commençant par l&#x27;alphabet cyrillique : les six cas, l&#x27;aspect des verbes, l&#x27;accent marqué sur chaque mot.</span><span class="carte-plat">Русский</span></span></a></li>
+<li><a class="carte" href="/chinois/"><img class="ico" src="/assets/icones/langues/chinois.png" alt="" width="52" height="52"><span class="carte-texte"><span class="carte-nom">Chinois<span class="etat gris">En préparation</span></span><span class="carte-ligne">Le chinois mandarin, des quatre tons au C2, sans réseau.</span><span class="carte-plat">中文</span></span></a></li>
+<li><a class="carte" href="/japonais/"><img class="ico" src="/assets/icones/langues/japonais.png" alt="" width="52" height="52"><span class="carte-texte"><span class="carte-nom">Japonais<span class="etat gris">En préparation</span></span><span class="carte-ligne">Le japonais appris seul et hors ligne, pas à pas.</span><span class="carte-plat">日本語</span></span></a></li>
+<li><a class="carte" href="/turc/"><img class="ico" src="/assets/icones/langues/turc.png" alt="" width="52" height="52"><span class="carte-texte"><span class="carte-nom">Turc<span class="etat gris">En préparation</span></span><span class="carte-ligne">Le turc de « merhaba » au C2, sans réseau.</span><span class="carte-plat">Türkçe</span></span></a></li>
+<li><a class="carte" href="/roumain/"><img class="ico" src="/assets/icones/langues/roumain.png" alt="" width="52" height="52"><span class="carte-texte"><span class="carte-nom">Roumain<span class="etat gris">En préparation</span></span><span class="carte-ligne">Le roumain du premier « bună » au C2 : l&#x27;article collé au bout du mot, le génitif-datif, le subjonctif.</span><span class="carte-plat">Română</span></span></a></li>
+<li><a class="carte" href="/persan/"><img class="ico" src="/assets/icones/langues/persan.png" alt="" width="52" height="52"><span class="carte-texte"><span class="carte-nom">Persan<span class="etat gris">En préparation</span></span><span class="carte-ligne">Le vocabulaire et la conjugaison du persan, pas à pas : persan d&#x27;Iran ou dari d&#x27;Afghanistan.</span><span class="carte-plat">فارسی</span></span></a></li>
+<li><a class="carte" href="/francais/"><img class="ico" src="/assets/icones/langues/francais.png" alt="" width="52" height="52"><span class="carte-texte"><span class="carte-nom">Français<span class="etat gris">En préparation</span></span><span class="carte-ligne">Enrichir un français déjà natif, cinq minutes à la fois : des cartes, un quiz, et le mot à retrouver depuis sa définition.</span><span class="carte-plat">Français</span></span></a></li>
+<li><a class="carte" href="/polyglotte/"><img class="ico" src="/assets/icones/langues/polyglotte.png" alt="" width="52" height="52"><span class="carte-texte"><span class="carte-nom">Polyglotte<span class="etat gris">En préparation</span></span><span class="carte-ligne">Le tableau de bord de toutes tes langues : les mots rencontrés et acquis, ton rythme, ta série.</span><span class="carte-plat">Toutes tes langues</span></span></a></li>
+    </ul>
   </div>
 </section>
 
-<section class="soft">
-  <div class="wrap">
-    <p class="eyebrow">Ce qu’elles ont en commun</p>
-    <h2>Un peu chaque jour, partout.</h2>
-    <div class="features">
-      <div class="feature"><h3>Hors ligne</h3><p>Les mots, les leçons et les exercices sont dans l’app. Elle marche en avion, dans le métro, partout.</p></div>
-      <div class="feature"><h3>Sans compte</h3><p>Tu ouvres l’app et tu commences. Ta progression reste sur ton appareil.</p></div>
-      <div class="feature"><h3>La mémoire travaille pour toi</h3><p>La répétition espacée ramène chaque mot juste avant que tu ne l’oublies.</p></div>
-      <div class="feature"><h3>Polyglotte relie tout</h3><p>Un tableau de bord lit tes progrès dans chaque app de langue : mots acquis, rythme, série.</p></div>
-    </div>
+<section class="section">
+  <div class="cadre">
+    <div class="tete"><p class="sur">Ce qu’elles ont en commun</p><h2>Un peu chaque jour, partout.</h2></div>
+    <ul class="grille">
+      <li class="case texte"><h3>Hors ligne</h3><p>Les mots, les leçons et les exercices sont dans l’app. Elle marche en avion, dans le métro, partout.</p></li>
+      <li class="case texte"><h3>Sans compte</h3><p>Tu ouvres l’app et tu commences. Ta progression reste sur ton appareil.</p></li>
+      <li class="case texte"><h3>La mémoire travaille pour toi</h3><p>La répétition espacée ramène chaque mot juste avant que tu ne l’oublies.</p></li>
+      <li class="case texte"><h3>Polyglotte relie tout</h3><p>Un tableau de bord lit tes progrès dans chaque app de langue : mots acquis, rythme, série.</p></li>
+    </ul>
   </div>
 </section>
 </main>
 
-<footer class="foot">
-  <div class="wrap">
+<footer class="pied">
+  <div class="cadre pied-dedans">
+    <a class="logo" href="/"><span class="logo-f" aria-hidden="true">F<i></i></span>FLOW</a>
+    <span class="pied-mention">Apprendre une langue depuis le français · iPhone et Mac</span>
     <nav aria-label="Liens du pied de page">
       <a href="/langues/">Langues</a>
-      <a href="/">Toutes les apps</a>
+      <a href="/#apps">Toutes les apps</a>
       <a href="/mentions-legales/">Mentions légales</a>
       <a href="mailto:contact@flowapps.store">contact@flowapps.store</a>
+      <span>© 2026 Helal Andesha</span>
     </nav>
-    <span class="copy">© 2026 Helal Andesha</span>
   </div>
 </footer>
 
